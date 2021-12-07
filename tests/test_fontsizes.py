@@ -1,15 +1,19 @@
 """Tests for font sizes."""
 
-from tueplots import fontsizes
 import pytest
+
+from tueplots import fontsizes
+
 
 def test_icml():
     sizes = fontsizes.icml()
     assert isinstance(sizes, dict)
 
+
 def test_neurips():
     sizes = fontsizes.icml()
     assert isinstance(sizes, dict)
+
 
 @pytest.mark.parametrize("base", [9, 10])
 def test_from_base(base):

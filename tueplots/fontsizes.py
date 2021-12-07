@@ -1,7 +1,9 @@
 """Fontsize settings."""
 
+
 def icml():
     return from_base(base=10)
+
 
 def neurips():
     return from_base(base=10)

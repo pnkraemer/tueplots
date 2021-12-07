@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
+    - uses: actions/checkout@v2
+    - name: Lint with black
+      run: |
+        pip install black
+        black .
+    - name: Lint with isort through tox
+      run: |
+        pip install isort
+        isort .

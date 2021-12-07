@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Configuration of the black code style checker
+# For more information about Black's usage of this file, see
+# https://github.com/psf/black#pyprojecttoml
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+multi_line_output = "3"
+include_trailing_comma = "true"
+force_grid_wrap = "0"
+use_parentheses = "true"
+line_length = "88"

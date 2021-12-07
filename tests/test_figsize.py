@@ -1,6 +1,6 @@
 import pytest
-from tueplots import figsize
 
+from tueplots import figsize
 
 full_and_half_columns = pytest.mark.parametrize("column", ["full", "half"])
 nrows_all = pytest.mark.parametrize("nrows", [1, 2])
