@@ -1,6 +1,5 @@
-
-
 # Double-column formats
+
 
 def icml(*, column="half"):
     height_per_width = golden_ratio()
@@ -12,6 +11,7 @@ def icml(*, column="half"):
     height = width * height_per_width / 2.0
     return width, height
 
+
 def cvpr(*, column="half"):
     height_per_width = golden_ratio()
     if column == "half":
@@ -22,13 +22,16 @@ def cvpr(*, column="half"):
     height = width * height_per_width / 2.0
     return width, height
 
+
 # Single-column formats
 
+
 def jmlr():
-    """JMLR figure size """
+    """JMLR figure size"""
     width = 433.62
     height = 0.5 * width * golden_ratio()
     return width, height
+
 
 def neurips():
     width = 397.48499
@@ -37,7 +40,8 @@ def neurips():
 
 
 def golden_ratio():
-    return  (5. ** 0.5 - 1.) / 2.
+    return (5.0 ** 0.5 - 1.0) / 2.0
+
 
 def inches_per_point():
-    return 1. / 72.27
+    return 1.0 / 72.27

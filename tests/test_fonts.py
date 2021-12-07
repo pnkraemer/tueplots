@@ -1,4 +1,7 @@
+"""Tests for font settings."""
+
 from momlplots import fonts
+
 
 def test_icml():
     font = fonts.icml()
