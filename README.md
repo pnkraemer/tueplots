@@ -1,3 +1,4 @@
-# moml-plots
+# TUEplots
 
-Plotting data for scientific papers, purely based on matplotlib.
+Plot-configurations for scientific publications, purely based on matplotlib.
+
