@@ -1,4 +1,5 @@
 """Font settings for conference papers and journals."""
+import colors
 
 
 def neurips(*, usetex=False):
@@ -20,24 +21,25 @@ def icml(*, usetex=False):
     }
 
 
-def beamer(* usetex=False): # for use with the MoML beamer template
+def beamer(*, usetex=False):  # for use with the MoML beamer template
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
-        "text.color": TUdark,
-        "axes.edgecolor": TUdark,
-        "axes.labelcolor": TUdark,
-        "xtick.color": TUdark,
-        "ytick.color": TUdark,
+        "text.color": colors.tue_dark,
+        "axes.edgecolor": colors.tue_dark,
+        "axes.labelcolor": colors.tue_dark,
+        "xtick.color": colors.tue_dark,
+        "ytick.color": colors.tue_dark,
     }
 
-def beamer_dark_bg(* usetex=False):   # colors for dark beamer slides
+
+def beamer_dark_bg(*, usetex=False):  # colors for dark beamer slides
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
-        "text.color": 'w',
-        "axes.edgecolor": 'w',
-        "axes.labelcolor": 'w',
-        "xtick.color": 'w',
-        "ytick.color": 'w',
+        "text.color": "w",
+        "axes.edgecolor": "w",
+        "axes.labelcolor": "w",
+        "xtick.color": "w",
+        "ytick.color": "w",
     }
