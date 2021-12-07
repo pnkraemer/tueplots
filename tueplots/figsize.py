@@ -26,6 +26,11 @@ def cvpr(*, column="half", nrows=1):
 
 
 # Single-column formats
+def beamer(*, nrows=1):
+    """beamer figure size"""
+    width = 398.3386 / 72.27
+    height = 0.8 * 241.56738 / 72.27 * nrows
+    return width, height
 
 
 def jmlr(*, nrows=1):

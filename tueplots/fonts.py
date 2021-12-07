@@ -30,6 +30,10 @@ def beamer(*, usetex=False):  # for use with the MoML beamer template
         "axes.labelcolor": colors.tue_dark(),
         "xtick.color": colors.tue_dark(),
         "ytick.color": colors.tue_dark(),
+        "axes.facecolor": "none",
+        "axes.titlesize": "medium",
+        "grid.color": colors.tue_gray(),
+        "axes.grid": False,
     }
 
 
@@ -42,4 +46,6 @@ def beamer_dark_bg(*, usetex=False):  # colors for dark beamer slides
         "axes.labelcolor": "w",
         "xtick.color": "w",
         "ytick.color": "w",
+        "axes.facecolor": "none",
+        "axes.titlesize": "medium",
     }
