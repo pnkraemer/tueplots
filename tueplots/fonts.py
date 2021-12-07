@@ -1,5 +1,6 @@
 """Font settings for conference papers and journals."""
 
+
 def neurips(*, usetex=False):
     return {
         "text.usetex": usetex,
