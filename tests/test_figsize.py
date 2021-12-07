@@ -3,27 +3,32 @@ from tueplots import figsize
 
 
 full_and_half_columns = pytest.mark.parametrize("column", ["full", "half"])
+nrows_all = pytest.mark.parametrize("nrows", [1, 2])
 
 
 @full_and_half_columns
-def test_icml(column):
-    size = figsize.icml(column=column)
+@nrows_all
+def test_icml(column, nrows):
+    size = figsize.icml(column=column, nrows=nrows)
     assert isinstance(size, tuple)
 
 
 @full_and_half_columns
-def test_cvpr(column):
-    size = figsize.cvpr(column=column)
+@nrows_all
+def test_cvpr(column, nrows):
+    size = figsize.cvpr(column=column, nrows=nrows)
     assert isinstance(size, tuple)
 
 
-def test_neurips():
-    size = figsize.neurips()
+@nrows_all
+def test_neurips(nrows):
+    size = figsize.neurips(nrows=nrows)
     assert isinstance(size, tuple)
 
 
-def test_jmlr():
-    size = figsize.jmlr()
+@nrows_all
+def test_jmlr(nrows):
+    size = figsize.jmlr(nrows=nrows)
     assert isinstance(size, tuple)
 
 
