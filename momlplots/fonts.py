@@ -1,7 +1,6 @@
 """Font settings for conference papers and journals."""
 
-def neurips(usetex=False):
-    # <- don't use LaTeX to typeset. It's much slower, and you can't change the font atm.
+def neurips(*, usetex=False):
     return {
         "text.usetex": usetex,
         "font.serif": ["Times New Roman"],
@@ -12,8 +11,9 @@ def neurips(usetex=False):
     }
 
 
-def icml():
+def icml(*, usetex=False):
     return {
+        "text.usetex": usetex,
         "font.serif": ["Times"],
         "mathtext.fontset": "stix",  # free ptmx replacement
     }
