@@ -1,4 +1,3 @@
-import pytest
 from momlplots import fonts
 
 def test_icml():
