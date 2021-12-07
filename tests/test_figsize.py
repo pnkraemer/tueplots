@@ -11,6 +11,17 @@ def test_icml(column):
     size = figsize.icml(column=column)
     assert isinstance(size, tuple)
 
+@full_and_half_columns
+def test_cvpr(column):
+    size = figsize.cvpr(column=column)
+    assert isinstance(size, tuple)
+
+
+def test_neurips():
+    size = figsize.neurips()
+    assert isinstance(size, tuple)
+
+
 def test_jmlr():
     size = figsize.jmlr()
     assert isinstance(size, tuple)
