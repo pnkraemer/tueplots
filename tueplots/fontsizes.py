@@ -8,6 +8,8 @@ def icml():
 def neurips():
     return from_base(base=10)
 
+def jmlr():
+    return from_base(base=10.95)
 
 def from_base(*, base=10):
     return {
