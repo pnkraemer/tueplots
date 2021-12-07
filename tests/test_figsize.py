@@ -1,5 +1,5 @@
 import pytest
-from momlplots import figsize
+from tueplots import figsize
 
 
 full_and_half_columns = pytest.mark.parametrize("column", ["full", "half"])

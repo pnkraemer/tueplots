@@ -1,6 +1,6 @@
 """Tests for font settings."""
 
-from momlplots import fonts
+from tueplots import fonts
 
 
 def test_icml():

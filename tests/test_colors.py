@@ -1,4 +1,4 @@
-from momlplots import colors
+from tueplots import colors
 
 
 def test_tue_dark():
