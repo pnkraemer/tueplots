@@ -17,7 +17,7 @@ def test_neurips():
 
 @pytest.mark.parametrize("base", [9, 10])
 def test_from_base(base):
-    """
+    r"""
     Turn a base-size into font-sizes.
 
     For a paper that uses size 10pt fonts for \normalsize, do
