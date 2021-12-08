@@ -38,7 +38,8 @@ def beamer_moml():
     }
 
 
-def beamer_dark_bg(*, usetex=False):  # colors for dark beamer slides
+def beamer_moml_dark_bg():
+    "Colors for dark beamer slides."""
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
