@@ -1,7 +1,7 @@
 """Font settings for conference papers and journals."""
 
 
-def neurips(*, usetex=False, family="serif"):
+def neurips2021(*, usetex=False, family="serif"):
     return {
         "text.usetex": usetex,
         "font.serif": ["Times New Roman"],
@@ -13,7 +13,7 @@ def neurips(*, usetex=False, family="serif"):
     }
 
 
-def icml(*, usetex=False, family="serif"):
+def icml2022(*, usetex=False, family="serif"):
     return {
         "text.usetex": usetex,
         "font.serif": ["Times"],

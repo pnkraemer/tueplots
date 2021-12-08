@@ -5,13 +5,13 @@ import pytest
 from tueplots import fontsizes
 
 
-def test_icml():
-    sizes = fontsizes.icml()
+def test_icml2022():
+    sizes = fontsizes.icml2022()
     assert isinstance(sizes, dict)
 
 
-def test_neurips():
-    sizes = fontsizes.icml()
+def test_neurips2021():
+    sizes = fontsizes.icml2022()
     assert isinstance(sizes, dict)
 
 

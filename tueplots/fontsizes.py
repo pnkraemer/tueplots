@@ -1,15 +1,15 @@
 """Fontsize settings."""
 
 
-def icml():
+def icml2022():
     return from_base(base=10)
 
 
-def neurips():
+def neurips2021():
     return from_base(base=10)
 
 
-def jmlr():
+def jmlr2001():
     return from_base(base=10.95)
 
 

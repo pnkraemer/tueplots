@@ -3,7 +3,7 @@
 # Double-column formats
 
 
-def icml(*, column="half", nrows=1):
+def icml2022(*, column="half", nrows=1):
 
     height_per_width = golden_ratio()
     if column == "half":
@@ -16,7 +16,7 @@ def icml(*, column="half", nrows=1):
     return width, height
 
 
-def cvpr(*, column="half", nrows=1):
+def cvpr2022(*, column="half", nrows=1):
     height_per_width = golden_ratio()
     if column == "half":
         width = 237.13594 / 72.27
@@ -35,14 +35,14 @@ def beamer(*, nrows=1):
     return width, height
 
 
-def jmlr(*, nrows=1):
+def jmlr2001(*, nrows=1):
     """JMLR figure size"""
     width = 433.62 / 72.27
     height = 0.5 * width * golden_ratio() * nrows
     return width, height
 
 
-def neurips(*, nrows=1):
+def neurips2021(*, nrows=1):
     width = 397.48499 / 72.27
     height = 0.5 * golden_ratio() * width * nrows
     return width, height
