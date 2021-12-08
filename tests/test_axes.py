@@ -6,4 +6,12 @@ from tueplots import axes
 
 
 def test_lines():
-    plt.rcParams.update(axes.lines(base_width=0.5, color="red", facecolor="none"))
+    plt.rcParams.update(
+        axes.lines(
+            color="red",
+        )
+    )
+
+
+def test_face():
+    plt.rcParams.update(axes.face(color="red"))
