@@ -21,7 +21,8 @@ def icml(*, usetex=False):
     }
 
 
-def beamer(*, usetex=False):  # for use with the MoML beamer template
+def beamer_moml():  
+    """For use with the MoML beamer template."""
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
