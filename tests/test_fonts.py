@@ -1,15 +1,18 @@
 """Tests for font settings."""
 
 import matplotlib.pyplot as plt
+import pytest
 
 from tueplots import fonts
 
 
-def test_icml():
-    font = fonts.icml()
+@pytest.mark.parametrize("family", ["serif", "sans-serif"])
+def test_icml(family):
+    font = fonts.icml(family=family)
     plt.rcParams.update(font)
 
 
-def test_neurips():
-    font = fonts.neurips()
+@pytest.mark.parametrize("family", ["serif", "sans-serif"])
+def test_neurips(family):
+    font = fonts.neurips(family=family)
     plt.rcParams.update(font)
