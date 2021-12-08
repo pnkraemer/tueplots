@@ -27,8 +27,8 @@ def test_neurips2021(nrows):
 
 
 @nrows_all
-def test_jmlr(nrows):
-    size = figsize.jmlr(nrows=nrows)
+def test_jmlr2001(nrows):
+    size = figsize.jmlr2001(nrows=nrows)
     assert isinstance(size, tuple)
 
 

@@ -35,7 +35,7 @@ def beamer(*, nrows=1):
     return width, height
 
 
-def jmlr(*, nrows=1):
+def jmlr2001(*, nrows=1):
     """JMLR figure size"""
     width = 433.62 / 72.27
     height = 0.5 * width * golden_ratio() * nrows
