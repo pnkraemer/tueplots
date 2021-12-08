@@ -1,3 +1,5 @@
+"""Figure size settings."""
+
 # Double-column formats
 
 

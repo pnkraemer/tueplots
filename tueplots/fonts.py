@@ -1,5 +1,4 @@
 """Font settings for conference papers and journals."""
-from . import colors
 
 
 def neurips(*, usetex=False, family="serif"):
