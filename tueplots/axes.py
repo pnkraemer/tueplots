@@ -5,7 +5,6 @@ def lines(
     *,
     base_width=1.0,
     color="black",
-    facecolor="none",
     spines_left=True,
     spines_right=True,
     spines_top=True,
