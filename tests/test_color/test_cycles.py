@@ -16,3 +16,7 @@ def test_high_contrast():
 def test_probnum():
     cy = cycler.probnum()
     plt.rcParams.update(cy)
+
+def test_muted():
+    cy = cycler.muted()
+    plt.rcParams.update(cy)

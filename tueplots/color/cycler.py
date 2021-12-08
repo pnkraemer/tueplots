@@ -18,3 +18,12 @@ def probnum():
     color_cycler = cycler('color', ['107D79', 'FF9933', 'slateblue', 'lightcoral', '9467BD', '8C564B', 'E377C2', '7F7F7F', 'BCBD22', '17BECF'])
     return {"axes.prop_cycle": color_cycler}
 
+
+def muted():
+    """Muted color scheme. Color-blind safe.
+
+    From Paul Tot's website: https://personal.sron.nl/~pault/
+    """
+    color_cycler =cycler('color', ['CC6677', '332288', 'DDCC77', '117733', '88CCEE', '882255', '44AA99', '999933', 'AA4499', 'DDDDDD'])
+    return {"axes.prop_cycle": color_cycler}
+
