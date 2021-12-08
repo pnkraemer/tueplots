@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           sudo apt-get update
-          pip install -r e/requirements.txt
+          pip install -r examples/requirements.txt
           pip install .
       - name: Execute all notebooks with nbconvert
         run: |
