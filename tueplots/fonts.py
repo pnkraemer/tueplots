@@ -2,7 +2,7 @@
 from . import colors
 
 
-def neurips(*, usetex=False):
+def neurips(*, usetex=False, family="serif"):
     return {
         "text.usetex": usetex,
         "font.serif": ["Times New Roman"],
@@ -10,14 +10,19 @@ def neurips(*, usetex=False):
         "mathtext.rm": "Times New Roman",
         "mathtext.it": "Times New Roman:italic",
         "mathtext.bf": "Times New Roman:bold",
+        "font.family": family,
     }
 
 
-def icml(*, usetex=False):
+def icml(*, usetex=False, family="serif"):
     return {
         "text.usetex": usetex,
         "font.serif": ["Times"],
-        "mathtext.fontset": "stix",  # free ptmx replacement
+        "mathtext.fontset": "custom",
+        "mathtext.rm": "Times",
+        "mathtext.it": "Times:italic",
+        "mathtext.bf": "Times:bold",
+        "font.family": family,
     }
 
 
@@ -39,7 +44,7 @@ def beamer_moml():
 
 
 def beamer_moml_dark_bg():
-    "Colors for dark beamer slides." ""
+    """Colors for dark beamer slides."""
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
@@ -49,5 +54,4 @@ def beamer_moml_dark_bg():
         "xtick.color": "w",
         "ytick.color": "w",
         "axes.facecolor": "none",
-        "axes.titlesize": "medium",
     }
