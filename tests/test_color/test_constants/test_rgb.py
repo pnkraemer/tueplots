@@ -47,5 +47,5 @@ def test_tue_colors():
     assert (rgb.tue_violet == rgb.tue_secondary8).all()
     assert (rgb.tue_mauve == rgb.tue_secondary9).all()
     assert (rgb.tue_lightorange == rgb.tue_secondary10).all()
-    assert (rgb.tue_orang == rgb.tue_secondary11).all()
+    assert (rgb.tue_orange == rgb.tue_secondary11).all()
     assert (rgb.tue_brown == rgb.tue_secondary12).all()
