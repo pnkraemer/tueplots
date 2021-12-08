@@ -1,7 +1,8 @@
 """Tests for color cycles."""
 
-from tueplots.color import cycler
 import matplotlib.pyplot as plt
+
+from tueplots.color import cycler
 
 
 def test_bright():
@@ -13,9 +14,11 @@ def test_high_contrast():
     cy = cycler.high_contrast()
     plt.rcParams.update(cy)
 
+
 def test_probnum():
     cy = cycler.probnum()
     plt.rcParams.update(cy)
+
 
 def test_muted():
     cy = cycler.muted()

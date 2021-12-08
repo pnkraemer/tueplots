@@ -21,7 +21,7 @@ def icml(*, usetex=False):
     }
 
 
-def beamer_moml():  
+def beamer_moml():
     """For use with the MoML beamer template."""
     return {
         "font.serif": ["Roboto Condensed"],
@@ -39,7 +39,7 @@ def beamer_moml():
 
 
 def beamer_moml_dark_bg():
-    "Colors for dark beamer slides."""
+    "Colors for dark beamer slides." ""
     return {
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
