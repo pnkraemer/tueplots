@@ -3,7 +3,7 @@
 # Double-column formats
 
 
-def icml(*, column="half", nrows=1):
+def icml2022(*, column="half", nrows=1):
 
     height_per_width = golden_ratio()
     if column == "half":

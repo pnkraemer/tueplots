@@ -8,8 +8,8 @@ nrows_all = pytest.mark.parametrize("nrows", [1, 2])
 
 @full_and_half_columns
 @nrows_all
-def test_icml(column, nrows):
-    size = figsize.icml(column=column, nrows=nrows)
+def test_icml2022(column, nrows):
+    size = figsize.icml2022(column=column, nrows=nrows)
     assert isinstance(size, tuple)
 
 

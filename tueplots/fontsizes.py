@@ -1,7 +1,7 @@
 """Fontsize settings."""
 
 
-def icml():
+def icml2022():
     return from_base(base=10)
 
 
