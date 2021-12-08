@@ -20,4 +20,5 @@ def from_base(*, base=10):
         "legend.fontsize": base - 3,
         "xtick.labelsize": base - 3,
         "ytick.labelsize": base - 3,
+        "axes.titlesize": "medium",
     }
