@@ -1,0 +1,27 @@
+def lines(*, base_width=1.0, color="black", facecolor="none"):
+    return {
+        # Set the line-widths appropriately (including the grid)
+        "axes.linewidth": base_width,
+        "xtick.major.width": base_width,
+        "ytick.major.width": base_width,
+        "xtick.minor.width": 0.6 * base_width,
+        "ytick.minor.width": 0.6 * base_width,
+        "xtick.major.size": 1.5 + 3 * base_width,
+        "ytick.major.size": 1.5 + 3 * base_width,
+        "xtick.minor.size": 1.5 + 3 * 0.6 * base_width,
+        "ytick.minor.size": 1.5 + 3 * 0.6 * base_width,
+        "grid.linewidth": base_width,
+        # Change the face color
+        "axes.facecolor": facecolor,
+        # Change the text color
+        "text.color": color,
+        "axes.edgecolor": color,
+        "axes.labelcolor": color,
+        "xtick.color": color,
+        "ytick.color": color,
+        "grid.color": color,
+        # Update the linestyle of the grid
+        # (it shares a color with the frame, and needs to be distinguishable)
+        "grid.linestyle": "dotted",
+        "grid.alpha": 0.75,
+    }
