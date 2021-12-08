@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
+    - uses: actions/checkout@v2
+    - name: Lint with black through tox
+      run: |
+        pip install tox
+        tox -e black
+    - name: Lint with isort through tox
+      run: |
+        pip install isort
+        tox -e isort
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
+    - uses: actions/checkout@v2
+    - name: Run tests with pytest
+      run: |
+        pip install tox
+        tox -e py3
