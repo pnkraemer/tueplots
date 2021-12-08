@@ -15,8 +15,8 @@ def test_icml2022(column, nrows):
 
 @full_and_half_columns
 @nrows_all
-def test_cvpr(column, nrows):
-    size = figsize.cvpr(column=column, nrows=nrows)
+def test_cvpr2022(column, nrows):
+    size = figsize.cvpr2022(column=column, nrows=nrows)
     assert isinstance(size, tuple)
 
 

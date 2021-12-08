@@ -16,7 +16,7 @@ def icml2022(*, column="half", nrows=1):
     return width, height
 
 
-def cvpr(*, column="half", nrows=1):
+def cvpr2022(*, column="half", nrows=1):
     height_per_width = golden_ratio()
     if column == "half":
         width = 237.13594 / 72.27
