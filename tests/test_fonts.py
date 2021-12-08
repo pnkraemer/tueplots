@@ -13,6 +13,6 @@ def test_icml2022(family):
 
 
 @pytest.mark.parametrize("family", ["serif", "sans-serif"])
-def test_neurips(family):
-    font = fonts.neurips(family=family)
+def test_neurips2021(family):
+    font = fonts.neurips2021(family=family)
     plt.rcParams.update(font)

@@ -10,7 +10,7 @@ def test_icml2022():
     assert isinstance(sizes, dict)
 
 
-def test_neurips():
+def test_neurips2021():
     sizes = fontsizes.icml2022()
     assert isinstance(sizes, dict)
 

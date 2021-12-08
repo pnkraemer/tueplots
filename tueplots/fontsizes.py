@@ -5,7 +5,7 @@ def icml2022():
     return from_base(base=10)
 
 
-def neurips():
+def neurips2021():
     return from_base(base=10)
 
 

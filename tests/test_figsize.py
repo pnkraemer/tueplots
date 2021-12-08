@@ -21,8 +21,8 @@ def test_cvpr(column, nrows):
 
 
 @nrows_all
-def test_neurips(nrows):
-    size = figsize.neurips(nrows=nrows)
+def test_neurips2021(nrows):
+    size = figsize.neurips2021(nrows=nrows)
     assert isinstance(size, tuple)
 
 

@@ -42,7 +42,7 @@ def jmlr(*, nrows=1):
     return width, height
 
 
-def neurips(*, nrows=1):
+def neurips2021(*, nrows=1):
     width = 397.48499 / 72.27
     height = 0.5 * golden_ratio() * width * nrows
     return width, height
