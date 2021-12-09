@@ -1,3 +1,5 @@
+"""Tests for figsize functionality."""
+import matplotlib.pyplot as plt
 import pytest
 
 from tueplots import figsize
@@ -10,26 +12,26 @@ nrows_all = pytest.mark.parametrize("nrows", [1, 2])
 @nrows_all
 def test_icml2022(column, nrows):
     size = figsize.icml2022(column=column, nrows=nrows)
-    assert isinstance(size, tuple)
+    plt.rcParams.update(size)
 
 
 @full_and_half_columns
 @nrows_all
 def test_cvpr2022(column, nrows):
     size = figsize.cvpr2022(column=column, nrows=nrows)
-    assert isinstance(size, tuple)
+    plt.rcParams.update(size)
 
 
 @nrows_all
 def test_neurips2021(nrows):
     size = figsize.neurips2021(nrows=nrows)
-    assert isinstance(size, tuple)
+    plt.rcParams.update(size)
 
 
 @nrows_all
 def test_jmlr2001(nrows):
     size = figsize.jmlr2001(nrows=nrows)
-    assert isinstance(size, tuple)
+    plt.rcParams.update(size)
 
 
 def test_golden_ratio():

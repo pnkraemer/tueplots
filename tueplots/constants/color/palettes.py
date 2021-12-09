@@ -45,6 +45,19 @@ tue_plot = (
 )
 """A mix of the primary and secondary colors from tue TUE color palette(s), ordered in a way that provides okay(ish) color contrast."""
 
+tue_plot_dark_bg = (
+    rgb.tue_lightgold,
+    rgb.tue_red,
+    rgb.tue_lightblue,
+    rgb.tue_gray,
+    rgb.tue_lightgreen,
+    rgb.tue_ocre,
+    rgb.tue_violet,
+    rgb.tue_mauve,
+    rgb.tue_brown,
+)
+"""A mix of the primary and secondary colors from tue TUE color palette(s), ordered in a way that provides okay(ish) color contrast when plotting on dark background."""
+
 pn = (
     rgb.pn_blue,
     rgb.pn_orange,

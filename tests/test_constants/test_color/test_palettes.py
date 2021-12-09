@@ -9,6 +9,7 @@ all_palettes = [
     palettes.tue_primary,
     palettes.tue_secondary,
     palettes.tue_plot,
+    palettes.tue_plot_dark_bg,
     palettes.pn,
     palettes.bright,
     palettes.high_contrast,
