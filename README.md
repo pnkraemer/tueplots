@@ -67,42 +67,22 @@ array([0.68627451, 0.70196078, 0.71764706])
 
 Most of the output types of functions in `tueplots` are dictionaries that are directly compatible with matplotlib's `rcParam` language.
 ```python
->>> from tueplots import axes 
+>>> from tueplots import marker
 >>> 
->>> axes.lines()
-{'axes.edgecolor': 'black',
- 'axes.labelcolor': 'black',
- 'axes.linewidth': 1.0,
- 'axes.spines.bottom': True,
- 'axes.spines.left': True,
- 'axes.spines.right': True,
- 'axes.spines.top': True,
- 'grid.alpha': 0.75,
- 'grid.color': 'black',
- 'grid.linestyle': 'dotted',
- 'grid.linewidth': 1.0,
- 'text.color': 'black',
- 'xtick.color': 'black',
- 'xtick.direction': 'out',
- 'xtick.major.size': 4.5,
- 'xtick.major.width': 1.0,
- 'xtick.minor.size': 3.3,
- 'xtick.minor.width': 0.6,
- 'ytick.color': 'black',
- 'ytick.direction': 'out',
- 'ytick.major.size': 4.5,
- 'ytick.major.width': 1.0,
- 'ytick.minor.size': 3.3,
- 'ytick.minor.width': 0.6}
+>>> marker.inverted()
+{'lines.markeredgecolor': 'auto',
+ 'lines.markeredgewidth': 0.75,
+ 'lines.markerfacecolor': 'white'}
+
 
 >>> import matplotlib.pyplot as plt
 
 >>> # Use them as context managers:
->>> with plt.rc_context(axes.lines()):
+>>> with plt.rc_context(marker.inverted()):
 ...     pass # do your plotting...
 
 >>> # Or change your global configuration
->>> plt.rcParams.update(axes.lines())
+>>> plt.rcParams.update(marker.inverted())
 ```
 
 For more detailed tutorials, please have a look at the examples in the `examples/` directory.
