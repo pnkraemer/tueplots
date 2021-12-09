@@ -3,7 +3,13 @@
 from matplotlib import cycler as mpl_cycler
 
 
-def cycler(*, color_palette):
-    """Set a linestyle-cycler by promoting each cycler to the longest length."""
-    color_cycler = mpl_cycler("color", color_palette)
-    return {"axes.prop_cycle": color_cycler}
+def cycler(**kwargs):
+    """Wrap a matplotlib.cycler object into a parameter-dictionary compatible with plt.rcParams.
+
+    Please refer to
+        https://matplotlib.org/cycler/
+    and
+        https://matplotlib.org/stable/tutorials/intermediate/color_cycle.html
+    for information about how to use cyclers.
+    """
+    return {"axes.prop_cycle": mpl_cycler(**kwargs)}

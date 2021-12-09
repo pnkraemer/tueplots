@@ -11,7 +11,3 @@ def test_with_edge():
 
 def test_inverted():
     plt.rcParams.update(marker.inverted())
-
-
-def test_cycler():
-    plt.rcParams.update(marker.cycler())

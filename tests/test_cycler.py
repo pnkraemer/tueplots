@@ -7,5 +7,5 @@ from tueplots.constants.color import palettes
 
 
 def test_cycler():
-    cy = cycler.cycler(color_palette=palettes.tue_primary)
+    cy = cycler.cycler(color=palettes.tue_primary)
     plt.rcParams.update(cy)

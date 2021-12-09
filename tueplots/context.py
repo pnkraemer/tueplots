@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 
 from tueplots import axes, figsize, fonts
-from tueplots.color.constants import rgb
+from tueplots.constants.color import rgb
 
 
 def icml2022():
