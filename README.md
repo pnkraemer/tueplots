@@ -4,7 +4,78 @@ Plot-configurations for scientific publications, purely based on matplotlib.
 
 ## Usage
 
-Please have a look at the examples in the example/ directory.
+`tueplots` provides some recipes for scientific plotting. 
+For example, figure sizes can be tailored straightforwardly to some common journal page layouts:
+```python
+from tueplots import figsize
+
+figsize.jmlr2001()
+# (6.0, 1.8541019662496847)
+```
+within one module, the functions have a unified interface (wherever possible)
+```python
+figsize.jmlr2001(nrows=2)
+# (6.0, 3.7082039324993694)
+
+figsize.neurips2021(nrows=3)
+# (5.499999861629998, 5.098780278910587)
+
+figsize.icml2022(nrows=4)
+# (6.75, 8.343458848123582)
+```
+
+There are also predefined color constants. For example, those based on the corporate design of the University of Tuebingen:
+```python
+from tueplots.color.constants import rgb 
+
+rgb.tue_dark
+# array([0.21568627, 0.25490196, 0.29019608])
+
+rgb.tue_gray
+# array([0.68627451, 0.70196078, 0.71764706])
+```
+
+Most of the output types of functions in `tueplots` are dictionaries that are directly compatible with matplotlib's `rcParam` language.
+```python
+from tueplots import axes 
+
+axes.lines()
+# {'axes.linewidth': 1.0,
+#  'xtick.major.width': 1.0,
+#  'ytick.major.width': 1.0,
+#  'xtick.minor.width': 0.6,
+#  'ytick.minor.width': 0.6,
+#  'xtick.major.size': 4.5,
+#  'ytick.major.size': 4.5,
+#  'xtick.minor.size': 3.3,
+#  'ytick.minor.size': 3.3,
+#  'xtick.direction': 'out',
+#  'ytick.direction': 'out',
+#  'grid.linewidth': 1.0,
+#  'text.color': 'black',
+#  'axes.edgecolor': 'black',
+#  'axes.labelcolor': 'black',
+#  'xtick.color': 'black',
+#  'ytick.color': 'black',
+#  'grid.color': 'black',
+#  'grid.linestyle': 'dotted',
+#  'grid.alpha': 0.75,
+#  'axes.spines.left': True,
+#  'axes.spines.right': True,
+#  'axes.spines.top': True,
+#  'axes.spines.bottom': True}
+
+import matplotlib.pyplot as plt
+
+# Use them as context managers:
+with plt.rc_context(rc=axes.lines()):
+    pass # do your plotting...
+
+# Or change your global configuration
+plt.rcParam.update(rc=axes.lines())
+```
+
+For more detailed tutorials, please have a look at the examples in the `examples/` directory.
 
 ## Contribution
 
