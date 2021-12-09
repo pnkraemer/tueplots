@@ -31,6 +31,20 @@ tue_secondary = (
     rgb.tue_brown,
 )
 
+tue_plot = (
+    rgb.tue_red,
+    rgb.tue_dark,
+    rgb.tue_gold,
+    rgb.tue_blue,
+    rgb.tue_gray,
+    rgb.tue_green,
+    rgb.tue_ocre,
+    rgb.tue_violet,
+    rgb.tue_mauve,
+    rgb.tue_brown,
+)
+"""A mix of the primary and secondary colors from tue TUE color palette(s), ordered in a way that provides okay(ish) color contrast."""
+
 pn = (
     rgb.pn_blue,
     rgb.pn_orange,

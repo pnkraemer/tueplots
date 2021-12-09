@@ -8,6 +8,7 @@ from tueplots.constants.color import palettes
 all_palettes = [
     palettes.tue_primary,
     palettes.tue_secondary,
+    palettes.tue_plot,
     palettes.pn,
     palettes.bright,
     palettes.high_contrast,
