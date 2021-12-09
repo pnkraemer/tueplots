@@ -98,7 +98,7 @@ Most of the output types of functions in `tueplots` are dictionaries that are di
 >>> import matplotlib.pyplot as plt
 
 >>> # Use them as context managers:
->>> with plt.rc_context(rc=axes.lines()):
+>>> with plt.rc_context(axes.lines()):
 ...     pass # do your plotting...
 
 >>> # Or change your global configuration
