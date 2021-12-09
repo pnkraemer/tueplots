@@ -2,8 +2,8 @@
 
 import matplotlib.pyplot as plt
 
-from tueplots import axes, figsize, fonts
-from tueplots.constants.color import rgb
+from tueplots import axes, cycler, figsize, fonts
+from tueplots.constants.color import palettes, rgb
 
 
 def icml2022():
@@ -22,7 +22,8 @@ def beamer_moml():
     size = figsize.beamer()
     font_config = fonts.beamer_moml()
     axes_config = axes.lines(color=rgb.tue_dark)
-    return {**font_config, **axes_config, "figure.figsize": size}
+    cycler_config = cycler.cycler(color=palettes.tue_plot)
+    return {**font_config, **axes_config, **cycler_config, "figure.figsize": size}
 
 
 def beamer_moml_dark_bg():
@@ -30,8 +31,10 @@ def beamer_moml_dark_bg():
     font_config = fonts.beamer_moml_dark_bg()
     axes_config_line = axes.lines(color="w")
     axes_config_face = axes.face(color=rgb.tue_dark)
+    cycler_config = cycler.cycler(color=palettes.tue_plot_dark_bg)
     return {
         **font_config,
+        **cycler_config,
         **axes_config_line,
         **axes_config_face,
         "figure.figsize": size,
