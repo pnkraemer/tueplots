@@ -2,6 +2,15 @@
 
 Scientific plotting made easy, purely based on matplotlib.
 
+Install via pip:
+```commandline
+pip install tueplots
+```
+
+or get the latest version from source:
+```commandline
+https://github.com/pnkraemer/tueplots.git
+```
 
 ## Why?
 
