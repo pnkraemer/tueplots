@@ -25,7 +25,7 @@ within one module, the functions have a unified interface (wherever possible)
 
 There are also predefined color constants. For example, those based on the corporate design of the University of Tuebingen:
 ```python
->>> from tueplots.color.constants import rgb 
+>>> from tueplots.constants.color import rgb 
 >>> 
 >>> rgb.tue_dark
 array([0.21568627, 0.25490196, 0.29019608])
