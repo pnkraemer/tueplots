@@ -9,11 +9,11 @@ def icml2022(*, column="full", nrows=1):
     if column == "half":
         width = 234.8775 / 72.27
         height = height_per_width * width * nrows
-        return width, height
+        return {"figure.figsize": (width, height)}
 
     width = 487.8225 / 72.27
     height = width * height_per_width / 2.0 * nrows
-    return width, height
+    return {"figure.figsize": (width, height)}
 
 
 def cvpr2022(*, column="full", nrows=1):
@@ -21,10 +21,10 @@ def cvpr2022(*, column="full", nrows=1):
     if column == "half":
         width = 237.13594 / 72.27
         height = height_per_width * width * nrows
-        return width, height
+        return {"figure.figsize": (width, height)}
     width = 496.85625 / 72.27
     height = width * height_per_width / 2.0 * nrows
-    return width, height
+    return {"figure.figsize": (width, height)}
 
 
 # Single-column formats
@@ -32,20 +32,20 @@ def beamer(*, nrows=1):
     """Beamer figure size for `aspectratio=169`."""
     width = 398.3386 / 72.27
     height = 0.8 * 241.56738 / 72.27 * nrows
-    return width, height
+    return {"figure.figsize": (width, height)}
 
 
 def jmlr2001(*, nrows=1):
     """JMLR figure size"""
     width = 433.62 / 72.27
     height = 0.5 * width * golden_ratio() * nrows
-    return width, height
+    return {"figure.figsize": (width, height)}
 
 
 def neurips2021(*, nrows=1):
     width = 397.48499 / 72.27
     height = 0.5 * golden_ratio() * width * nrows
-    return width, height
+    return {"figure.figsize": (width, height)}
 
 
 def golden_ratio():
