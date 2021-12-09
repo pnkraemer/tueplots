@@ -38,3 +38,32 @@ pn = (
     rgb.pn_gray,
     rgb.pn_red,
 )
+
+bright = (
+    "4477AA",
+    "EE6677",
+    "228833",
+    "CCBB44",
+    "66CCEE",
+    "AA3377",
+    "BBBBBB",
+)
+"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
+
+high_contrast = ("004488", "DDAA33", "BB5566")
+"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
+
+muted = (
+    "CC6677",
+    "332288",
+    "DDCC77",
+    "117733",
+    "88CCEE",
+    "882255",
+    "44AA99",
+    "999933",
+    "AA4499",
+    "DDDDDD",
+)
+
+"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
