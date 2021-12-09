@@ -34,19 +34,22 @@ and that the font-size in the plot should be readable, and similar to the rest o
 For example, figure sizes can be tailored straightforwardly to some common journal page layouts:
 ```python
 >>> from tueplots import figsize
->>> figsize.jmlr2001()
+>>> figsize.jmlr2001()["figure.figsize"]
 (6.0, 1.8541019662496847)
 ```
 within one module, the functions have a unified interface (wherever possible)
 ```python
->>> figsize.jmlr2001(nrows=2)
+>>> figsize.jmlr2001(nrows=2)["figure.figsize"]
 (6.0, 3.7082039324993694)
 >>> 
->>> figsize.neurips2021(nrows=3)
+>>> figsize.neurips2021(nrows=3)["figure.figsize"]
 (5.499999861629998, 5.098780278910587)
 >>> 
+>>> # The full output:
 >>> figsize.icml2022(nrows=4)
-(6.75, 8.343458848123582)
+{'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (6.75, 8.343458848123582)}
 ```
 
 There are also predefined color constants. For example, those based on the corporate design of the University of Tuebingen:
