@@ -8,7 +8,9 @@ def lines(
     spines_left=True,
     spines_right=True,
     spines_top=True,
-    spines_bottom=True
+    spines_bottom=True,
+    xtick_direction="out",
+    ytick_direction="out",
 ):
     return {
         # Set the line-widths appropriately (including the grid)
@@ -21,6 +23,8 @@ def lines(
         "ytick.major.size": 1.5 + 3 * base_width,
         "xtick.minor.size": 1.5 + 3 * 0.6 * base_width,
         "ytick.minor.size": 1.5 + 3 * 0.6 * base_width,
+        "xtick.direction": xtick_direction,
+        "ytick.direction": ytick_direction,
         "grid.linewidth": base_width,
         # Change the text color
         "text.color": color,
