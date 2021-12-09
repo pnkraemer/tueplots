@@ -1,8 +1,34 @@
 # TUEplots
 
-Plot-configurations for scientific publications, purely based on matplotlib.
+Scientific plotting made easy, purely based on matplotlib.
 
-## Usage
+
+## Why?
+
+`tueplots` helps you to create scientific plots that can be used immediately in papers, presentations, posters, or other publications.
+Instead of trying to make your plots as beautiful as possible (who are we to judge your favourite color), it makes it effortless to avoid common issues like too-small figures, inappropriate fontsizes, or inconsistencies among figures.
+Because good-looking figures _are_ important. 
+
+
+_**`tueplots` has no internal state:**_
+It only passes around dictionaries, whose key-value pairs match those that matplotlib uses.
+Instead of updating global state, it makes it easy for you to do it yourself! 
+If you want to globally change settings, pass them to `matplotlib.pyplot.rcParams.update()`.
+If you only need them for specific contexts, pass them to `matpltlib.pyplot.rc_context()`.
+`tueplots` makes the change easy, so you can make the easy change. This should make `tueplots` naturally compatible with other matplotlib extensions.
+Usage examples are given below.
+
+
+**_`tueplots` has no opinions:_**
+It does not tell you what your figures should like like in the end, but helps you to tailor your plots to your own needs.
+We like all the colors, frame-styles, markers, or linewidths.
+But we _do_ think that figure sizes should match the text-width in your publication, 
+and that the font-size in the plot should be readable, and similar to the rest of the paper/presentation/....
+
+
+
+
+## Usage examples
 
 `tueplots` provides some recipes for scientific plotting. 
 For example, figure sizes can be tailored straightforwardly to some common journal page layouts:
@@ -92,3 +118,9 @@ pip install pre-commit
 pre-commit install
 ```
 From then on, your code will be checked for isort and black compatibility automatically. 
+
+
+
+# Miscellanous
+
+tueplots`has been developed at the University of Tübingen (hence the name).
