@@ -111,7 +111,10 @@ Tests are run with pytest.
 You can use tox (you only have to install tox once):
 ```commandline
 pip install tox 
-tox
+tox -e py3  # for the tests (via pytest)
+tox -e isort  # for linting (isort)
+tox -e black  # for linting (black)
+tox -e byexample  # to run the python snippets in the readme
 ```
 
 The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
