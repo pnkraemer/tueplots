@@ -5,10 +5,12 @@ Scientific plotting made easy, purely based on matplotlib.
 
 ## Why?
 
-`tueplots` helps you to create scientific plots that can be used immediately in papers, presentations, posters, or other publications.
-Instead of trying to make your plots as beautiful as possible (who are we to judge your favourite color), it makes it effortless to avoid common issues like too-small figures, inappropriate fontsizes, or inconsistencies among figures.
+`tueplots` helps you to create scientific plots that can be used in papers, presentations, posters, or other publications.
+`tueplots` does not try to make your plots as beautiful as possible (who are we to judge your favourite color).
+Instead, it makes it effortless to avoid common issues like too-small figures, inappropriate fontsizes, or inconsistencies among figures.
 Because good-looking figures _are_ important. 
 
+The code adheres to the following principles.
 
 _**`tueplots` has no internal state:**_
 It only passes around dictionaries, whose key-value pairs match those that matplotlib uses.
