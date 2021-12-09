@@ -9,6 +9,7 @@ def test_lines():
     plt.rcParams.update(
         axes.lines(
             color="red",
+            xtick_direction="inout",
         )
     )
 
