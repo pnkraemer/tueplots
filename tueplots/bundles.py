@@ -2,20 +2,22 @@
 
 import matplotlib.pyplot as plt
 
-from tueplots import axes, cycler, figsize, fonts
+from tueplots import axes, cycler, figsize, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
 
 
 def icml2022():
     size = figsize.icml2022()
     font_config = fonts.icml2022()
-    return {**font_config, **size}
+    fontsize_config = fontsizes.icml2022()
+    return {**font_config, **size, **fontsize_config}
 
 
 def neurips2021():
     size = figsize.neurips2021()
     font_config = fonts.neurips2021()
-    return {**font_config, **size}
+    fontsize_config = fontsizes.neurips2021()
+    return {**font_config, **size, **fontsize_config}
 
 
 def beamer_moml():
