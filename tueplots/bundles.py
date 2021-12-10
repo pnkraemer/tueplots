@@ -1,7 +1,5 @@
 """Context managers for plots."""
 
-import matplotlib.pyplot as plt
-
 from tueplots import axes, cycler, figsize, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
 

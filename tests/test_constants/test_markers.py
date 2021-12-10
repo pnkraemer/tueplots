@@ -1,7 +1,6 @@
 """Tests for marker lists."""
 
 
-import numpy as np
 import pytest
 
 from tueplots.constants import markers
