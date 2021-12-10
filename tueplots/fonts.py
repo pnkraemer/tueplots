@@ -13,15 +13,23 @@ def neurips2021(*, usetex=False, family="serif"):
     }
 
 
-def icml2022(*, usetex=False, family="serif"):
+def icml2022(*, family="serif"):
     return {
-        "text.usetex": usetex,
+        "text.usetex": False,
         "font.serif": ["Times"],
         "mathtext.fontset": "custom",
         "mathtext.rm": "Times",
         "mathtext.it": "Times:italic",
         "mathtext.bf": "Times:bold",
         "font.family": family,
+    }
+
+
+def icml2022_tex(*, family="serif"):
+    return {
+        "text.usetex": True,
+        "font.family": family,
+        "text.latex.preamble": r"\usepackage{times}",
     }
 
 
