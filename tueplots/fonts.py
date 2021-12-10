@@ -26,10 +26,22 @@ def icml2022(*, family="serif"):
 
 
 def icml2022_tex(*, family="serif"):
+
+    preamble = r"\usepackage{times} "
+
+    if family == "serif":
+        return {
+            "text.usetex": True,
+            "font.family": "serif",
+            "text.latex.preamble": preamble,
+        }
+    preamble += (
+        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
+    )
     return {
         "text.usetex": True,
-        "font.family": family,
-        "text.latex.preamble": r"\usepackage{times}",
+        "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
     }
 
 
