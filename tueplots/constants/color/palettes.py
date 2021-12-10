@@ -60,8 +60,8 @@ tue_plot_dark_bg = (
 
 pn = (
     rgb.pn_blue,
-    rgb.pn_orange,
     rgb.pn_green,
+    rgb.pn_orange,
     rgb.pn_gray,
     rgb.pn_red,
 )

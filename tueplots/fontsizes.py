@@ -15,10 +15,10 @@ def jmlr2001():
 
 def from_base(*, base=10):
     return {
-        "axes.labelsize": base - 1,
         "font.size": base - 1,
+        "axes.labelsize": base - 1,
         "legend.fontsize": base - 3,
         "xtick.labelsize": base - 3,
         "ytick.labelsize": base - 3,
-        "axes.titlesize": "medium",
+        "axes.titlesize": base - 1,
     }
