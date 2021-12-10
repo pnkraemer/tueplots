@@ -117,7 +117,16 @@ pre-commit install
 From then on, your code will be checked for isort and black compatibility automatically. 
 
 
+## Related packages
+There are similar packages to `tueplots` (with different foci, respectively):
+* Seaborn: https://seaborn.pydata.org/index.html
+* ProPlot: https://proplot.readthedocs.io/en/latest/cycles.html
+* SciencePlots: https://github.com/garrettj403/SciencePlots
+* MatplotX: https://github.com/nschloe/matplotx
+
+If you know of any others, please open an issue/PR. 
+
 
 # Miscellanous
 
-tueplots`has been developed at the University of Tübingen (hence the name).
+`tueplots`has been developed at the University of Tübingen (hence the name).
