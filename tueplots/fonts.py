@@ -35,7 +35,7 @@ def icml2022(*, family="serif"):
     return {
         "text.usetex": False,
         "font.serif": ["Times"],
-        "mathtext.fontset": "custom",
+        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
         "mathtext.rm": "Times",
         "mathtext.it": "Times:italic",
         "mathtext.bf": "Times:bold",
