@@ -5,7 +5,7 @@ def neurips2021(*, family="serif"):
     return {
         "text.usetex": False,
         "font.serif": ["Times New Roman"],
-        "mathtext.fontset": "custom",
+        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
         "mathtext.rm": "Times New Roman",
         "mathtext.it": "Times New Roman:italic",
         "mathtext.bf": "Times New Roman:bold",
