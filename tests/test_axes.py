@@ -16,3 +16,7 @@ def test_lines():
 
 def test_face():
     plt.rcParams.update(axes.face(color="red"))
+
+
+def test_legend():
+    plt.rcParams.update(axes.legend(shadow=False, frameon=True, fancybox=False))
