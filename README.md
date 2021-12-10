@@ -98,14 +98,19 @@ For more detailed tutorials, please have a look at the examples in the `examples
 
 ## Contribution
 
-Tests are run with pytest.
-You can use tox (you only have to install tox once):
+To install `tueplots` with all development-related dependencies (tox, jupyter, etc.), run
 ```commandline
-pip install tox 
-tox -e py3  # for the tests (via pytest)
-tox -e isort  # for linting (isort)
-tox -e black  # for linting (black)
-tox -e byexample  # to run the python snippets in the readme
+pip install .[dev]
+```
+
+Run the tests with pytest
+```commandline
+pytest
+```
+
+or use tox (which also runs the linter, and the python-code-snippets in this readme).
+```commandline
+tox
 ```
 
 The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
