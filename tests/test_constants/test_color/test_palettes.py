@@ -1,6 +1,5 @@
 """Tests for color palettes."""
 
-import numpy as np
 import pytest
 
 from tueplots.constants.color import palettes

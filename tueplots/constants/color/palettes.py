@@ -1,11 +1,5 @@
 """Color palettes."""
 
-
-# _np instead of "np", because we dont want to expose numpy through
-# `rgb.np`. This is not a bulletproof solution, but "saver" options
-# would require a lot more import logic and that feels a bit pointless.
-import numpy as _np
-
 from tueplots.constants.color import rgb
 
 tue_primary = (
