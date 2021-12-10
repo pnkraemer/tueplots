@@ -3,14 +3,14 @@
 
 def lines(
     *,
-    base_width=1.0,
+    base_width=0.75,
     color="black",
     spines_left=True,
     spines_right=True,
     spines_top=True,
     spines_bottom=True,
-    xtick_direction="out",
-    ytick_direction="out",
+    xtick_direction="inout",
+    ytick_direction="inout",
 ):
     return {
         # Set the line-widths appropriately (including the grid)
@@ -36,7 +36,7 @@ def lines(
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
         "grid.linestyle": "dotted",
-        "grid.alpha": 0.75,
+        "grid.alpha": 0.5,
         # Set visibility of spines
         "axes.spines.left": spines_left,
         "axes.spines.right": spines_right,

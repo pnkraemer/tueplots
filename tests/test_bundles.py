@@ -6,12 +6,12 @@ from tueplots import bundles
 
 
 def test_icml2022():
-    with plt.rc_context(bundles.icml2022()):
+    with plt.rc_context(bundles.icml2022(family="sans-serif", column="half")):
         pass
 
 
 def test_neurips2021():
-    with plt.rc_context(bundles.neurips2021()):
+    with plt.rc_context(bundles.neurips2021(nrows=2)):
         pass
 
 
