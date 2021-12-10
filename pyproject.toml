@@ -28,3 +28,22 @@ include_trailing_comma = "true"
 force_grid_wrap = "0"
 use_parentheses = "true"
 line_length = "88"
+
+
+
+# Pylint configuration
+[tool.pylint.messages_control]
+disable = [
+    # Exceptions suggested by Black:
+    # https://github.com/psf/black/blob/7f75fe3669ebf0627b1b0476a6d02047e909b959/docs/compatible_configs.md#black-compatible-configurations
+    "bad-continuation",
+    "bad-whitespace",
+    # Specific ignores
+    "invalid-name",  # we name things the way we want.
+    "missing-function-docstring",  # Most functions are so small, there is no need for a docstring.
+    "line-too-long",  # black takes care of linebreaks itself. Long docs dont really matter.
+    "import-error",  # caught by the tests, not by pylint.
+]
+
+[tool.pylint.format]
+max-line-length = "88"
