@@ -13,9 +13,23 @@ def icml2022(*, column="half", nrows=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def icml2022_tex(*, column="half", nrows=1, family="sans-serif"):
+    size = figsize.icml2022(column=column, nrows=nrows)
+    font_config = fonts.icml2022_tex(family=family)
+    fontsize_config = fontsizes.icml2022()
+    return {**font_config, **size, **fontsize_config}
+
+
 def neurips2021(*, nrows=1, family="sans-serif"):
     size = figsize.neurips2021(nrows=nrows)
     font_config = fonts.neurips2021(family=family)
+    fontsize_config = fontsizes.neurips2021()
+    return {**font_config, **size, **fontsize_config}
+
+
+def neurips2021_tex(*, nrows=1, family="sans-serif"):
+    size = figsize.neurips2021(nrows=nrows)
+    font_config = fonts.neurips2021_tex(family=family)
     fontsize_config = fontsizes.neurips2021()
     return {**font_config, **size, **fontsize_config}
 
