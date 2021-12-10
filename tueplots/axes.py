@@ -42,6 +42,12 @@ def lines(
         "axes.spines.right": spines_right,
         "axes.spines.top": spines_top,
         "axes.spines.bottom": spines_bottom,
+        # Legend
+        "patch.linewidth": base_width,
+        "legend.frameon": True,
+        "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
+        "legend.fancybox": False,
+        "legend.shadow": False,
     }
 
 
