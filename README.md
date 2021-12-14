@@ -100,6 +100,48 @@ Most of the output types of functions in `tueplots` are dictionaries that are di
 ```
 
 For more detailed tutorials, please have a look at the examples in the `examples/` directory.
+
+## ICML 2022
+If you're getting ready to submit your paper to ICML 2022, plug either of the following into your preamble. 
+The signatures are interchangeable.
+```python 
+>>> from tueplots import bundles
+>>> bundles.icml2022()
+{'axes.labelsize': 9,
+ 'axes.titlesize': 9,
+ 'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (3.25, 2.0086104634371584),
+ 'font.family': 'sans-serif',
+ 'font.serif': ['Times'],
+ 'font.size': 9,
+ 'legend.fontsize': 7,
+ 'mathtext.bf': 'Times:bold',
+ 'mathtext.fontset': 'stix',
+ 'mathtext.it': 'Times:italic',
+ 'mathtext.rm': 'Times',
+ 'text.usetex': False,
+ 'xtick.labelsize': 7,
+ 'ytick.labelsize': 7}
+>>> bundles.icml2022_tex(family="sans-serif", column="full", nrows=2)
+{'axes.labelsize': 9,
+ 'axes.titlesize': 9,
+ 'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (6.75, 4.171729424061791),
+ 'font.family': 'sans-serif',
+ 'font.size': 9,
+ 'legend.fontsize': 7,
+ 'text.latex.preamble': '\\usepackage{times} '
+                        '\\renewcommand{\\familydefault}{\\sfdefault} '
+                        '\\usepackage{sansmath} \\sansmath',
+ 'text.usetex': True,
+ 'xtick.labelsize': 7,
+ 'ytick.labelsize': 7}
+```
+
+
+
 ## Troubleshooting
 
 #### My version of matplotlib cannot find font XYZ?!
