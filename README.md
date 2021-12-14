@@ -100,6 +100,153 @@ Most of the output types of functions in `tueplots` are dictionaries that are di
 ```
 
 For more detailed tutorials, please have a look at the examples in the `examples/` directory.
+
+## ICML 2022
+If you're getting ready to submit your paper to ICML 2022, plug either of the following into your preamble. 
+The signatures are interchangeable.
+```python 
+>>> from tueplots import bundles
+>>> bundles.icml2022()
+{'axes.labelsize': 9,
+ 'axes.titlesize': 9,
+ 'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (3.25, 2.0086104634371584),
+ 'font.family': 'sans-serif',
+ 'font.serif': ['Times'],
+ 'font.size': 9,
+ 'legend.fontsize': 7,
+ 'mathtext.bf': 'Times:bold',
+ 'mathtext.fontset': 'stix',
+ 'mathtext.it': 'Times:italic',
+ 'mathtext.rm': 'Times',
+ 'text.usetex': False,
+ 'xtick.labelsize': 7,
+ 'ytick.labelsize': 7}
+>>> bundles.icml2022_tex(family="sans-serif", column="full", nrows=2)
+{'axes.labelsize': 9,
+ 'axes.titlesize': 9,
+ 'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (6.75, 4.171729424061791),
+ 'font.family': 'sans-serif',
+ 'font.size': 9,
+ 'legend.fontsize': 7,
+ 'text.latex.preamble': '\\usepackage{times} '
+                        '\\renewcommand{\\familydefault}{\\sfdefault} '
+                        '\\usepackage{sansmath} \\sansmath',
+ 'text.usetex': True,
+ 'xtick.labelsize': 7,
+ 'ytick.labelsize': 7}
+>>>
+>>> # Plug any of those into either the rcParams or into an rc_context:
+>>> plt.rcParams.update(bundles.icml2022())
+>>> with plt.rc_context(bundles.icml2022_tex()):
+...     pass
+```
+If you don't want a pre-packaged solution, at least fix your figure- and font-sizes as follows.
+```python
+>>> from tueplots import figsize, fontsizes, fonts
+>>> figsize.icml2022()
+{'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (6.75, 2.0858647120308955)}
+>>> figsize.icml2022(column="half", nrows=2, constrained_layout=True, tight_layout=False)
+{'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (3.25, 4.017220926874317)}
+>>> fontsizes.icml2022()
+{'axes.labelsize': 9,
+ 'axes.titlesize': 9,
+ 'font.size': 9,
+ 'legend.fontsize': 7,
+ 'xtick.labelsize': 7,
+ 'ytick.labelsize': 7}
+>>> fonts.icml2022()
+{'font.family': 'serif',
+ 'font.serif': ['Times'],
+ 'mathtext.bf': 'Times:bold',
+ 'mathtext.fontset': 'stix',
+ 'mathtext.it': 'Times:italic',
+ 'mathtext.rm': 'Times',
+ 'text.usetex': False}
+>>> fonts.icml2022(family="serif")
+{'font.family': 'serif',
+ 'font.serif': ['Times'],
+ 'mathtext.bf': 'Times:bold',
+ 'mathtext.fontset': 'stix',
+ 'mathtext.it': 'Times:italic',
+ 'mathtext.rm': 'Times',
+ 'text.usetex': False}
+>>> fonts.icml2022_tex(family="sans-serif")
+{'font.family': 'sans-serif',
+ 'text.latex.preamble': '\\usepackage{times} '
+                        '\\renewcommand{\\familydefault}{\\sfdefault} '
+                        '\\usepackage{sansmath} \\sansmath',
+ 'text.usetex': True}
+```
+and if you want to give your plots a makeover (albeit a slightly opinionated one) with a single line of code,
+consider the `axes.lines()` setting.
+```python
+>>> from tueplots import axes
+>>> axes.lines()
+{'axes.edgecolor': 'black',
+ 'axes.labelcolor': 'black',
+ 'axes.linewidth': 0.5,
+ 'axes.spines.bottom': True,
+ 'axes.spines.left': True,
+ 'axes.spines.right': True,
+ 'axes.spines.top': True,
+ 'grid.alpha': 0.25,
+ 'grid.color': 'black',
+ 'grid.linestyle': 'dotted',
+ 'grid.linewidth': 0.5,
+ 'legend.edgecolor': 'inherit',
+ 'lines.linewidth': 0.5,
+ 'patch.linewidth': 0.5,
+ 'text.color': 'black',
+ 'xtick.color': 'black',
+ 'xtick.direction': 'inout',
+ 'xtick.major.size': 3.0,
+ 'xtick.major.width': 0.5,
+ 'xtick.minor.size': 1.75,
+ 'xtick.minor.width': 0.25,
+ 'ytick.color': 'black',
+ 'ytick.direction': 'inout',
+ 'ytick.major.size': 3.0,
+ 'ytick.major.width': 0.5,
+ 'ytick.minor.size': 1.75,
+ 'ytick.minor.width': 0.25}
+>>> axes.lines(base_width=0.5, color="black", spines_right=False, spines_top=False)
+{'axes.edgecolor': 'black',
+ 'axes.labelcolor': 'black',
+ 'axes.linewidth': 0.5,
+ 'axes.spines.bottom': True,
+ 'axes.spines.left': True,
+ 'axes.spines.right': False,
+ 'axes.spines.top': False,
+ 'grid.alpha': 0.25,
+ 'grid.color': 'black',
+ 'grid.linestyle': 'dotted',
+ 'grid.linewidth': 0.5,
+ 'legend.edgecolor': 'inherit',
+ 'lines.linewidth': 0.5,
+ 'patch.linewidth': 0.5,
+ 'text.color': 'black',
+ 'xtick.color': 'black',
+ 'xtick.direction': 'inout',
+ 'xtick.major.size': 3.0,
+ 'xtick.major.width': 0.5,
+ 'xtick.minor.size': 1.75,
+ 'xtick.minor.width': 0.25,
+ 'ytick.color': 'black',
+ 'ytick.direction': 'inout',
+ 'ytick.major.size': 3.0,
+ 'ytick.major.width': 0.5,
+ 'ytick.minor.size': 1.75,
+ 'ytick.minor.width': 0.25}
+```
+
 ## Troubleshooting
 
 #### My version of matplotlib cannot find font XYZ?!
@@ -144,6 +291,7 @@ There are similar packages to `tueplots` (with different foci, respectively):
 * ProPlot: https://proplot.readthedocs.io/en/latest/cycles.html
 * SciencePlots: https://github.com/garrettj403/SciencePlots
 * MatplotX: https://github.com/nschloe/matplotx
+* Themepy: https://github.com/petermckeeverPerform/themepy
 
 If you know of any others, please open an issue/PR. 
 
