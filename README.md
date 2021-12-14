@@ -144,6 +144,7 @@ There are similar packages to `tueplots` (with different foci, respectively):
 * ProPlot: https://proplot.readthedocs.io/en/latest/cycles.html
 * SciencePlots: https://github.com/garrettj403/SciencePlots
 * MatplotX: https://github.com/nschloe/matplotx
+* Themepy: https://github.com/petermckeeverPerform/themepy
 
 If you know of any others, please open an issue/PR. 
 
