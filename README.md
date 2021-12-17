@@ -190,7 +190,8 @@ consider the `axes.lines()` setting.
 ```python
 >>> from tueplots import axes
 >>> axes.lines()
-{'axes.edgecolor': 'black',
+{'axes.axisbelow': True,
+ 'axes.edgecolor': 'black',
  'axes.labelcolor': 'black',
  'axes.linewidth': 0.5,
  'axes.spines.bottom': True,
@@ -199,7 +200,7 @@ consider the `axes.lines()` setting.
  'axes.spines.top': True,
  'grid.alpha': 0.25,
  'grid.color': 'black',
- 'grid.linestyle': 'dotted',
+ 'grid.linestyle': 'solid',
  'grid.linewidth': 0.5,
  'legend.edgecolor': 'inherit',
  'lines.linewidth': 0.5,
@@ -218,7 +219,8 @@ consider the `axes.lines()` setting.
  'ytick.minor.size': 1.75,
  'ytick.minor.width': 0.25}
 >>> axes.lines(base_width=0.5, color="black", spines_right=False, spines_top=False)
-{'axes.edgecolor': 'black',
+{'axes.axisbelow': True,
+ 'axes.edgecolor': 'black',
  'axes.labelcolor': 'black',
  'axes.linewidth': 0.5,
  'axes.spines.bottom': True,
@@ -227,7 +229,7 @@ consider the `axes.lines()` setting.
  'axes.spines.top': False,
  'grid.alpha': 0.25,
  'grid.color': 'black',
- 'grid.linestyle': 'dotted',
+ 'grid.linestyle': 'solid',
  'grid.linewidth': 0.5,
  'legend.edgecolor': 'inherit',
  'lines.linewidth': 0.5,
