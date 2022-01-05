@@ -43,15 +43,19 @@ def icml2022(*, family="serif"):
     }
 
 
-def jmlr2001(*, family="serif"):
+def jmlr2001_tex(*, family="serif"):
+    if family == "serif":
+        return {
+            "text.usetex": True,
+            "font.family": "serif",
+        }
+    preamble = (
+        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
+    )
     return {
-        "text.usetex": False,
-        "font.serif": ["Computer Modern"],
-        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-        "mathtext.rm": "Computer Modern",
-        "mathtext.it": "Computer Modern:italic",
-        "mathtext.bf": "Computer Modern:bold",
-        "font.family": family,
+        "text.usetex": True,
+        "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
     }
 
 

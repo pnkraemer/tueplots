@@ -27,6 +27,6 @@ def test_neurips2021(family):
 
 
 @all_font_families
-def test_jmlr2001(family):
-    font = fonts.jmlr2001(family=family)
+def test_jmlr2001_tex(family):
+    font = fonts.jmlr2001_tex(family=family)
     plt.rcParams.update(font)
