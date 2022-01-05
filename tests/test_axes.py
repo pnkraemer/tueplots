@@ -7,7 +7,11 @@ from tueplots import axes
 
 def test_lines():
     config = axes.lines(
-        color="red", xtick_direction="inout", line_base_ratio=2.0, grid_alpha=0.25
+        color="red",
+        xtick_direction="inout",
+        line_base_ratio=2.0,
+        grid_alpha=0.25,
+        grid_linestyle="dashed",
     )
     plt.rcParams.update(config)
 

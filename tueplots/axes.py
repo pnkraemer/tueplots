@@ -12,7 +12,8 @@ def lines(
     xtick_direction="inout",
     ytick_direction="inout",
     line_base_ratio=1.5,
-    grid_alpha=0.25
+    grid_alpha=0.25,
+    grid_linestyle="solid",
 ):
     return {
         # Set the line-widths appropriately (including the grid)
@@ -42,7 +43,7 @@ def lines(
         "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
-        "grid.linestyle": "dotted",
+        "grid.linestyle": grid_linestyle,
         "grid.alpha": grid_alpha,
         # Set visibility of spines
         "axes.spines.left": spines_left,
