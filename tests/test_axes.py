@@ -8,6 +8,8 @@ from tueplots import axes
 def test_lines():
     config = axes.lines(
         line_base_ratio=2.0,
+        tick_major_base_ratio=1.0,
+        tick_minor_base_ratio=0.5,
         axisbelow=True,
     )
     plt.rcParams.update(config)
