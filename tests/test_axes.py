@@ -7,7 +7,6 @@ from tueplots import axes
 
 def test_lines():
     config = axes.lines(
-        color="red",
         line_base_ratio=2.0,
         grid_alpha=0.25,
         grid_linestyle="dashed",
@@ -17,7 +16,7 @@ def test_lines():
 
 
 def test_color():
-    plt.rcParams.update(axes.color(face="red"))
+    plt.rcParams.update(axes.color(face="red", base="red"))
 
 
 def test_legend():

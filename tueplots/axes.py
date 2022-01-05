@@ -4,7 +4,6 @@
 def lines(
     *,
     base_width=0.5,
-    color="black",
     line_base_ratio=1.5,
     grid_alpha=0.25,
     grid_linestyle="solid",
@@ -25,13 +24,6 @@ def lines(
         "grid.linewidth": base_width,
         # Legend frame linewidth
         "patch.linewidth": base_width,
-        # Change the text color
-        "text.color": color,
-        "axes.edgecolor": color,
-        "axes.labelcolor": color,
-        "xtick.color": color,
-        "ytick.color": color,
-        "grid.color": color,
         "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
@@ -50,8 +42,16 @@ def legend(*, shadow=False, frameon=True, fancybox=False):
     }
 
 
-def color(*, face="none"):
-    return {"axes.facecolor": face}
+def color(*, base="black", face="none"):
+    return {
+        "text.color": base,
+        "axes.edgecolor": base,
+        "axes.labelcolor": base,
+        "xtick.color": base,
+        "ytick.color": base,
+        "grid.color": base,
+        "axes.facecolor": face,
+    }
 
 
 def spines(*, left=True, right=True, top=True, bottom=True):
