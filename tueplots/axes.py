@@ -4,7 +4,7 @@
 def lines(
     *,
     base_width=0.5,
-    line_base_ratio=1.5,
+    line_base_ratio=2.0,
     axisbelow=True,
 ):
     return {
@@ -24,11 +24,13 @@ def lines(
         "patch.linewidth": base_width,
         "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
         # Control the zorder of the ticks and gridlines
+        # This is somewhat out of place in this function, but creating a new function
+        # seems a bit unnecessary here... suggestions welcome!
         "axes.axisbelow": axisbelow,
     }
 
 
-def grid(*, grid_alpha=0.25, grid_linestyle="solid"):
+def grid(*, grid_alpha=0.15, grid_linestyle="solid"):
     return {
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
