@@ -5,8 +5,6 @@ def lines(
     *,
     base_width=0.5,
     color="black",
-    xtick_direction="inout",
-    ytick_direction="inout",
     line_base_ratio=1.5,
     grid_alpha=0.25,
     grid_linestyle="solid",
@@ -27,9 +25,6 @@ def lines(
         "grid.linewidth": base_width,
         # Legend frame linewidth
         "patch.linewidth": base_width,
-        # Tick directions
-        "xtick.direction": xtick_direction,
-        "ytick.direction": ytick_direction,
         # Change the text color
         "text.color": color,
         "axes.edgecolor": color,
@@ -65,4 +60,11 @@ def spines(*, left=True, right=True, top=True, bottom=True):
         "axes.spines.right": right,
         "axes.spines.top": top,
         "axes.spines.bottom": bottom,
+    }
+
+
+def tick_direction(*, x="inout", y="inout"):
+    return {
+        "xtick.direction": x,
+        "ytick.direction": y,
     }

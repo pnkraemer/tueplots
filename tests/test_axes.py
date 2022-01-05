@@ -8,7 +8,6 @@ from tueplots import axes
 def test_lines():
     config = axes.lines(
         color="red",
-        xtick_direction="inout",
         line_base_ratio=2.0,
         grid_alpha=0.25,
         grid_linestyle="dashed",
@@ -27,3 +26,7 @@ def test_legend():
 
 def test_spines():
     plt.rcParams.update(axes.spines(right=False, left=True, top=False, bottom=False))
+
+
+def test_tick_direction():
+    plt.rcParams.update(axes.tick_direction(x="in", y="out"))
