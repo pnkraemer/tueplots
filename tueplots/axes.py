@@ -46,11 +46,7 @@ def lines(
         # (it shares a color with the frame, and needs to be distinguishable)
         "grid.linestyle": grid_linestyle,
         "grid.alpha": grid_alpha,
-        # Set visibility of spines
-        "axes.spines.left": spines_left,
-        "axes.spines.right": spines_right,
-        "axes.spines.top": spines_top,
-        "axes.spines.bottom": spines_bottom,
+        # Control the zorder of the ticks and gridlines
         "axes.axisbelow": axisbelow,
     }
 
@@ -65,3 +61,12 @@ def legend(*, shadow=False, frameon=True, fancybox=False):
 
 def face(*, color="none"):
     return {"axes.facecolor": color}
+
+
+def spines(*, left=True, right=True, top=True, bottom=True):
+    return {
+        "axes.spines.left": left,
+        "axes.spines.right": right,
+        "axes.spines.top": top,
+        "axes.spines.bottom": bottom,
+    }

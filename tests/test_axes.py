@@ -23,3 +23,7 @@ def test_face():
 
 def test_legend():
     plt.rcParams.update(axes.legend(shadow=False, frameon=True, fancybox=False))
+
+
+def test_spines():
+    plt.rcParams.update(axes.spines(right=False, left=True, top=False, bottom=False))
