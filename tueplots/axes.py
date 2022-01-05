@@ -29,7 +29,7 @@ def lines(
         "xtick.minor.size": 1.0 + 3 * 0.5 * base_width,
         "ytick.minor.size": 1.0 + 3 * 0.5 * base_width,
         "grid.linewidth": base_width,
-        # Legend
+        # Legend frame linewidth
         "patch.linewidth": base_width,
         # Tick directions
         "xtick.direction": xtick_direction,
