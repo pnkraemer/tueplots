@@ -43,6 +43,18 @@ def icml2022(*, family="serif"):
     }
 
 
+def jmlr2001(*, family="serif"):
+    return {
+        "text.usetex": False,
+        "font.serif": ["Computer Modern"],
+        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
+        "mathtext.rm": "Computer Modern",
+        "mathtext.it": "Computer Modern:italic",
+        "mathtext.bf": "Computer Modern:bold",
+        "font.family": family,
+    }
+
+
 def icml2022_tex(*, family="serif"):
     preamble = r"\usepackage{times} "
     if family == "serif":
