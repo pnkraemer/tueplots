@@ -42,21 +42,32 @@ def neurips2021_tex(*, nrows=1, family="sans-serif"):
 def beamer_moml(*, nrows=1):
     size = figsize.beamer(nrows=nrows)
     font_config = fonts.beamer_moml()
-    axes_config = axes.lines(color=rgb.tue_dark)
+    axes_config_line = axes.lines()
+    axes_config_grid = axes.grid()
+    axes_config_color = axes.color(base=rgb.tue_dark)
     cycler_config = cycler.cycler(color=palettes.tue_plot)
-    return {**font_config, **axes_config, **cycler_config, **size}
+    return {
+        **size,
+        **font_config,
+        **axes_config_line,
+        **axes_config_grid,
+        **axes_config_color,
+        **cycler_config,
+    }
 
 
 def beamer_moml_dark_bg(*, nrows=1):
     size = figsize.beamer(nrows=nrows)
     font_config = fonts.beamer_moml_dark_bg()
-    axes_config_line = axes.lines(color="w")
-    axes_config_face = axes.face(color=rgb.tue_dark)
+    axes_config_line = axes.lines()
+    axes_config_grid = axes.grid()
+    axes_config_color = axes.color(face=rgb.tue_dark, base="w")
     cycler_config = cycler.cycler(color=palettes.tue_plot_dark_bg)
     return {
-        **font_config,
-        **cycler_config,
-        **axes_config_line,
-        **axes_config_face,
         **size,
+        **font_config,
+        **axes_config_line,
+        **axes_config_grid,
+        **axes_config_color,
+        **cycler_config,
     }
