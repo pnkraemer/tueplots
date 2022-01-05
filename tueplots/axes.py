@@ -50,8 +50,8 @@ def legend(*, shadow=False, frameon=True, fancybox=False):
     }
 
 
-def face(*, color="none"):
-    return {"axes.facecolor": color}
+def color(*, face="none"):
+    return {"axes.facecolor": face}
 
 
 def spines(*, left=True, right=True, top=True, bottom=True):

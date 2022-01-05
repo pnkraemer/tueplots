@@ -16,8 +16,8 @@ def test_lines():
     plt.rcParams.update(config)
 
 
-def test_face():
-    plt.rcParams.update(axes.face(color="red"))
+def test_color():
+    plt.rcParams.update(axes.color(face="red"))
 
 
 def test_legend():
