@@ -11,11 +11,12 @@ def lines(
     spines_bottom=True,
     xtick_direction="inout",
     ytick_direction="inout",
+    line_base_ratio=1.5,
 ):
     return {
         # Set the line-widths appropriately (including the grid)
         "axes.linewidth": base_width,
-        "lines.linewidth": base_width,
+        "lines.linewidth": line_base_ratio * base_width,
         "xtick.major.width": base_width,
         "ytick.major.width": base_width,
         "xtick.minor.width": 0.5 * base_width,

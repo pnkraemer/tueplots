@@ -6,12 +6,8 @@ from tueplots import axes
 
 
 def test_lines():
-    plt.rcParams.update(
-        axes.lines(
-            color="red",
-            xtick_direction="inout",
-        )
-    )
+    config = axes.lines(color="red", xtick_direction="inout", line_base_ratio=2.0)
+    plt.rcParams.update(config)
 
 
 def test_face():
