@@ -12,6 +12,7 @@ def test_lines():
         line_base_ratio=2.0,
         grid_alpha=0.25,
         grid_linestyle="dashed",
+        axisbelow=True,
     )
     plt.rcParams.update(config)
 

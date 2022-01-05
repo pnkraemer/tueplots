@@ -14,6 +14,7 @@ def lines(
     line_base_ratio=1.5,
     grid_alpha=0.25,
     grid_linestyle="solid",
+    axisbelow=True,
 ):
     return {
         # Set the line-widths appropriately (including the grid)
@@ -50,6 +51,7 @@ def lines(
         "axes.spines.right": spines_right,
         "axes.spines.top": spines_top,
         "axes.spines.bottom": spines_bottom,
+        "axes.axisbelow": axisbelow,
     }
 
 
