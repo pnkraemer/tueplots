@@ -12,6 +12,7 @@ def lines(
     xtick_direction="inout",
     ytick_direction="inout",
     line_base_ratio=1.5,
+    grid_alpha=0.25
 ):
     return {
         # Set the line-widths appropriately (including the grid)
@@ -25,9 +26,10 @@ def lines(
         "ytick.major.size": 1.5 + 3 * base_width,
         "xtick.minor.size": 1.0 + 3 * 0.5 * base_width,
         "ytick.minor.size": 1.0 + 3 * 0.5 * base_width,
+        "grid.linewidth": base_width,
+        # Tick directions
         "xtick.direction": xtick_direction,
         "ytick.direction": ytick_direction,
-        "grid.linewidth": base_width,
         # Change the text color
         "text.color": color,
         "axes.edgecolor": color,
@@ -38,7 +40,7 @@ def lines(
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
         "grid.linestyle": "dotted",
-        "grid.alpha": 0.25,
+        "grid.alpha": grid_alpha,
         # Set visibility of spines
         "axes.spines.left": spines_left,
         "axes.spines.right": spines_right,
