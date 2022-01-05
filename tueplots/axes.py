@@ -27,6 +27,8 @@ def lines(
         "xtick.minor.size": 1.0 + 3 * 0.5 * base_width,
         "ytick.minor.size": 1.0 + 3 * 0.5 * base_width,
         "grid.linewidth": base_width,
+        # Legend
+        "patch.linewidth": base_width,
         # Tick directions
         "xtick.direction": xtick_direction,
         "ytick.direction": ytick_direction,
@@ -37,6 +39,7 @@ def lines(
         "xtick.color": color,
         "ytick.color": color,
         "grid.color": color,
+        "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
         "grid.linestyle": "dotted",
@@ -46,9 +49,6 @@ def lines(
         "axes.spines.right": spines_right,
         "axes.spines.top": spines_top,
         "axes.spines.bottom": spines_bottom,
-        # Legend
-        "patch.linewidth": base_width,
-        "legend.edgecolor": "inherit",  # inherit color from axes. passing 'color' leads to awkward future warnings.
     }
 
 
