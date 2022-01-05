@@ -18,6 +18,13 @@ def icml2022_tex(*, column="half", nrows=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def jmlr2001_tex(*, nrows=1, family="sans-serif"):
+    size = figsize.jmlr2001(nrows=nrows)
+    font_config = fonts.jmlr2001_tex(family=family)
+    fontsize_config = fontsizes.jmlr2001()
+    return {**font_config, **size, **fontsize_config}
+
+
 def neurips2021(*, nrows=1, family="sans-serif"):
     size = figsize.neurips2021(nrows=nrows)
     font_config = fonts.neurips2021(family=family)

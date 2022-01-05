@@ -15,6 +15,11 @@ def test_icml2022_tex():
         pass
 
 
+def test_jmlr2001_tex():
+    with plt.rc_context(bundles.jmlr2001_tex()):
+        pass
+
+
 def test_neurips2021():
     with plt.rc_context(bundles.neurips2021(nrows=2)):
         pass
