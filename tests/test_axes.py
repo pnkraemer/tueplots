@@ -10,6 +10,9 @@ def test_lines():
         line_base_ratio=2.0,
         tick_major_base_ratio=1.0,
         tick_minor_base_ratio=0.5,
+        tick_size_width_ratio=3.0,
+        tick_major_size_min=1.5,
+        tick_minor_size_min=1.0,
         axisbelow=True,
     )
     plt.rcParams.update(config)
