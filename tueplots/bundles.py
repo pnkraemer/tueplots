@@ -45,7 +45,7 @@ def beamer_moml(*, nrows=1):
     axes_config = axes.lines()
     color_config = axes.color(base=rgb.tue_dark)
     cycler_config = cycler.cycler(color=palettes.tue_plot)
-    return {**font_config, **axes_config, **cycler_config, **size}
+    return {**font_config, **axes_config, **cycler_config, **size, **color_config}
 
 
 def beamer_moml_dark_bg(*, nrows=1):
