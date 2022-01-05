@@ -9,18 +9,20 @@ def lines(
     tick_minor_base_ratio=0.5,
     axisbelow=True,
 ):
+    tick_major_width = tick_major_base_ratio * base_width
+    tick_minor_width = tick_minor_base_ratio * base_width
     return {
         # Set the line-widths appropriately (including the grid)
         "axes.linewidth": base_width,
         "lines.linewidth": line_base_ratio * base_width,
-        "xtick.major.width": tick_major_base_ratio * base_width,
-        "ytick.major.width": tick_major_base_ratio * base_width,
-        "xtick.minor.width": tick_minor_base_ratio * base_width,
-        "ytick.minor.width": tick_minor_base_ratio * base_width,
-        "xtick.major.size": 1.5 + 3 * base_width,
-        "ytick.major.size": 1.5 + 3 * base_width,
-        "xtick.minor.size": 1.0 + 3 * 0.5 * base_width,
-        "ytick.minor.size": 1.0 + 3 * 0.5 * base_width,
+        "xtick.major.width": tick_major_width,
+        "ytick.major.width": tick_major_width,
+        "xtick.minor.width": tick_minor_width,
+        "ytick.minor.width": tick_minor_width,
+        "xtick.major.size": 1.5 + 3 * tick_major_width,
+        "ytick.major.size": 1.5 + 3 * tick_major_width,
+        "xtick.minor.size": 1.0 + 3 * tick_minor_width,
+        "ytick.minor.size": 1.0 + 3 * tick_minor_width,
         "grid.linewidth": base_width,
         # Legend frame linewidth
         "patch.linewidth": base_width,
