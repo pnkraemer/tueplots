@@ -24,3 +24,9 @@ def test_icml2022_tex(family):
 def test_neurips2021(family):
     font = fonts.neurips2021(family=family)
     plt.rcParams.update(font)
+
+
+@all_font_families
+def test_jmlr2001_tex(family):
+    font = fonts.jmlr2001_tex(family=family)
+    plt.rcParams.update(font)
