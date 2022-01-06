@@ -46,7 +46,7 @@ def beamer_moml(*, rel_width=1, rel_height=1):
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(base=rgb.tue_dark)
     cycler_config = cycler.cycler(color=palettes.tue_plot)
-    fontsize_config = fontsizes.beamer_moml(rel_width=rel_width, rel_height=rel_height)
+    fontsize_config = fontsizes.beamer_moml()
     return {
         **size,
         **font_config,
@@ -65,7 +65,7 @@ def beamer_moml_dark_bg(*, rel_width=1, rel_height=1):
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_dark, base="w")
     cycler_config = cycler.cycler(color=palettes.tue_plot_dark_bg)
-    fontsize_config = fontsizes.beamer_moml(rel_width=rel_width, rel_height=rel_height)
+    fontsize_config = fontsizes.beamer_moml()
     return {
         **size,
         **font_config,
