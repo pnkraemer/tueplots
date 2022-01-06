@@ -13,6 +13,10 @@ def jmlr2001():
     return from_base(base=10.95)
 
 
+def beamer_moml():
+    return from_base(base=10)
+
+
 def from_base(*, base=10):
     return {
         "font.size": base - 1,

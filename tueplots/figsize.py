@@ -44,10 +44,10 @@ def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
 
 
 # Single-column formats
-def beamer(*, nrows=1, constrained_layout=True, tight_layout=False):
+def beamer(*, rel_width=1, rel_height=1, constrained_layout=True, tight_layout=False):
     """Beamer figure size for `aspectratio=169`."""
-    width = 398.3386 / 72.27
-    height = 0.8 * 241.56738 / 72.27 * nrows
+    width = 398.3386 / 72.27 * rel_width
+    height = 0.8 * 241.56738 / 72.27 * rel_height
     return {
         "figure.figsize": (width, height),
         "figure.constrained_layout.use": constrained_layout,
