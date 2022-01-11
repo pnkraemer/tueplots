@@ -24,6 +24,10 @@ https://github.com/pnkraemer/tueplots.git
 Instead, it makes it effortless to avoid common issues like too-small figures, inappropriate fontsizes, or inconsistencies among figures.
 Because good-looking figures _are_ important. 
 
+![plot](./_img/before.png)
+![plot](./_img/after1.png)
+![plot](./_img/after2.png)
+
 The code adheres to the following principles.
 
 _**`tueplots` has no internal state:**_
