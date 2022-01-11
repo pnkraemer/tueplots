@@ -59,20 +59,20 @@ and that the font-size in the plot should be readable, and similar to the rest o
 `tueplots` provides some recipes for scientific plotting. 
 For example, figure sizes can be tailored straightforwardly to some common journal page layouts:
 ```python
->>> from tueplots import figsize
->>> figsize.jmlr2001()["figure.figsize"]
+>>> from tueplots import figsizes
+>>> figsizes.jmlr2001()["figure.figsize"]
 (6.0, 1.8541019662496847)
 ```
 within one module, the functions have a unified interface (wherever possible)
 ```python
->>> figsize.jmlr2001(nrows=2)["figure.figsize"]
+>>> figsizes.jmlr2001(nrows=2)["figure.figsize"]
 (6.0, 3.7082039324993694)
 >>> 
->>> figsize.neurips2021(nrows=3)["figure.figsize"]
+>>> figsizes.neurips2021(nrows=3)["figure.figsize"]
 (5.499999861629998, 5.098780278910587)
 >>> 
 >>> # The full output:
->>> figsize.icml2022(nrows=4)
+>>> figsizes.icml2022(nrows=4)
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (6.75, 8.343458848123582)}
@@ -91,9 +91,9 @@ array([0.68627451, 0.70196078, 0.71764706])
 
 Most of the output types of functions in `tueplots` are dictionaries that are directly compatible with matplotlib's `rcParam` language.
 ```python
->>> from tueplots import marker
+>>> from tueplots import markers
 >>> 
->>> marker.inverted()
+>>> markers.inverted()
 {'lines.markeredgecolor': 'auto',
  'lines.markeredgewidth': 0.75,
  'lines.markerfacecolor': 'white'}
@@ -102,11 +102,11 @@ Most of the output types of functions in `tueplots` are dictionaries that are di
 >>> import matplotlib.pyplot as plt
 
 >>> # Use them as context managers:
->>> with plt.rc_context(marker.inverted()):
+>>> with plt.rc_context(markers.inverted()):
 ...     pass # do your plotting...
 
 >>> # Or change your global configuration
->>> plt.rcParams.update(marker.inverted())
+>>> plt.rcParams.update(markers.inverted())
 ```
 
 For more detailed tutorials, please have a look at the examples in the `examples/` directory.
@@ -156,12 +156,12 @@ The signatures are interchangeable.
 ```
 If you don't want a pre-packaged solution, at least fix your figure- and font-sizes as follows.
 ```python
->>> from tueplots import figsize, fontsizes, fonts
->>> figsize.icml2022()
+>>> from tueplots import figsizes, fontsizes, fonts
+>>> figsizes.icml2022()
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (6.75, 2.0858647120308955)}
->>> figsize.icml2022(column="half", nrows=2, constrained_layout=True, tight_layout=False)
+>>> figsizes.icml2022(column="half", nrows=2, constrained_layout=True, tight_layout=False)
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (3.25, 4.017220926874317)}
