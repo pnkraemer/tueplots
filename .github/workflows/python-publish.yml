@@ -1,4 +1,7 @@
-name: Publish Wheels to PyPI
+# This workflows will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: Upload Python Package
 
 on:
   release:
@@ -6,36 +9,22 @@ on:
 
 jobs:
   deploy:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0  # This is needed so that all tags are loaded (important for setuptools_scm)
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - name: Upgrade pip
-      run: |
-        python -m pip install --upgrade pip
-    - name: Build and install package
-      run: |
-        python -m pip install -e .[dev]
-      if: always()
-    - name: Lint with pylint through tox
-      run: |
-        pip install tox
-        tox -e pylint
-      if: always()
-    - name: Build package using `build`
-      run: |
-        pip install --upgrade build
-        python -m build
-    - name: Publish to PyPI
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        pip install --upgrade twine
-        twine upload dist/*-py3-none-any.whl
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade build twine
+      - name: Build and publish
+        env:
+          TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: |
+          python -m build
+          twine upload dist/*py3-none-any.whl
