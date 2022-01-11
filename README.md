@@ -24,11 +24,15 @@ https://github.com/pnkraemer/tueplots.git
 Instead, it makes it effortless to avoid common issues like too-small figures, inappropriate fontsizes, or inconsistencies among figures.
 Because good-looking figures _are_ important. 
 
-![plot](./_img/before.png)
-![plot](./_img/after1.png)
-![plot](./_img/after2.png)
+For example, consider the style tailored to the ICML2022 template.
+(Left: default matplotlib, middle: one line of tueplots-code, right: two lines of tueplots-code)
 
-The code adheres to the following principles.
+<img src="./_img/before.png" width="200"/>
+<img src="./_img/after1.png" width="200"/>
+<img src="./_img/after2.png" width="200"/>
+
+
+## Principles
 
 _**`tueplots` has no internal state:**_
 It only passes around dictionaries, whose key-value pairs match those that matplotlib uses.
