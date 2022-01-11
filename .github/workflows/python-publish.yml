@@ -23,16 +23,6 @@ jobs:
       run: |
         python -m pip install -e .[dev]
       if: always()
-    - name: Lint with black through tox
-      run: |
-        pip install tox
-        tox -e black
-      if: always()
-    - name: Lint with isort through tox
-      run: |
-        pip install tox
-        tox -e isort
-      if: always()
     - name: Lint with pylint through tox
       run: |
         pip install tox
