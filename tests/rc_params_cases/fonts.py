@@ -1,7 +1,5 @@
-"""Tests for font settings."""
+"""Test cases for font settings."""
 
-import matplotlib.pyplot as plt
-import pytest_cases
 
 from tueplots import fonts
 
@@ -44,8 +42,3 @@ def case_jmlr2001_tex_default_arguments():
 
 def case_jmlr2001_tex_all_arguments_set():
     return fonts.jmlr2001_tex(family="serif")
-
-
-@pytest_cases.parametrize_with_cases("font_config", cases=".")
-def test_update_rcParams(font_config):
-    plt.rcParams.update(font_config)
