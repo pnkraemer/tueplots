@@ -42,3 +42,11 @@ def case_fonts_jmlr2001_tex_default():
 
 def case_fonts_jmlr2001_tex_custom():
     return fonts.jmlr2001_tex(family="serif")
+
+
+def case_fonts_aistats2022_tex_default():
+    return fonts.aistats2022_tex()
+
+
+def case_fonts_aistats2022_tex_custom():
+    return fonts.aistats2022_tex(family="serif")

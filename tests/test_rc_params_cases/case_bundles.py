@@ -27,6 +27,14 @@ def case_bundles_jmlr2001_tex_custom():
     return bundles.jmlr2001_tex(nrows=2, ncols=2, family="serif")
 
 
+def case_bundles_aistats2022_tex_default():
+    return bundles.aistats2022_tex()
+
+
+def case_bundles_aistats2022_tex_custom():
+    return bundles.aistats2022_tex(column="full", nrows=2, ncols=2, family="serif")
+
+
 def case_bundles_neurips2021_default():
     return bundles.neurips2021()
 

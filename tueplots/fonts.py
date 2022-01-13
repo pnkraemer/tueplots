@@ -62,10 +62,19 @@ def icml2022_tex(*, family="serif"):
 
 
 def jmlr2001_tex(*, family="serif"):
+    return _tex_computer_modern(family=family)
+
+
+def aistats2022_tex(*, family="serif"):
+    return _tex_computer_modern(family=family)
+
+
+def _tex_computer_modern(*, family="serif"):
     if family == "serif":
         return {
             "text.usetex": True,
             "font.family": "serif",
+            "text.latex.preamble": "",
         }
     preamble = (
         r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"

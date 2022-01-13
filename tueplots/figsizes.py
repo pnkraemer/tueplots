@@ -43,6 +43,42 @@ def icml2022(
     }
 
 
+def aistats2022(
+    *,
+    column="full",
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+
+    if column == "half":
+        figsize = _from_base(
+            width_pt=3.25 * _INCHES_PER_POINT,
+            nrows=nrows,
+            ncols=ncols,
+            height_to_width_ratio=height_to_width_ratio,
+        )
+        return {
+            "figure.figsize": figsize,
+            "figure.constrained_layout.use": constrained_layout,
+            "figure.autolayout": tight_layout,
+        }
+
+    figsize = _from_base(
+        width_pt=6.75 * _INCHES_PER_POINT,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio / 2.0,
+    )
+    return {
+        "figure.figsize": figsize,
+        "figure.constrained_layout.use": constrained_layout,
+        "figure.autolayout": tight_layout,
+    }
+
+
 def cvpr2022(
     *,
     column="full",

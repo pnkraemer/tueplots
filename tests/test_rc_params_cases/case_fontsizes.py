@@ -11,6 +11,10 @@ def case_fontsizes_neurips2021():
     return fontsizes.neurips2021()
 
 
+def case_fontsizes_aistats2022():
+    return fontsizes.aistats2022()
+
+
 def case_fontsizes_jmlr2001():
     return fontsizes.jmlr2001()
 
