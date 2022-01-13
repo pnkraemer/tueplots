@@ -3,17 +3,17 @@
 from tueplots import markers
 
 
-def case_with_edge_default():
+def case_markers_with_edge_default():
     return markers.with_edge()
 
 
-def case_with_edge_custom():
+def case_markers_with_edge_custom():
     return markers.with_edge(edgecolor="green", edgewidth=1.0)
 
 
-def case_inverted_default():
+def case_markers_inverted_default():
     return markers.inverted()
 
 
-def case_inverted_custom():
+def case_markers_inverted_custom():
     return markers.inverted(facecolor="green", edgewidth=1.0)
