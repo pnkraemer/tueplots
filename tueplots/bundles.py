@@ -18,6 +18,13 @@ def icml2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def aistats2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.aistats2022(column=column, nrows=nrows, ncols=ncols)
+    font_config = fonts.aistats2022_tex(family=family)
+    fontsize_config = fontsizes.aistats2022()
+    return {**font_config, **size, **fontsize_config}
+
+
 def jmlr2001_tex(*, nrows=1, ncols=1, family="sans-serif"):
     size = figsizes.jmlr2001(nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
