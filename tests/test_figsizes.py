@@ -34,6 +34,11 @@ def test_jmlr2001(nrows):
     plt.rcParams.update(size)
 
 
+def test_beamer_169():
+    size = figsizes.beamer_169()
+    plt.rcParams.update(size)
+
+
 def test_golden_ratio():
     ratio = figsizes.golden_ratio()
     assert abs(ratio - 1 / 1.61) < 0.1, ratio

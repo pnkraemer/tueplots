@@ -39,8 +39,8 @@ def neurips2021_tex(*, nrows=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def beamer_moml(*, rel_width=1, rel_height=1):
-    size = figsizes.beamer(rel_width=rel_width, rel_height=rel_height)
+def beamer_moml(*, rel_width=1.0, rel_height=0.8):
+    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
@@ -58,8 +58,8 @@ def beamer_moml(*, rel_width=1, rel_height=1):
     }
 
 
-def beamer_moml_dark_bg(*, rel_width=1, rel_height=1):
-    size = figsizes.beamer(rel_width=rel_width, rel_height=rel_height)
+def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
+    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml_dark_bg()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()

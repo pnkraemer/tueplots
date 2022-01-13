@@ -44,15 +44,6 @@ def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
 
 
 # Single-column formats
-def beamer(*, rel_width=1, rel_height=1, constrained_layout=True, tight_layout=False):
-    """Beamer figure size for `aspectratio=169`."""
-    width = 398.3386 / 72.27 * rel_width
-    height = 0.8 * 241.56738 / 72.27 * rel_height
-    return {
-        "figure.figsize": (width, height),
-        "figure.constrained_layout.use": constrained_layout,
-        "figure.autolayout": tight_layout,
-    }
 
 
 def jmlr2001(*, nrows=1, constrained_layout=True, tight_layout=False):
@@ -69,6 +60,22 @@ def jmlr2001(*, nrows=1, constrained_layout=True, tight_layout=False):
 def neurips2021(*, nrows=1, constrained_layout=True, tight_layout=False):
     width = 397.48499 / 72.27
     height = 0.5 * golden_ratio() * width * nrows
+    return {
+        "figure.figsize": (width, height),
+        "figure.constrained_layout.use": constrained_layout,
+        "figure.autolayout": tight_layout,
+    }
+
+
+# Other formats
+
+
+def beamer_169(
+    *, rel_width=1.0, rel_height=0.8, constrained_layout=True, tight_layout=False
+):
+    """Beamer figure size for `aspectratio=169`."""
+    width = 398.3386 / 72.27 * rel_width
+    height = 241.56738 / 72.27 * rel_height
     return {
         "figure.figsize": (width, height),
         "figure.constrained_layout.use": constrained_layout,

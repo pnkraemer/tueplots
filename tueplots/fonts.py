@@ -83,6 +83,9 @@ def beamer_moml():
         "text.usetex": False,
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
+        "font.weight": "light",
+        "axes.labelweight": "light",
+        "axes.titleweight": "light",
     }
 
 
@@ -92,4 +95,7 @@ def beamer_moml_dark_bg():
         "text.usetex": False,
         "font.serif": ["Roboto Condensed"],
         "font.family": "serif",
+        "font.weight": "light",
+        "axes.labelweight": "light",
+        "axes.titleweight": "light",
     }
