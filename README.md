@@ -14,7 +14,7 @@ pip install tueplots
 
 or get the latest version from source:
 ```commandline
-https://github.com/pnkraemer/tueplots.git
+pip install git+https://github.com/pnkraemer/tueplots.git
 ```
 
 ## Why?
