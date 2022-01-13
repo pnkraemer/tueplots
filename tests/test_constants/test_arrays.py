@@ -6,6 +6,7 @@ import pytest_cases
 CASE_MODULES = (
     ".test_arrays_cases.case_markers",
     ".test_arrays_cases.color_cases.case_palettes",
+    ".test_arrays_cases.color_cases.case_rgb",
 )
 
 
