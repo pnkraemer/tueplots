@@ -1,43 +1,79 @@
 """Figure size settings."""
 
+# Some useful constants
+_GOLDEN_RATIO = (5.0 ** 0.5 - 1.0) / 2.0
+_INCHES_PER_POINT = 1.0 * 72.27
+
 # Double-column formats
 
 
-def icml2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=False):
+def icml2022(
+    *,
+    column="full",
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
 
-    height_per_width = golden_ratio()
     if column == "half":
-        width = 234.8775 / 72.27
-        height = height_per_width * width * nrows
+        figsize = _from_base(
+            width_pt=234.8775,
+            nrows=nrows,
+            ncols=ncols,
+            height_to_width_ratio=height_to_width_ratio,
+        )
         return {
-            "figure.figsize": (width, height),
+            "figure.figsize": figsize,
             "figure.constrained_layout.use": constrained_layout,
             "figure.autolayout": tight_layout,
         }
 
-    width = 487.8225 / 72.27
-    height = width * height_per_width / 2.0 * nrows
+    figsize = _from_base(
+        width_pt=487.8225,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio / 2.0,
+    )
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
 
 
-def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=False):
-    height_per_width = golden_ratio()
+def cvpr2022(
+    *,
+    column="full",
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+
     if column == "half":
-        width = 237.13594 / 72.27
-        height = height_per_width * width * nrows
+        figsize = _from_base(
+            width_pt=237.13594,
+            nrows=nrows,
+            ncols=ncols,
+            height_to_width_ratio=height_to_width_ratio,
+        )
         return {
-            "figure.figsize": (width, height),
+            "figure.figsize": figsize,
             "figure.constrained_layout.use": constrained_layout,
             "figure.autolayout": tight_layout,
         }
-    width = 496.85625 / 72.27
-    height = width * height_per_width / 2.0 * nrows
+
+    figsize = _from_base(
+        width_pt=496.85625,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio / 2.0,
+    )
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
@@ -46,46 +82,71 @@ def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
 # Single-column formats
 
 
-def jmlr2001(*, nrows=1, constrained_layout=True, tight_layout=False):
+def jmlr2001(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
     """JMLR figure size"""
-    width = 433.62 / 72.27
-    height = 0.5 * width * golden_ratio() * nrows
+
+    figsize = _from_base(
+        width_pt=433.62,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio / 2.0,
+    )
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
 
 
-def neurips2021(*, nrows=1, constrained_layout=True, tight_layout=False):
-    width = 397.48499 / 72.27
-    height = 0.5 * golden_ratio() * width * nrows
+def neurips2021(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+
+    figsize = _from_base(
+        width_pt=397.48499,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio / 2.0,
+    )
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
+
+
+def _from_base(*, width_pt, nrows, height_to_width_ratio, ncols):
+    width_inches = width_pt / _INCHES_PER_POINT
+    height_inches = height_to_width_ratio * width_inches * nrows / ncols
+    return width_inches, height_inches
 
 
 # Other formats
 
 
 def beamer_169(
-    *, rel_width=1.0, rel_height=0.8, constrained_layout=True, tight_layout=False
+    *, rel_width=0.9, rel_height=0.6, constrained_layout=True, tight_layout=False
 ):
     """Beamer figure size for `aspectratio=169`."""
-    width = 398.3386 / 72.27 * rel_width
-    height = 241.56738 / 72.27 * rel_height
+    textwidth_169_pt = 398.3386  # via '\showthe\textwidth' in latex
+    textwidth_169_in = textwidth_169_pt / _INCHES_PER_POINT
+    textheight_169_in = textwidth_169_in / 16.0 * 9.0
+
+    figsize = (textwidth_169_in * rel_width, textheight_169_in * rel_height)
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
-
-
-def golden_ratio():
-    return (5.0 ** 0.5 - 1.0) / 2.0
-
-
-def inches_per_point():
-    return 1.0 / 72.27

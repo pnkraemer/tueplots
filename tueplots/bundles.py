@@ -4,36 +4,36 @@ from tueplots import axes, cycler, figsizes, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
 
 
-def icml2022(*, column="half", nrows=1, family="sans-serif"):
-    size = figsizes.icml2022(column=column, nrows=nrows)
+def icml2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.icml2022(column=column, nrows=nrows, ncols=ncols)
     font_config = fonts.icml2022(family=family)
     fontsize_config = fontsizes.icml2022()
     return {**font_config, **size, **fontsize_config}
 
 
-def icml2022_tex(*, column="half", nrows=1, family="sans-serif"):
-    size = figsizes.icml2022(column=column, nrows=nrows)
+def icml2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.icml2022(column=column, nrows=nrows, ncols=ncols)
     font_config = fonts.icml2022_tex(family=family)
     fontsize_config = fontsizes.icml2022()
     return {**font_config, **size, **fontsize_config}
 
 
-def jmlr2001_tex(*, nrows=1, family="sans-serif"):
-    size = figsizes.jmlr2001(nrows=nrows)
+def jmlr2001_tex(*, nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.jmlr2001(nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
     fontsize_config = fontsizes.jmlr2001()
     return {**font_config, **size, **fontsize_config}
 
 
-def neurips2021(*, nrows=1, family="sans-serif"):
-    size = figsizes.neurips2021(nrows=nrows)
+def neurips2021(*, nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.neurips2021(nrows=nrows, ncols=ncols)
     font_config = fonts.neurips2021(family=family)
     fontsize_config = fontsizes.neurips2021()
     return {**font_config, **size, **fontsize_config}
 
 
-def neurips2021_tex(*, nrows=1, family="sans-serif"):
-    size = figsizes.neurips2021(nrows=nrows)
+def neurips2021_tex(*, nrows=1, ncols=1, family="sans-serif"):
+    size = figsizes.neurips2021(nrows=nrows, ncols=ncols)
     font_config = fonts.neurips2021_tex(family=family)
     fontsize_config = fontsizes.neurips2021()
     return {**font_config, **size, **fontsize_config}
