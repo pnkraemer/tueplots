@@ -3,13 +3,15 @@
 import matplotlib.pyplot as plt
 import pytest_cases
 
+CASE_MODULES = (".rc_params_cases.fonts", ".rc_params_cases.axes")
 
-@pytest_cases.parametrize_with_cases("config", cases=".rc_params_cases.fonts")
+
+@pytest_cases.parametrize_with_cases("config", cases=CASE_MODULES)
 def test_update_rcParams(config):
     plt.rcParams.update(config)
 
 
-@pytest_cases.parametrize_with_cases("config", cases=".rc_params_cases.fonts")
+@pytest_cases.parametrize_with_cases("config", cases=CASE_MODULES)
 def test_rc_context(config):
     with plt.rc_context(config):
         pass
