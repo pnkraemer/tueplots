@@ -3,7 +3,11 @@
 import matplotlib.pyplot as plt
 import pytest_cases
 
-CASE_MODULES = (".rc_params_cases.fonts", ".rc_params_cases.axes")
+CASE_MODULES = (
+    ".rc_params_cases.fonts",
+    ".rc_params_cases.axes",
+    ".rc_params_cases.bundles",
+)
 
 
 @pytest_cases.parametrize_with_cases("config", cases=CASE_MODULES)

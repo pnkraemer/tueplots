@@ -12,6 +12,7 @@ def case_axes_lines_default():
 
 def case_axes_lines_custom():
     return axes.lines(
+        base_width=0.5,
         line_base_ratio=2.0,
         tick_major_base_ratio=1.0,
         tick_minor_base_ratio=0.5,
@@ -35,7 +36,7 @@ def case_axes_legend_default():
 
 
 def case_axes_legend_custom():
-    return axes.legend(shadow=False, frameon=True, fancybox=False)
+    return axes.legend(shadow=True, frameon=False, fancybox=True)
 
 
 def case_axes_spines_default():
@@ -43,7 +44,7 @@ def case_axes_spines_default():
 
 
 def case_axes_spines_custom():
-    return axes.spines(right=False, left=True, top=False, bottom=False)
+    return axes.spines(right=False, left=False, top=False, bottom=False)
 
 
 def case_axes_tick_direction_default():
