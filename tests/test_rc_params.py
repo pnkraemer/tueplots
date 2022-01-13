@@ -8,6 +8,7 @@ CASE_MODULES = (
     ".rc_params_cases.axes",
     ".rc_params_cases.bundles",
     ".rc_params_cases.cycler",
+    ".rc_params_cases.figsizes",
 )
 
 
