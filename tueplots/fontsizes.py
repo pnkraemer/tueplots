@@ -9,6 +9,10 @@ def neurips2021():
     return _from_base(base=10)
 
 
+def aistats2022():
+    return _from_base(base=10)
+
+
 def jmlr2001():
     return _from_base(base=10.95)
 

@@ -12,12 +12,12 @@ def case_figsizes_icml2022_custom():
     return figsizes.icml2022(column="full", nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
-def case_figsizes_aistats2021_default():
-    return figsizes.aistats2021()
+def case_figsizes_aistats2022_default():
+    return figsizes.aistats2022()
 
 
-def case_figsizes_aistats2021_custom():
-    return figsizes.aistats2021(
+def case_figsizes_aistats2022_custom():
+    return figsizes.aistats2022(
         column="full", nrows=2, ncols=3, height_to_width_ratio=1.0
     )
 

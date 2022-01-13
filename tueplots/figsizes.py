@@ -43,7 +43,7 @@ def icml2022(
     }
 
 
-def aistats2021(
+def aistats2022(
     *,
     column="full",
     nrows=1,
