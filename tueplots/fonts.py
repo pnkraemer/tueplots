@@ -74,6 +74,7 @@ def _tex_computer_modern(*, family="serif"):
         return {
             "text.usetex": True,
             "font.family": "serif",
+            "text.latex.preamble": "",
         }
     preamble = (
         r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
