@@ -38,9 +38,9 @@ pn_orange = _np.array([255, 153, 51]) / 255.0
 pn_gray = tue_gray
 pn_red = tue_red
 
-# the Corporate-ID colors of the Max Planck Society, 
+# the Corporate-ID colors of the Max Planck Society,
 # provided as a curtesy to our colleagues at the MPI IS
 mpg_green = _np.array([17, 102, 86]) / 255.0
-mpg_lightgreen = mpg_green + 0.5 * (255.0 - mpg_green) # 50% version
+mpg_lightgreen = mpg_green + 0.5 * (255.0 - mpg_green)  # 50% version
 mpg_gray = _np.array([221, 222, 214]) / 255.0
-mpg_lightgray = mpg_gray + 0.5 * (255.0 - mpg_gray) # 50% version
+mpg_lightgray = mpg_gray + 0.5 * (255.0 - mpg_gray)  # 50% version
