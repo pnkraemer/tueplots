@@ -1,6 +1,5 @@
 """Tests for tueplots.
 
-
 Essentially, there are only two kinds of tests.
 
     1) The return types of anything in tueplots' main module should be a dictionary
