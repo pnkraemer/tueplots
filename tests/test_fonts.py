@@ -1,32 +1,51 @@
 """Tests for font settings."""
 
 import matplotlib.pyplot as plt
-import pytest
+import pytest_cases
 
 from tueplots import fonts
 
-all_font_families = pytest.mark.parametrize("family", ["serif", "sans-serif"])
+
+def case_icml2022_default_arguments():
+    return fonts.icml2022()
 
 
-@all_font_families
-def test_icml2022(family):
-    font = fonts.icml2022(family=family)
-    plt.rcParams.update(font)
+def case_icml2022_all_arguments_set():
+    return fonts.icml2022(family="serif")
 
 
-@all_font_families
-def test_icml2022_tex(family):
-    font = fonts.icml2022_tex(family=family)
-    plt.rcParams.update(font)
+def case_icml2022_tex_default_arguments():
+    return fonts.icml2022_tex()
 
 
-@all_font_families
-def test_neurips2021(family):
-    font = fonts.neurips2021(family=family)
-    plt.rcParams.update(font)
+def case_icml2022_tex_all_arguments_set():
+    return fonts.icml2022_tex(family="serif")
 
 
-@all_font_families
-def test_jmlr2001_tex(family):
-    font = fonts.jmlr2001_tex(family=family)
-    plt.rcParams.update(font)
+def case_neurips2021_default_arguments():
+    return fonts.neurips2021()
+
+
+def case_neurips2021_all_arguments_set():
+    return fonts.neurips2021(family="serif")
+
+
+def case_neurips2021_tex_default_arguments():
+    return fonts.neurips2021_tex()
+
+
+def case_neurips2021_tex_all_arguments_set():
+    return fonts.neurips2021_tex(family="serif")
+
+
+def case_jmlr2001_tex_default_arguments():
+    return fonts.jmlr2001_tex()
+
+
+def case_jmlr2001_tex_all_arguments_set():
+    return fonts.jmlr2001_tex(family="serif")
+
+
+@pytest_cases.parametrize_with_cases("font_config", cases=".")
+def test_update_rcParams(font_config):
+    plt.rcParams.update(font_config)
