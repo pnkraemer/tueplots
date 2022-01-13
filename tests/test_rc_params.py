@@ -10,6 +10,7 @@ CASE_MODULES = (
     ".rc_params_cases.cycler",
     ".rc_params_cases.figsizes",
     ".rc_params_cases.fontsizes",
+    ".rc_params_cases.markers",
 )
 
 
