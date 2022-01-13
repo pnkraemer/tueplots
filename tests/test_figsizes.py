@@ -13,7 +13,9 @@ ncols_all = pytest.mark.parametrize("ncols", [1, 2])
 @nrows_all
 @ncols_all
 def test_icml2022(column, nrows, ncols):
-    size = figsizes.icml2022(column=column, nrows=nrows, ncols=ncols)
+    size = figsizes.icml2022(
+        column=column, nrows=nrows, ncols=ncols, height_to_width_ratio=1.0
+    )
     plt.rcParams.update(size)
 
 
