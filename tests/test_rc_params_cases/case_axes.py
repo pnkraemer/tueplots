@@ -1,8 +1,6 @@
 """Test cases for axes."""
 
 
-from pytest_cases import case
-
 from tueplots import axes
 
 

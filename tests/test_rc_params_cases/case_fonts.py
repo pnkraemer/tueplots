@@ -1,8 +1,6 @@
 """Test cases for font settings."""
 
 
-from pytest_cases import case
-
 from tueplots import fonts
 
 
