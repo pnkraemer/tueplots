@@ -11,8 +11,8 @@ ncols_all = pytest.mark.parametrize("ncols", [1, 2])
 
 @full_and_half_columns
 @nrows_all
-# @ncols_all
-def test_icml2022(column, nrows):
+@ncols_all
+def test_icml2022(column, nrows, ncols):
     size = figsizes.icml2022(column=column, nrows=nrows)
     plt.rcParams.update(size)
 
@@ -39,14 +39,3 @@ def test_jmlr2001(nrows):
 def test_beamer_169():
     size = figsizes.beamer_169()
     plt.rcParams.update(size)
-
-
-#
-# def test_golden_ratio():
-#     ratio = figsizes.golden_ratio()
-#     assert abs(ratio - 1 / 1.61) < 0.1, ratio
-#
-#
-# def test_inches_per_point():
-#     in_per_pt = figsizes.inches_per_point()
-#     assert in_per_pt > 0.0

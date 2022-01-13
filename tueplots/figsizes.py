@@ -7,12 +7,15 @@ _INCHES_PER_POINT = 1.0 * 72.27
 # Double-column formats
 
 
-def icml2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=False):
+def icml2022(
+    *, column="full", nrows=1, ncols=1, constrained_layout=True, tight_layout=False
+):
 
     if column == "half":
         figsize = _from_base(
-            width_inches=234.8775 / _INCHES_PER_POINT,
+            width_pt=234.8775,
             nrows=nrows,
+            ncols=ncols,
             height_per_width=_GOLDEN_RATIO,
         )
         return {
@@ -22,8 +25,9 @@ def icml2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
         }
 
     figsize = _from_base(
-        width_inches=487.8225 / _INCHES_PER_POINT,
+        width_pt=487.8225,
         nrows=nrows,
+        ncols=ncols,
         height_per_width=_GOLDEN_RATIO / 2.0,
     )
     return {
@@ -33,12 +37,15 @@ def icml2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
     }
 
 
-def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=False):
+def cvpr2022(
+    *, column="full", nrows=1, ncols=1, constrained_layout=True, tight_layout=False
+):
 
     if column == "half":
         figsize = _from_base(
-            width_inches=237.13594 / _INCHES_PER_POINT,
+            width_pt=237.13594,
             nrows=nrows,
+            ncols=ncols,
             height_per_width=_GOLDEN_RATIO,
         )
         return {
@@ -48,8 +55,9 @@ def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
         }
 
     figsize = _from_base(
-        width_inches=496.85625 / _INCHES_PER_POINT,
+        width_pt=496.85625,
         nrows=nrows,
+        ncols=ncols,
         height_per_width=_GOLDEN_RATIO / 2.0,
     )
     return {
@@ -62,12 +70,13 @@ def cvpr2022(*, column="full", nrows=1, constrained_layout=True, tight_layout=Fa
 # Single-column formats
 
 
-def jmlr2001(*, nrows=1, constrained_layout=True, tight_layout=False):
+def jmlr2001(*, nrows=1, ncols=1, constrained_layout=True, tight_layout=False):
     """JMLR figure size"""
 
     figsize = _from_base(
-        width_inches=433.62 / _INCHES_PER_POINT,
+        width_pt=433.62,
         nrows=nrows,
+        ncols=ncols,
         height_per_width=_GOLDEN_RATIO / 2.0,
     )
     return {
@@ -77,11 +86,12 @@ def jmlr2001(*, nrows=1, constrained_layout=True, tight_layout=False):
     }
 
 
-def neurips2021(*, nrows=1, constrained_layout=True, tight_layout=False):
+def neurips2021(*, nrows=1, ncols=1, constrained_layout=True, tight_layout=False):
 
     figsize = _from_base(
-        width_inches=397.48499 / _INCHES_PER_POINT,
+        width_pt=397.48499,
         nrows=nrows,
+        ncols=ncols,
         height_per_width=_GOLDEN_RATIO / 2.0,
     )
     return {
@@ -91,8 +101,9 @@ def neurips2021(*, nrows=1, constrained_layout=True, tight_layout=False):
     }
 
 
-def _from_base(width_inches, nrows, height_per_width):
-    height_inches = height_per_width * width_inches * nrows
+def _from_base(*, width_pt, nrows, height_per_width, ncols):
+    width_inches = width_pt / _INCHES_PER_POINT
+    height_inches = height_per_width * width_inches * nrows / ncols
     return width_inches, height_inches
 
 
