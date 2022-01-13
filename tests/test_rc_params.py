@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import pytest_cases
 
 CASE_MODULES = (
-    ".rc_params_cases.fonts",
-    ".rc_params_cases.axes",
-    ".rc_params_cases.bundles",
-    ".rc_params_cases.cycler",
-    ".rc_params_cases.figsizes",
-    ".rc_params_cases.fontsizes",
-    ".rc_params_cases.markers",
+    ".test_rc_params_cases.case_fonts",
+    ".test_rc_params_cases.case_axes",
+    ".test_rc_params_cases.case_bundles",
+    ".test_rc_params_cases.case_cycler",
+    ".test_rc_params_cases.case_figsizes",
+    ".test_rc_params_cases.case_fontsizes",
+    ".test_rc_params_cases.case_markers",
 )
 
 
