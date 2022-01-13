@@ -137,13 +137,16 @@ def _from_base(*, width_pt, nrows, height_to_width_ratio, ncols):
 
 
 def beamer_169(
-    *, rel_width=1.0, rel_height=0.8, constrained_layout=True, tight_layout=False
+    *, rel_width=0.9, rel_height=0.6, constrained_layout=True, tight_layout=False
 ):
     """Beamer figure size for `aspectratio=169`."""
-    width = 398.3386 / _INCHES_PER_POINT * rel_width
-    height = 241.56738 / _INCHES_PER_POINT * rel_height
+    textwidth_169_pt = 398.3386  # via '\showthe\textwidth' in latex
+    textwidth_169_in = textwidth_169_pt / _INCHES_PER_POINT
+    textheight_169_in = textwidth_169_in / 16.0 * 9.0
+
+    figsize = (textwidth_169_in * rel_width, textheight_169_in * rel_height)
     return {
-        "figure.figsize": (width, height),
+        "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
     }
