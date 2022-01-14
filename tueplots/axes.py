@@ -39,7 +39,7 @@ def lines(
     }
 
 
-def grid(*, grid_alpha=0.15, grid_linestyle="solid"):
+def grid(*, grid_alpha=0.2, grid_linestyle="solid"):
     return {
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)

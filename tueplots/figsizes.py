@@ -121,7 +121,7 @@ def cvpr2022(
 def jmlr2001(
     *,
     nrows=1,
-    ncols=1,
+    ncols=2,
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
@@ -144,7 +144,7 @@ def jmlr2001(
 def neurips2021(
     *,
     nrows=1,
-    ncols=1,
+    ncols=2,
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
