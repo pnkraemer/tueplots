@@ -7,36 +7,51 @@ _INCHES_PER_POINT = 1.0 * 72.27
 # Double-column formats
 
 
-def icml2022(**kwargs):
-    return _icml2022_and_aistats2022(**kwargs)
+def icml2022_half(**kwargs):
+    return _icml2022_and_aistats2022_half(**kwargs)
 
 
-def aistats2022(**kwargs):
-    return _icml2022_and_aistats2022(**kwargs)
+def icml2022_full(**kwargs):
+    return _icml2022_and_aistats2022_full(**kwargs)
 
 
-def _icml2022_and_aistats2022(
+def aistats2022_half(**kwargs):
+    return _icml2022_and_aistats2022_half(**kwargs)
+
+
+def aistats2022_full(**kwargs):
+    return _icml2022_and_aistats2022_full(**kwargs)
+
+
+def _icml2022_and_aistats2022_half(
     *,
-    column="full",
     nrows=1,
     ncols=1,
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
-    if column == "half":
-        figsize = _from_base_in(
-            width_in=3.25,
-            nrows=nrows,
-            ncols=ncols,
-            height_to_width_ratio=height_to_width_ratio,
-        )
-        return {
-            "figure.figsize": figsize,
-            "figure.constrained_layout.use": constrained_layout,
-            "figure.autolayout": tight_layout,
-        }
+    figsize = _from_base_in(
+        width_in=3.25,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio,
+    )
+    return {
+        "figure.figsize": figsize,
+        "figure.constrained_layout.use": constrained_layout,
+        "figure.autolayout": tight_layout,
+    }
 
+
+def _icml2022_and_aistats2022_full(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
     figsize = _from_base_in(
         width_in=6.75,
         nrows=nrows,

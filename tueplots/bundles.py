@@ -5,21 +5,30 @@ from tueplots.constants.color import palettes, rgb
 
 
 def icml2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
-    size = figsizes.icml2022(column=column, nrows=nrows, ncols=ncols)
+    if column == "half":
+        size = figsizes.icml2022_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.icml2022_full(nrows=nrows, ncols=ncols)
     font_config = fonts.icml2022(family=family)
     fontsize_config = fontsizes.icml2022()
     return {**font_config, **size, **fontsize_config}
 
 
 def icml2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
-    size = figsizes.icml2022(column=column, nrows=nrows, ncols=ncols)
+    if column == "half":
+        size = figsizes.icml2022_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.icml2022_full(nrows=nrows, ncols=ncols)
     font_config = fonts.icml2022_tex(family=family)
     fontsize_config = fontsizes.icml2022()
     return {**font_config, **size, **fontsize_config}
 
 
 def aistats2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
-    size = figsizes.aistats2022(column=column, nrows=nrows, ncols=ncols)
+    if column == "half":
+        size = figsizes.aistats2022_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.aistats2022_full(nrows=nrows, ncols=ncols)
     font_config = fonts.aistats2022_tex(family=family)
     fontsize_config = fontsizes.aistats2022()
     return {**font_config, **size, **fontsize_config}

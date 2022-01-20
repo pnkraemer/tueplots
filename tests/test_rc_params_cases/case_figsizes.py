@@ -4,14 +4,20 @@
 from tueplots import figsizes
 
 
-def case_figsizes_icml2022():
-    return figsizes.icml2022(column="full", nrows=2, ncols=3, height_to_width_ratio=1.0)
+def case_figsizes_icml2022_full():
+    return figsizes.icml2022_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
-def case_figsizes_aistats2022():
-    return figsizes.aistats2022(
-        column="full", nrows=2, ncols=3, height_to_width_ratio=1.0
-    )
+def case_figsizes_icml2022_half():
+    return figsizes.icml2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aistats2022_full():
+    return figsizes.aistats2022_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aistats2022_half():
+    return figsizes.aistats2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_cvpr2022():
