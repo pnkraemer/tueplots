@@ -17,7 +17,7 @@ def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="sans-serif
     return {**font_config, **size, **fontsize_config}
 
 
-def aistats2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     if column == "half":
         size = figsizes.aistats2022_half(nrows=nrows, ncols=ncols)
     elif column == "full":
@@ -27,7 +27,7 @@ def aistats2022_tex(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def jmlr2001_tex(*, nrows=1, ncols=1, family="sans-serif"):
+def jmlr2001(*, nrows=1, ncols=1, family="sans-serif"):
     size = figsizes.jmlr2001(nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
     fontsize_config = fontsizes.jmlr2001()

@@ -14,12 +14,12 @@ def case_bundles_icml2022(column, usetex):
 
 
 def case_bundles_jmlr2001_tex():
-    return bundles.jmlr2001_tex(nrows=2, ncols=2, family="serif")
+    return bundles.jmlr2001(nrows=2, ncols=2, family="serif")
 
 
 @pytest_cases.parametrize(column=["full", "half"])
 def case_bundles_aistats2022(column):
-    return bundles.aistats2022_tex(column=column, nrows=2, ncols=2, family="serif")
+    return bundles.aistats2022(column=column, nrows=2, ncols=2, family="serif")
 
 
 @pytest_cases.parametrize(usetex=[True, False])
