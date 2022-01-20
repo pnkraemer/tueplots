@@ -68,6 +68,7 @@ pn_blue = np.array([41, 68, 165]) / 255.0
 
 # ProbNum-matching secondary colors
 # (made up slightly ad-hoc, please criticise!)
+
 pn_orange = np.array([255, 153, 51]) / 255.0
 """Secondary color of ProbNum: probnum.org. Orange."""
 

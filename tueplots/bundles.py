@@ -49,7 +49,7 @@ def neurips2021(*, usetex=True, nrows=1, ncols=1, family="sans-serif"):
 
 
 def beamer_moml(*, rel_width=1.0, rel_height=0.8):
-    """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen. """
+    """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
@@ -69,7 +69,7 @@ def beamer_moml(*, rel_width=1.0, rel_height=0.8):
 
 
 def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
-    """Dark version of :func:`beamer_moml`. """
+    """Dark version of :func:`beamer_moml`."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml_dark_bg()
     axes_config_line = axes.lines()
