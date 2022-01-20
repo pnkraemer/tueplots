@@ -13,6 +13,15 @@ Welcome to tueplots's documentation!
    tueplots
 
 
+.. toctree::
+   :maxdepth: 4
+   :caption: Example stuff:
+
+   examples
+
+
+
+
 Indices and tables
 ==================
 
