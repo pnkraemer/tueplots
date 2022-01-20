@@ -1,5 +1,5 @@
-tueplots package
-================
+API: tueplots package
+=====================
 
 .. automodule:: tueplots
    :members:
