@@ -1,5 +1,5 @@
 .. tueplots documentation master file, created by
-   sphinx-quickstart on Thu Jan 20 14:49:19 2022.
+   sphinx-quickstart on Thu Jan 20 15:36:42 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -7,11 +7,10 @@ Welcome to tueplots's documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
+   :caption: Contents:
 
-   api/fonts
-   api/figsizes
-   api/tueplots
+   tueplots
 
 
 Indices and tables
