@@ -47,6 +47,14 @@ line_length = "88"
 
 
 # Pylint configuration
+
+[tool.pylint.master]
+load-plugins = [
+    "pylint.extensions.docparams",
+    "pylint.extensions.docstyle",
+]
+
+
 [tool.pylint.messages_control]
 disable = [
     # Exceptions suggested by Black:
@@ -55,7 +63,6 @@ disable = [
     "bad-whitespace",
     # Specific ignores
     "invalid-name",  # we name things the way we want.
-    "missing-function-docstring",  # Most functions are so small, there is no need for a docstring.
     "line-too-long",  # black takes care of linebreaks itself. Long docs dont really matter.
     "import-error",  # caught by the tests, not by pylint.
 ]
