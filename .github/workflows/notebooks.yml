@@ -23,9 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          sudo apt-get update
-          pip install -r examples/requirements.txt
-          pip install .
+          pip install .[examples]
       - name: Execute all notebooks with nbconvert
         run: |
           for file in $(find -wholename "./examples/*.ipynb" -not -path "**/.ipynb_checkpoints/*")
