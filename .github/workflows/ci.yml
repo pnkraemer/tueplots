@@ -60,4 +60,6 @@ jobs:
     - name: Build the HTML docs
       run: |
         pip install tox
+        sudo apt-get install pandoc
+        sudo apt-get install graphviz
         tox -e docs
