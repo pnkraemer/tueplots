@@ -4,11 +4,7 @@
 from tueplots import axes
 
 
-def case_axes_lines_default():
-    return axes.lines()
-
-
-def case_axes_lines_custom():
+def case_axes_lines():
     return axes.lines(
         base_width=0.5,
         line_base_ratio=2.0,
@@ -21,43 +17,23 @@ def case_axes_lines_custom():
     )
 
 
-def case_axes_color_default():
-    return axes.color()
-
-
-def case_axes_color_custom():
+def case_axes_color():
     return axes.color(face="red", base="red")
 
 
-def case_axes_legend_default():
-    return axes.legend()
-
-
-def case_axes_legend_custom():
+def case_axes_legend():
     return axes.legend(shadow=True, frameon=False, fancybox=True)
 
 
-def case_axes_spines_default():
-    return axes.spines()
-
-
-def case_axes_spines_custom():
+def case_axes_spines():
     return axes.spines(right=False, left=False, top=False, bottom=False)
 
 
-def case_axes_tick_direction_default():
-    return axes.tick_direction()
-
-
-def case_axes_tick_direction_custom():
+def case_axes_tick_direction():
     return axes.tick_direction(x="in", y="out")
 
 
-def case_axes_grid_default():
-    return axes.grid()
-
-
-def case_axes_grid_custom():
+def case_axes_grid():
     return axes.grid(
         grid_alpha=0.25,
         grid_linestyle="dashed",
