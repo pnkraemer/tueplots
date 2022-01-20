@@ -26,7 +26,7 @@ jobs:
           pip install .[examples]
       - name: Execute all notebooks with nbconvert
         run: |
-          for file in $(find -wholename "./examples/*.ipynb" -not -path "**/.ipynb_checkpoints/*")
+          for file in $(find -wholename "./docs/examples/*.ipynb" -not -path "**/.ipynb_checkpoints/*")
           do
               jupyter nbconvert --to notebook --execute --ExecutePreprocessor.kernel_name=python3 $file
           done

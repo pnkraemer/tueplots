@@ -11,7 +11,6 @@ Install via pip:
 ```
 pip install tueplots
 ```
-
 or get the latest version from source:
 ```
 pip install git+https://github.com/pnkraemer/tueplots.git
@@ -28,9 +27,9 @@ For example, consider the style tailored to the ICML2022 template.
 (Left: default matplotlib, middle: one line of tueplots-code, right: two lines of tueplots-code)
 
 <p align="center">
-<img src="_img/before.png" width="200"/>
-<img src="_img/after1.png" width="200"/>
-<img src="_img/after2.png" width="200"/>
+<img src="./_img/before.png" width="200"/>
+<img src="./_img/after1.png" width="200"/>
+<img src="./_img/after2.png" width="200"/>
 </p>
 
 
