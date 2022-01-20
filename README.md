@@ -241,13 +241,18 @@ There are probably many other ways to do this.
 Once the font is installed, delete your matplotlib cache (usually: `rm ~/.cache/matplotlib -rf`) and restart your notebook (not just the kernel).
 See also https://stackoverflow.com/questions/42097053/matplotlib-cannot-find-basic-fonts/42841531.
 
-
+## Examples 
+To run the examples, additional dependencies need to be installed via 
+```commandline
+pip install .[examples]
+```
+For example: `jupyter`.
 
 ## Contribution
 
-To install `tueplots` with all development-related dependencies (tox, jupyter, etc.), run
+Install `tueplots` with all test-related dependencies via
 ```commandline
-pip install .[dev]
+pip install .[tests]
 ```
 
 Run the tests with pytest
