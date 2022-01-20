@@ -2,7 +2,10 @@
 
 
 def icml2022():
+    r"""Fontsize for ICML 2022.
 
+    Source: https://media.icml.cc/Conferences/ICML2022/Styles/example_paper.pdf
+    """
     # ICML text size is 10, but captions are in size 9.
     # Therefore, we use base 9 instead of 10.
     return _from_base(base=9)
