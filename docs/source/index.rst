@@ -8,12 +8,6 @@
 
 
 .. toctree::
-   :maxdepth: 4
-   :caption: API Documentation
-
-   api/tueplots
-
-.. toctree::
    :maxdepth: 1
    :caption: Example Notebooks
 
@@ -26,6 +20,11 @@
    example_notebooks/markers
 
 
+.. toctree::
+   :maxdepth: 4
+   :caption: API Documentation
+
+   api/tueplots
 
 
 .. toctree::
