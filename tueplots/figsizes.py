@@ -65,9 +65,8 @@ def _icml2022_and_aistats2022_full(
     }
 
 
-def cvpr2022(
+def cvpr2022_half(
     *,
-    column="full",
     nrows=1,
     ncols=1,
     constrained_layout=True,
@@ -75,18 +74,27 @@ def cvpr2022(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
 
-    if column == "half":
-        figsize = _from_base_pt(
-            width_pt=237.13594,
-            nrows=nrows,
-            ncols=ncols,
-            height_to_width_ratio=height_to_width_ratio,
-        )
-        return {
-            "figure.figsize": figsize,
-            "figure.constrained_layout.use": constrained_layout,
-            "figure.autolayout": tight_layout,
-        }
+    figsize = _from_base_pt(
+        width_pt=237.13594,
+        nrows=nrows,
+        ncols=ncols,
+        height_to_width_ratio=height_to_width_ratio,
+    )
+    return {
+        "figure.figsize": figsize,
+        "figure.constrained_layout.use": constrained_layout,
+        "figure.autolayout": tight_layout,
+    }
+
+
+def cvpr2022_full(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
 
     figsize = _from_base_pt(
         width_pt=496.85625,
