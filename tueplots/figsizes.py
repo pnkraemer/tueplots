@@ -16,6 +16,7 @@ def aistats2022(**kwargs):
 
 
 def _icml2022_and_aistats2022(
+    *,
     column="full",
     nrows=1,
     ncols=1,
