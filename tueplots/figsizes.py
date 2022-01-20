@@ -8,18 +8,22 @@ _INCHES_PER_POINT = 1.0 * 72.27
 
 
 def icml2022_half(**kwargs):
+    """Double-column (half-width) figures for ICML 2022."""
     return _icml2022_and_aistats2022_half(**kwargs)
 
 
 def icml2022_full(**kwargs):
+    """Single-column (full-width) figures for ICML 2022."""
     return _icml2022_and_aistats2022_full(**kwargs)
 
 
 def aistats2022_half(**kwargs):
+    """Double-column (half-width) figures for AISTATS 2022."""
     return _icml2022_and_aistats2022_half(**kwargs)
 
 
 def aistats2022_full(**kwargs):
+    """Single-column (full-width) figures for AISTATS 2022."""
     return _icml2022_and_aistats2022_full(**kwargs)
 
 
@@ -73,6 +77,7 @@ def cvpr2022_half(
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
+    """Double-column (half-width) figures for CVPR 2022."""
 
     figsize = _from_base_pt(
         width_pt=237.13594,
@@ -95,6 +100,7 @@ def cvpr2022_full(
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
+    """Single-column (full-width) figures for CVPR 2022."""
 
     figsize = _from_base_pt(
         width_pt=496.85625,
@@ -148,6 +154,7 @@ def neurips2021(
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
+    """Neurips 2021 figure size."""
 
     figsize = _from_base_pt(
         width_pt=397.48499,

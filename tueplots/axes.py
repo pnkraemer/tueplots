@@ -12,6 +12,8 @@ def lines(
     tick_minor_size_min=2.0,
     axisbelow=True,
 ):
+    """Adjust linewidth(s) according to a base width."""
+
     tick_major_width = tick_major_base_ratio * base_width
     tick_minor_width = tick_minor_base_ratio * base_width
     tick_major_size = max(tick_major_size_min, tick_size_width_ratio * tick_major_width)
@@ -40,6 +42,7 @@ def lines(
 
 
 def grid(*, grid_alpha=0.2, grid_linestyle="solid"):
+    """Adjust the grid-style."""
     return {
         # Update the linestyle of the grid
         # (it shares a color with the frame, and needs to be distinguishable)
@@ -49,6 +52,8 @@ def grid(*, grid_alpha=0.2, grid_linestyle="solid"):
 
 
 def legend(*, shadow=False, frameon=True, fancybox=False):
+    """Adjust the legend-style."""
+
     return {
         "legend.shadow": shadow,
         "legend.frameon": frameon,
@@ -57,6 +62,8 @@ def legend(*, shadow=False, frameon=True, fancybox=False):
 
 
 def color(*, base="black", face="none"):
+    """Adjust the axes' color."""
+
     return {
         "text.color": base,
         "axes.edgecolor": base,
@@ -69,6 +76,7 @@ def color(*, base="black", face="none"):
 
 
 def spines(*, left=True, right=True, top=True, bottom=True):
+    """Adjust the visibility of the axes' spines."""
     return {
         "axes.spines.left": left,
         "axes.spines.right": right,
@@ -78,6 +86,7 @@ def spines(*, left=True, right=True, top=True, bottom=True):
 
 
 def tick_direction(*, x="inout", y="inout"):
+    """Adjust the tick direction."""
     return {
         "xtick.direction": x,
         "ytick.direction": y,
