@@ -106,16 +106,16 @@ def case_rgb_pn_red():
 
 
 def case_rgb_mpg_green():
-    return rgb.mpg_green
+    return rgb.mps_green
 
 
 def case_rgb_mpg_lightgreen():
-    return rgb.mpg_lightgreen
+    return rgb.mps_lightgreen
 
 
 def case_rgb_mpg_gray():
-    return rgb.mpg_gray
+    return rgb.mps_gray
 
 
 def case_rgb_mpg_lightgray():
-    return rgb.mpg_lightgray
+    return rgb.mps_lightgray
