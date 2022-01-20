@@ -250,21 +250,22 @@ For example: `jupyter`.
 
 ## Contribution
 
-Install `tueplots` with all test-related dependencies via
+Install `tueplots` with all ci-related dependencies via
 ```
-pip install .[tests]
+pip install .[ci]
 ```
-
-Run the tests with pytest
+Run all checks via
 ```
-pytest
+tox
 ```
-
+or only run the tests via
+```
+tox -e pytest
+```
 or use tox (which also runs the linter, and the python-code-snippets in this readme).
 ```
 tox
 ```
-
 The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
 To automatically satisfy the former, there is a pre-commit that can be used (do this once):
 ```
