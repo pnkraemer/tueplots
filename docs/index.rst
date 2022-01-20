@@ -12,7 +12,7 @@ Welcome to tueplots's documentation!
 
    tueplots
 
-.. nbgallery::
+.. toctree::
    :maxdepth: 1
    :caption: Examples
 

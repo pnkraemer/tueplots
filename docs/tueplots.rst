@@ -6,16 +6,10 @@ API: tueplots package
    :undoc-members:
    :show-inheritance:
 
-Subpackages
------------
-
 .. toctree::
    :maxdepth: 4
 
    tueplots.constants
-
-Submodules
-----------
 
 .. toctree::
    :maxdepth: 4

@@ -6,9 +6,6 @@ tueplots.constants.color package
    :undoc-members:
    :show-inheritance:
 
-Submodules
-----------
-
 .. toctree::
    :maxdepth: 4
 
