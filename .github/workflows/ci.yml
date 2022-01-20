@@ -61,5 +61,4 @@ jobs:
       run: |
         pip install tox
         sudo apt-get install pandoc
-        sudo apt-get install graphviz
         tox -e docs

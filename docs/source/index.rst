@@ -4,26 +4,27 @@
    contain the root `toctree` directive.
 
 
-.. mdinclude:: ../README.md
+.. mdinclude:: ../../README.md
 
 
 .. toctree::
    :maxdepth: 4
    :caption: API Documentation
 
-   tueplots
+   api/tueplots
 
 .. toctree::
    :maxdepth: 1
-   :caption: Examples
+   :caption: Example Notebooks
 
-   examples/axes
-   examples/bundles
-   examples/color-cycles
-   examples/figsizes
-   examples/fonts
-   examples/fontsizes
-   examples/markers
+   example_notebooks/axes
+   example_notebooks/bundles
+   example_notebooks/color-cycles
+   example_notebooks/figsizes
+   example_notebooks/fonts
+   example_notebooks/fontsizes
+   example_notebooks/markers
+
 
 
 

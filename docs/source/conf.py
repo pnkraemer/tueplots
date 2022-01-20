@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = "tueplots"
-copyright = "2022, Author"
-author = "Author"
+copyright = "2022, Nicholas Krämer"
+author = "Nicholas Krämer"
 
 
 # -- General configuration ---------------------------------------------------
