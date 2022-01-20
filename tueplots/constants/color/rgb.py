@@ -2,6 +2,9 @@
 
 import numpy as np
 
+# Uni Tuebingen corporate colors: primary
+
+
 tue_red = np.array([141.0, 45.0, 57.0]) / 255.0
 """Primary corporate color of the University of Tübingen. Red."""
 
@@ -17,7 +20,7 @@ tue_gold = np.array([174.0, 159.0, 109.0]) / 255.0
 tue_lightgold = np.array([239.0, 236.0, 226.0]) / 255.0
 """Primary corporate color of the University of Tübingen. Light gold."""
 
-# Uni tuebingen corporate colors
+# Uni Tuebingen corporate colors: secondary
 
 tue_darkblue = np.array([65.0, 90.0, 140.0]) / 255.0
 """Secondary corporate color of the University of Tübingen. Dark blue."""
