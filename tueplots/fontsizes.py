@@ -27,7 +27,7 @@ def beamer_moml():
     return _from_base(base=10)
 
 
-def _from_base(*, base=10):
+def _from_base(*, base):
     return {
         "font.size": base - 1,
         "axes.labelsize": base - 1,
