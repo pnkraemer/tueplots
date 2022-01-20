@@ -8,16 +8,21 @@ Welcome to tueplots's documentation!
 
 .. toctree::
    :maxdepth: 4
-   :caption: API Documentation:
+   :caption: API Documentation
 
    tueplots
 
+.. nbgallery::
+   :maxdepth: 1
+   :caption: Examples
 
-.. toctree::
-   :maxdepth: 4
-   :caption: Example stuff:
-
-   examples
+   examples/axes
+   examples/bundles
+   examples/color-cycles
+   examples/figsizes
+   examples/fonts
+   examples/fontsizes
+   examples/markers
 
 
 
