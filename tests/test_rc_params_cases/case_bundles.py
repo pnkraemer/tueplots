@@ -1,30 +1,30 @@
 """Test cases for bundles."""
 
+import pytest_cases
+
 from tueplots import bundles
 
 
-def case_bundles_icml2022():
-    return bundles.icml2022(nrows=2, ncols=2, family="serif", column="full")
-
-
-def case_bundles_icml2022_tex():
-    return bundles.icml2022_tex(nrows=2, ncols=2, family="serif", column="full")
+@pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_icml2022(column, usetex):
+    return bundles.icml2022(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
 
 
 def case_bundles_jmlr2001_tex():
     return bundles.jmlr2001_tex(nrows=2, ncols=2, family="serif")
 
 
-def case_bundles_aistats2022_tex():
-    return bundles.aistats2022_tex(column="full", nrows=2, ncols=2, family="serif")
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_aistats2022(column):
+    return bundles.aistats2022_tex(column=column, nrows=2, ncols=2, family="serif")
 
 
-def case_bundles_neurips2021():
-    return bundles.neurips2021(nrows=2, ncols=2, family="serif")
-
-
-def case_bundles_neurips2021_tex():
-    return bundles.neurips2021_tex(nrows=2, ncols=2, family="serif")
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_neurips2021(usetex):
+    return bundles.neurips2021(usetex=usetex, nrows=2, ncols=2, family="serif")
 
 
 def case_bundles_beamer_moml_tex():
