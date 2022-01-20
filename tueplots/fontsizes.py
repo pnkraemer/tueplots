@@ -2,7 +2,13 @@
 
 
 def icml2022():
-    return _from_base(base=10)
+    r"""Fontsize for ICML 2022.
+
+    Source: https://media.icml.cc/Conferences/ICML2022/Styles/example_paper.pdf
+    """
+    # ICML text size is 10, but captions are in size 9.
+    # Therefore, we use base 9 instead of 10.
+    return _from_base(base=9)
 
 
 def neurips2021():
@@ -21,7 +27,7 @@ def beamer_moml():
     return _from_base(base=10)
 
 
-def _from_base(*, base=10):
+def _from_base(*, base):
     return {
         "font.size": base - 1,
         "axes.labelsize": base - 1,
