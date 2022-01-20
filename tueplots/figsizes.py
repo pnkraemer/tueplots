@@ -18,7 +18,7 @@ def icml2022(
 ):
 
     if column == "half":
-        figsize = _from_base(
+        figsize = _from_base_pt(
             width_pt=234.8775,
             nrows=nrows,
             ncols=ncols,
@@ -30,7 +30,7 @@ def icml2022(
             "figure.autolayout": tight_layout,
         }
 
-    figsize = _from_base(
+    figsize = _from_base_pt(
         width_pt=487.8225,
         nrows=nrows,
         ncols=ncols,
@@ -54,7 +54,7 @@ def aistats2022(
 ):
 
     if column == "half":
-        figsize = _from_base(
+        figsize = _from_base_pt(
             width_pt=3.25 * _INCHES_PER_POINT,
             nrows=nrows,
             ncols=ncols,
@@ -66,7 +66,7 @@ def aistats2022(
             "figure.autolayout": tight_layout,
         }
 
-    figsize = _from_base(
+    figsize = _from_base_pt(
         width_pt=6.75 * _INCHES_PER_POINT,
         nrows=nrows,
         ncols=ncols,
@@ -90,7 +90,7 @@ def cvpr2022(
 ):
 
     if column == "half":
-        figsize = _from_base(
+        figsize = _from_base_pt(
             width_pt=237.13594,
             nrows=nrows,
             ncols=ncols,
@@ -102,7 +102,7 @@ def cvpr2022(
             "figure.autolayout": tight_layout,
         }
 
-    figsize = _from_base(
+    figsize = _from_base_pt(
         width_pt=496.85625,
         nrows=nrows,
         ncols=ncols,
@@ -128,7 +128,7 @@ def jmlr2001(
 ):
     """JMLR figure size"""
 
-    figsize = _from_base(
+    figsize = _from_base_pt(
         width_pt=433.62,
         nrows=nrows,
         ncols=ncols,
@@ -150,7 +150,7 @@ def neurips2021(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
 
-    figsize = _from_base(
+    figsize = _from_base_pt(
         width_pt=397.48499,
         nrows=nrows,
         ncols=ncols,
@@ -163,10 +163,14 @@ def neurips2021(
     }
 
 
-def _from_base(*, width_pt, nrows, height_to_width_ratio, ncols):
-    width_inches = width_pt / _INCHES_PER_POINT
-    height_inches = height_to_width_ratio * width_inches * nrows / ncols
-    return width_inches, height_inches
+def _from_base_pt(*, width_pt, **kwargs):
+    width_in = width_pt / _INCHES_PER_POINT
+    return _from_base_in(width_in=width_in, **kwargs)
+
+
+def _from_base_in(*, width_in, nrows, height_to_width_ratio, ncols):
+    height_in = height_to_width_ratio * width_in * nrows / ncols
+    return width_in, height_in
 
 
 # Other formats
