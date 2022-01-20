@@ -47,7 +47,7 @@ def _icml2022_and_aistats2022_half(
 def _icml2022_and_aistats2022_full(
     *,
     nrows=1,
-    ncols=1,
+    ncols=2,
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
@@ -56,7 +56,7 @@ def _icml2022_and_aistats2022_full(
         width_in=6.75,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio / 2.0,
+        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -90,7 +90,7 @@ def cvpr2022_half(
 def cvpr2022_full(
     *,
     nrows=1,
-    ncols=1,
+    ncols=2,
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
@@ -100,7 +100,7 @@ def cvpr2022_full(
         width_pt=496.85625,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio / 2.0,
+        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
