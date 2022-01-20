@@ -72,7 +72,7 @@ within one module, the functions have a unified interface (wherever possible)
 (5.499999861629998, 5.098780278910587)
 >>> 
 >>> # The full output:
->>> figsizes.icml2022(nrows=4)
+>>> figsizes.icml2022_full(nrows=4)
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (6.75, 8.343458848123582)}
@@ -123,6 +123,21 @@ The signatures are interchangeable.
  'figure.constrained_layout.use': True,
  'figure.figsize': (3.25, 2.0086104634371584),
  'font.family': 'sans-serif',
+ 'font.size': 8,
+ 'legend.fontsize': 6,
+ 'text.latex.preamble': '\\usepackage{times} '
+                        '\\renewcommand{\\familydefault}{\\sfdefault} '
+                        '\\usepackage{sansmath} \\sansmath',
+ 'text.usetex': True,
+ 'xtick.labelsize': 6,
+ 'ytick.labelsize': 6}
+>>> bundles.icml2022(family="sans-serif", usetex=False, column="full", nrows=2)
+{'axes.labelsize': 8,
+ 'axes.titlesize': 8,
+ 'figure.autolayout': False,
+ 'figure.constrained_layout.use': True,
+ 'figure.figsize': (6.75, 8.343458848123582),
+ 'font.family': 'sans-serif',
  'font.serif': ['Times'],
  'font.size': 8,
  'legend.fontsize': 6,
@@ -133,35 +148,20 @@ The signatures are interchangeable.
  'text.usetex': False,
  'xtick.labelsize': 6,
  'ytick.labelsize': 6}
->>> bundles.icml2022_tex(family="sans-serif", column="full", nrows=2)
-{'axes.labelsize': 8,
- 'axes.titlesize': 8,
- 'figure.autolayout': False,
- 'figure.constrained_layout.use': True,
- 'figure.figsize': (6.75, 4.171729424061791),
- 'font.family': 'sans-serif',
- 'font.size': 8,
- 'legend.fontsize': 6,
- 'text.latex.preamble': '\\usepackage{times} '
-                        '\\renewcommand{\\familydefault}{\\sfdefault} '
-                        '\\usepackage{sansmath} \\sansmath',
- 'text.usetex': True,
- 'xtick.labelsize': 6,
- 'ytick.labelsize': 6}
 >>>
 >>> # Plug any of those into either the rcParams or into an rc_context:
 >>> plt.rcParams.update(bundles.icml2022())
->>> with plt.rc_context(bundles.icml2022_tex()):
+>>> with plt.rc_context(bundles.icml2022()):
 ...     pass
 ```
 If you don't want a pre-packaged solution, at least fix your figure- and font-sizes as follows.
 ```python
 >>> from tueplots import figsizes, fontsizes, fonts
->>> figsizes.icml2022()
+>>> figsizes.icml2022_full()
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (6.75, 2.0858647120308955)}
->>> figsizes.icml2022(column="half", nrows=2, constrained_layout=True, tight_layout=False)
+>>> figsizes.icml2022_half(nrows=2, constrained_layout=True, tight_layout=False)
 {'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (3.25, 4.017220926874317)}
