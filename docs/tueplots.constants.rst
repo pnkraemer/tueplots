@@ -9,9 +9,5 @@ tueplots.constants package
 .. toctree::
    :maxdepth: 4
 
-   tueplots.constants.color
-
-.. toctree::
-   :maxdepth: 4
-
    tueplots.constants.markers
+   tueplots.constants.color

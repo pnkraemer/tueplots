@@ -9,11 +9,6 @@ API: tueplots package
 .. toctree::
    :maxdepth: 4
 
-   tueplots.constants
-
-.. toctree::
-   :maxdepth: 4
-
    tueplots.axes
    tueplots.bundles
    tueplots.cycler
@@ -21,3 +16,4 @@ API: tueplots package
    tueplots.fonts
    tueplots.fontsizes
    tueplots.markers
+   tueplots.constants

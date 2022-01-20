@@ -8,12 +8,12 @@ Scientific plotting made easy, purely based on matplotlib.
 
 
 Install via pip:
-```commandline
+```
 pip install tueplots
 ```
 
 or get the latest version from source:
-```commandline
+```
 pip install git+https://github.com/pnkraemer/tueplots.git
 ```
 
@@ -28,15 +28,15 @@ For example, consider the style tailored to the ICML2022 template.
 (Left: default matplotlib, middle: one line of tueplots-code, right: two lines of tueplots-code)
 
 <p align="center">
-<img src="./_img/before.png" width="200"/>
-<img src="./_img/after1.png" width="200"/>
-<img src="./_img/after2.png" width="200"/>
+<img src="_img/before.png" width="200"/>
+<img src="_img/after1.png" width="200"/>
+<img src="_img/after2.png" width="200"/>
 </p>
 
 
 ## Principles
 
-_**`tueplots` has no internal state:**_
+**`tueplots` has no internal state:**
 It only passes around dictionaries, whose key-value pairs match those that matplotlib uses.
 Instead of updating global state, it makes it easy for you to do it yourself! 
 If you want to globally change settings, pass them to `matplotlib.pyplot.rcParams.update()`.
@@ -45,7 +45,7 @@ If you only need them for specific contexts, pass them to `matpltlib.pyplot.rc_c
 Usage examples are given below.
 
 
-**_`tueplots` has no opinions:_**
+**`tueplots` has no opinions:**
 It does not tell you what your figures should like like in the end, but helps you to tailor your plots to your own needs.
 We like all the colors, frame-styles, markers, or linewidths.
 But we _do_ think that figure sizes should match the text-width in your publication, 
@@ -243,7 +243,7 @@ See also https://stackoverflow.com/questions/42097053/matplotlib-cannot-find-bas
 
 ## Examples 
 To run the examples, additional dependencies need to be installed via 
-```commandline
+```
 pip install .[examples]
 ```
 For example: `jupyter`.
@@ -251,23 +251,23 @@ For example: `jupyter`.
 ## Contribution
 
 Install `tueplots` with all test-related dependencies via
-```commandline
+```
 pip install .[tests]
 ```
 
 Run the tests with pytest
-```commandline
+```
 pytest
 ```
 
 or use tox (which also runs the linter, and the python-code-snippets in this readme).
-```commandline
+```
 tox
 ```
 
 The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
 To automatically satisfy the former, there is a pre-commit that can be used (do this once):
-```commandline
+```
 pip install pre-commit
 pre-commit install
 ```
