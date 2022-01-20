@@ -117,37 +117,37 @@ The signatures are interchangeable.
 ```python 
 >>> from tueplots import bundles
 >>> bundles.icml2022()
-{'axes.labelsize': 9,
- 'axes.titlesize': 9,
+{'axes.labelsize': 8,
+ 'axes.titlesize': 8,
  'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (3.25, 2.0086104634371584),
  'font.family': 'sans-serif',
  'font.serif': ['Times'],
- 'font.size': 9,
- 'legend.fontsize': 7,
+ 'font.size': 8,
+ 'legend.fontsize': 6,
  'mathtext.bf': 'Times:bold',
  'mathtext.fontset': 'stix',
  'mathtext.it': 'Times:italic',
  'mathtext.rm': 'Times',
  'text.usetex': False,
- 'xtick.labelsize': 7,
- 'ytick.labelsize': 7}
+ 'xtick.labelsize': 6,
+ 'ytick.labelsize': 6}
 >>> bundles.icml2022_tex(family="sans-serif", column="full", nrows=2)
-{'axes.labelsize': 9,
- 'axes.titlesize': 9,
+{'axes.labelsize': 8,
+ 'axes.titlesize': 8,
  'figure.autolayout': False,
  'figure.constrained_layout.use': True,
  'figure.figsize': (6.75, 4.171729424061791),
  'font.family': 'sans-serif',
- 'font.size': 9,
- 'legend.fontsize': 7,
+ 'font.size': 8,
+ 'legend.fontsize': 6,
  'text.latex.preamble': '\\usepackage{times} '
                         '\\renewcommand{\\familydefault}{\\sfdefault} '
                         '\\usepackage{sansmath} \\sansmath',
  'text.usetex': True,
- 'xtick.labelsize': 7,
- 'ytick.labelsize': 7}
+ 'xtick.labelsize': 6,
+ 'ytick.labelsize': 6}
 >>>
 >>> # Plug any of those into either the rcParams or into an rc_context:
 >>> plt.rcParams.update(bundles.icml2022())
@@ -166,12 +166,12 @@ If you don't want a pre-packaged solution, at least fix your figure- and font-si
  'figure.constrained_layout.use': True,
  'figure.figsize': (3.25, 4.017220926874317)}
 >>> fontsizes.icml2022()
-{'axes.labelsize': 9,
- 'axes.titlesize': 9,
- 'font.size': 9,
- 'legend.fontsize': 7,
- 'xtick.labelsize': 7,
- 'ytick.labelsize': 7}
+{'axes.labelsize': 8,
+ 'axes.titlesize': 8,
+ 'font.size': 8,
+ 'legend.fontsize': 6,
+ 'xtick.labelsize': 6,
+ 'ytick.labelsize': 6}
 >>> fonts.icml2022()
 {'font.family': 'serif',
  'font.serif': ['Times'],

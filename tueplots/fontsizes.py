@@ -2,7 +2,10 @@
 
 
 def icml2022():
-    return _from_base(base=10)
+
+    # ICML text size is 10, but captions are in size 9.
+    # Therefore, we use base 9 instead of 10.
+    return _from_base(base=9)
 
 
 def neurips2021():
