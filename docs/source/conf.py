@@ -12,14 +12,15 @@
 #
 import os
 import sys
+from datetime import datetime
 
 # Location of Sphinx files
-sys.path.insert(0, os.path.abspath("./../../"))
+sys.path.insert(0, os.path.abspath("./../"))
 
 # -- Project information -----------------------------------------------------
 
 project = "tueplots"
-copyright = "2022, Nicholas Krämer"
+copyright = f"{str(datetime.utcnow().year)}, Nicholas Krämer"
 author = "Nicholas Krämer"
 
 
