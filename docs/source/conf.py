@@ -15,7 +15,7 @@ import sys
 from datetime import datetime
 
 # Location of Sphinx files
-sys.path.insert(0, os.path.abspath("../tueplots"))
+sys.path.insert(0, os.path.abspath("../../tueplots"))
 
 # -- Project information -----------------------------------------------------
 
