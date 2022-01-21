@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="./docs/source/img/logo.png" width="500"/>
+<img src="./docs/source/img/logo.png" width="400"/>
 </p>
 
 # TUEplots: Extend matplotlib for scientific publications
@@ -53,7 +53,7 @@ Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en
 Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html).
 A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/quickstart/application_icml2022.html).
 If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/quickstart/troubleshooting.html) site.
-
+For more advanced tutorials, you may refer to the example notebooks.
 
 ## Related packages
 There are similar packages to `tueplots` (with different foci, respectively):
