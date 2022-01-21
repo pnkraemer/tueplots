@@ -55,6 +55,7 @@ and that the font-size in the plot should be readable, and similar to the rest o
 If you're getting ready to submit your paper to ICML 2022, plug either of the following into your preamble. 
 The signatures are interchangeable.
 ```python 
+>>> import matplotlib.pyplot as plt
 >>> from tueplots import bundles
 >>> bundles.icml2022()
 {'axes.labelsize': 8,
