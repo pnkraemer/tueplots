@@ -1,21 +1,17 @@
-# TUEplots
+
+<p align="center">
+<img src="./docs/source/img/logo.png" width="500"/>
+</p>
+
+# TUEplots: Extend matplotlib for scientific publications
+
 [![PyPi Version](https://img.shields.io/pypi/v/tueplots.svg?style=flat-square)](https://pypi.org/project/tueplots/)
 [![Docs](https://readthedocs.org/projects/pip/badge/?version=latest&style=flat-square)](https://github.com/pnkraemer/tueplots)
 [![GitHub stars](https://img.shields.io/github/stars/pnkraemer/tueplots.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/pnkraemer/tueplots)
 [![gh-actions](https://img.shields.io/github/workflow/status/pnkraemer/tueplots/ci?style=flat-square)](https://github.com/pnkraemer/tueplots/actions?query=workflow%3Aci)
 <a href="https://github.com/pnkraemer/tueplots/blob/master/LICENSE"><img src="https://img.shields.io/github/license/pnkraemer/tueplots?style=flat-square&color=2b9348" alt="License Badge"/></a>
 
-Scientific plotting made easy, purely based on matplotlib.
 
-
-Install via pip:
-```
-pip install tueplots
-```
-or get the latest version from source:
-```
-pip install git+https://github.com/pnkraemer/tueplots.git
-```
 
 ## Why?
 
@@ -51,65 +47,9 @@ We like all the colors, frame-styles, markers, or linewidths.
 But we _do_ think that figure sizes should match the text-width in your publication, 
 and that the font-size in the plot should be readable, and similar to the rest of the paper/presentation/....
 
+## Getting started 
 
-
-
-## Usage examples
-
-`tueplots` provides some recipes for scientific plotting. 
-For example, figure sizes can be tailored straightforwardly to some common journal page layouts:
-```python
->>> from tueplots import figsizes
->>> figsizes.jmlr2001()["figure.figsize"]
-(6.0, 1.8541019662496847)
-```
-within one module, the functions have a unified interface (wherever possible)
-```python
->>> figsizes.jmlr2001(nrows=2)["figure.figsize"]
-(6.0, 3.7082039324993694)
->>> 
->>> figsizes.neurips2021(nrows=3)["figure.figsize"]
-(5.499999861629998, 5.098780278910587)
->>> 
->>> # The full output:
->>> figsizes.icml2022_full(nrows=4)
-{'figure.autolayout': False,
- 'figure.constrained_layout.use': True,
- 'figure.figsize': (6.75, 8.343458848123582)}
-```
-
-There are also predefined color constants. For example, those based on the corporate design of the University of Tuebingen:
-```python
->>> from tueplots.constants.color import rgb 
->>> 
->>> rgb.tue_dark
-array([0.21568627, 0.25490196, 0.29019608])
->>>
->>> rgb.tue_gray
-array([0.68627451, 0.70196078, 0.71764706])
-```
-
-Most of the output types of functions in `tueplots` are dictionaries that are directly compatible with matplotlib's `rcParam` language.
-```python
->>> from tueplots import markers
->>> 
->>> markers.inverted()
-{'lines.markeredgecolor': 'auto',
- 'lines.markeredgewidth': 0.75,
- 'lines.markerfacecolor': 'white'}
-
-
->>> import matplotlib.pyplot as plt
-
->>> # Use them as context managers:
->>> with plt.rc_context(markers.inverted()):
-...     pass # do your plotting...
-
->>> # Or change your global configuration
->>> plt.rcParams.update(markers.inverted())
-```
-
-For more detailed tutorials, please have a look at the examples in the `examples/` directory.
+[**Installation**](https://tueplots.readthedocs.io/en/latest/quickstart/installation.html) | [**Usage examples**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html)
 
 ## ICML 2022
 If you're getting ready to submit your paper to ICML 2022, plug either of the following into your preamble. 

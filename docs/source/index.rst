@@ -7,6 +7,15 @@
 .. mdinclude:: ../../README.md
 
 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Quickstart
+
+   quickstart/installation
+   quickstart/usage_example
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Example Notebooks
