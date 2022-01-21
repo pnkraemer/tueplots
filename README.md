@@ -49,10 +49,10 @@ and that the font-size in the plot should be readable, and similar to the rest o
 
 ## Getting started 
 
-Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/quickstart/installation.html).
-Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html).
-A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/quickstart/application_icml2022.html).
-If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/quickstart/troubleshooting.html) site.
+Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/getting_started/installation.html).
+Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/getting_started/usage_example.html).
+A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/getting_started/application_icml2022.html).
+If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/getting_started/troubleshooting.html) site.
 For more advanced tutorials, you may refer to the example notebooks.
 
 ## Related packages
