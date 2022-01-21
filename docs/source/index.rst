@@ -14,6 +14,7 @@
 
    quickstart/installation
    quickstart/usage_example
+   quickstart/application_icml2022
 
 
 .. toctree::
