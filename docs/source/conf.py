@@ -15,7 +15,7 @@ import sys
 from datetime import datetime
 
 # Location of Sphinx files
-sys.path.insert(0, os.path.abspath("./../"))
+sys.path.insert(0, os.path.abspath("../tueplots"))
 
 # -- Project information -----------------------------------------------------
 
@@ -37,7 +37,6 @@ extensions = [
     "m2r2",
 ]
 
-# source_suffix = '.rst'
 source_suffix = [".rst", ".md"]
 
 # Add any paths that contain templates here, relative to this directory.
