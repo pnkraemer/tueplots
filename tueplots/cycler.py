@@ -1,4 +1,4 @@
-"""Color cycler."""
+"""Wrapper for matplotlib cycler."""
 
 from matplotlib import cycler as mpl_cycler
 

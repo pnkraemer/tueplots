@@ -1,4 +1,4 @@
-"""Context managers for plots."""
+"""Bundled configurations."""
 
 from tueplots import axes, cycler, figsizes, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
