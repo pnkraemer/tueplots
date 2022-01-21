@@ -5,6 +5,7 @@ from tueplots.constants.color import palettes, rgb
 
 
 def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="sans-serif"):
+    """ICML 2022 bundle."""
     if column == "half":
         size = figsizes.icml2022_half(nrows=nrows, ncols=ncols)
     elif column == "full":
@@ -18,6 +19,7 @@ def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="sans-serif
 
 
 def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+    """AISTATS 2022 bundle."""
     if column == "half":
         size = figsizes.aistats2022_half(nrows=nrows, ncols=ncols)
     elif column == "full":
@@ -28,6 +30,7 @@ def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
 
 
 def jmlr2001(*, nrows=1, ncols=1, family="sans-serif"):
+    """JMLR 2001 bundle."""
     size = figsizes.jmlr2001(nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
     fontsize_config = fontsizes.jmlr2001()
@@ -35,6 +38,7 @@ def jmlr2001(*, nrows=1, ncols=1, family="sans-serif"):
 
 
 def neurips2021(*, usetex=True, nrows=1, ncols=1, family="sans-serif"):
+    """Neurips 2021 bundle."""
     if usetex is True:
         font_config = fonts.neurips2021_tex(family=family)
     elif usetex is False:
@@ -45,6 +49,7 @@ def neurips2021(*, usetex=True, nrows=1, ncols=1, family="sans-serif"):
 
 
 def beamer_moml(*, rel_width=1.0, rel_height=0.8):
+    """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
@@ -64,6 +69,7 @@ def beamer_moml(*, rel_width=1.0, rel_height=0.8):
 
 
 def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
+    """Dark version of :func:`beamer_moml`."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml_dark_bg()
     axes_config_line = axes.lines()

@@ -13,6 +13,7 @@ tue_primary = np.array(
         rgb.tue_lightgold,
     ]
 )
+"""Primary corporate colors of the University of Tübingen."""
 
 tue_secondary = np.array(
     [
@@ -30,6 +31,7 @@ tue_secondary = np.array(
         rgb.tue_brown,
     ]
 )
+"""Secondary corporate colors of the University of Tübingen."""
 
 tue_plot = np.array(
     [
@@ -71,6 +73,7 @@ pn = np.array(
         rgb.pn_red,
     ]
 )
+"""Colors of ProbNum: probnum.org."""
 
 bright = np.array(
     [
@@ -83,10 +86,16 @@ bright = np.array(
         "BBBBBB",
     ]
 )
-"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
+"""Bright colors.
+
+From Paul Tot's website: https://personal.sron.nl/~pault/.
+"""
 
 high_contrast = np.array(["004488", "DDAA33", "BB5566"])
-"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
+"""High-contrast colors.
+
+From Paul Tot's website: https://personal.sron.nl/~pault/.
+"""
 
 muted = np.array(
     [
@@ -102,4 +111,7 @@ muted = np.array(
         "DDDDDD",
     ]
 )
-"""From Paul Tot's website: https://personal.sron.nl/~pault/."""
+"""Muted colors.
+
+From Paul Tot's website: https://personal.sron.nl/~pault/.
+"""

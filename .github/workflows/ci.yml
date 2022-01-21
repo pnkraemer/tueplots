@@ -50,3 +50,15 @@ jobs:
       run: |
         pip install tox
         tox -e byexample
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
+    - uses: actions/checkout@v2
+    - name: Build the HTML docs
+      run: |
+        pip install tox
+        sudo apt-get install pandoc
+        tox -e docs
