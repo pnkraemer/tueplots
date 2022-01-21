@@ -49,50 +49,10 @@ and that the font-size in the plot should be readable, and similar to the rest o
 
 ## Getting started 
 
-[**Installation**](https://tueplots.readthedocs.io/en/latest/quickstart/installation.html) | [**Usage examples**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html)
-
-## Troubleshooting
-
-#### My version of matplotlib cannot find font XYZ?!
-Some of the fonts that `tueplot` provides (e.g., `Times` or `Roboto`) needs to be installed on your machine before matplotlib can find it.
-This means that you need to find a `.ttf` file online (e.g., `Roboto` family is available at Google fonts: https://fonts.google.com/specimen/Roboto),
-download it, and install it. For Ubuntu, this means opening the file (with your font manager) and clicking `install`.
-There are probably many other ways to do this.
-Once the font is installed, delete your matplotlib cache (usually: `rm ~/.cache/matplotlib -rf`) and restart your notebook (not just the kernel).
-See also https://stackoverflow.com/questions/42097053/matplotlib-cannot-find-basic-fonts/42841531.
-
-## Examples 
-To run the examples, additional dependencies need to be installed via 
-```
-pip install .[examples]
-```
-For example: `jupyter`.
-
-## Contribution
-
-Install `tueplots` with all ci-related dependencies via
-```
-pip install .[ci]
-```
-Run all checks via
-```
-tox
-```
-or only run the tests via
-```
-tox -e pytest
-```
-or use tox (which also runs the linter, and the python-code-snippets in this readme).
-```
-tox
-```
-The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
-To automatically satisfy the former, there is a pre-commit that can be used (do this once):
-```
-pip install pre-commit
-pre-commit install
-```
-From then on, your code will be checked for isort and black compatibility automatically. 
+Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/quickstart/installation.html).
+Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html).
+A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/quickstart/application_icml2022.html).
+If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/quickstart/troubleshooting.html) site.
 
 
 ## Related packages
@@ -103,7 +63,8 @@ There are similar packages to `tueplots` (with different foci, respectively):
 * MatplotX: https://github.com/nschloe/matplotx
 * Themepy: https://github.com/petermckeeverPerform/themepy
 
-If you know of any others, please open an issue/PR. 
+The [**matplotlib third-party plots**](https://matplotlib.org/mpl-third-party/) contains a more comprehensive list.
+If you know of any others, please feel invited to open an issue/PR. 
 
 
 # Miscellanous

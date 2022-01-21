@@ -3,7 +3,8 @@
 If you're getting ready to submit your paper to ICML 2022, plug either of the following into your preamble.
 
 ## In a nutshell
-
+The minimal amount of code required to fit your figure to the ICML 2022 style (source: https://media.icml.cc/Conferences/ICML2022/Styles/example_paper.pdf)
+is `plt.rcParams.update(bundles.icml2022())`:
 ```python
 >>> import matplotlib.pyplot as plt
 >>> from tueplots import bundles
