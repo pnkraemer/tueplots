@@ -13,7 +13,7 @@ and provides fonts, figure sizes, font sizes, color schemes, and more, for a num
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Getting started
 
    getting_started/installation
@@ -43,7 +43,7 @@ and provides fonts, figure sizes, font sizes, color schemes, and more, for a num
 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :caption: Developer documentation
 
    docs_dev/contribution_guide
