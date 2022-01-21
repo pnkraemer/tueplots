@@ -24,9 +24,9 @@ For example, consider the style tailored to the ICML2022 template.
 (Left: default matplotlib, middle: one line of tueplots-code, right: two lines of tueplots-code)
 
 <p align="center">
-<img src="./_img/before.png" width="200"/>
-<img src="./_img/after1.png" width="200"/>
-<img src="./_img/after2.png" width="200"/>
+<img src="./docs/img_for_readme/before.png" width="200"/>
+<img src="./docs/img_for_readme/after1.png" width="200"/>
+<img src="./docs/img_for_readme/after2.png" width="200"/>
 </p>
 
 
@@ -49,10 +49,10 @@ and that the font-size in the plot should be readable, and similar to the rest o
 
 ## Getting started 
 
-Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/quickstart/installation.html).
-Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/quickstart/usage_example.html).
-A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/quickstart/application_icml2022.html).
-If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/quickstart/troubleshooting.html) site.
+Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/getting_started/installation.html).
+Some usage examples are given [**at this url**](https://tueplots.readthedocs.io/en/latest/getting_started/usage_example.html).
+A more specific tutorial, applying `tueplots` to figures intended for ICML 2022, is [**on this page**](https://tueplots.readthedocs.io/en/latest/getting_started/application_icml2022.html).
+If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/getting_started/troubleshooting.html) site.
 For more advanced tutorials, you may refer to the example notebooks.
 
 ## Related packages
