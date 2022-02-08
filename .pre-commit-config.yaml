@@ -38,3 +38,10 @@ repos:
     rev: v5.10.1 # Make sure to use the same tag/version as specified in tox.ini.
     hooks:
       - id: isort
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.2.3
+    hooks:
+     - id: nbqa-black
+       additional_dependencies: [black==22.1.0]
+     - id: nbqa-isort
+       additional_dependencies: [isort==5.10.1]
