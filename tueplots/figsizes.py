@@ -2,7 +2,7 @@
 
 # Some useful constants
 _GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
-_INCHES_PER_POINT = 1.0 * 72.27
+_POINTS_PER_INCH = 72.27
 
 # Double-column formats
 
@@ -170,7 +170,7 @@ def neurips2021(
 
 
 def _from_base_pt(*, width_pt, **kwargs):
-    width_in = width_pt / _INCHES_PER_POINT
+    width_in = width_pt / _POINTS_PER_INCH
     return _from_base_in(width_in=width_in, **kwargs)
 
 
@@ -187,7 +187,7 @@ def beamer_169(
 ):
     """Beamer figure size for `aspectratio=169`."""
     textwidth_169_pt = 398.3386  # via '\showthe\textwidth' in latex
-    textwidth_169_in = textwidth_169_pt / _INCHES_PER_POINT
+    textwidth_169_in = textwidth_169_pt / _POINTS_PER_INCH
     textheight_169_in = textwidth_169_in / 16.0 * 9.0
 
     figsize = (textwidth_169_in * rel_width, textheight_169_in * rel_height)
