@@ -1,8 +1,8 @@
 """Figure size settings."""
 
 # Some useful constants
-_GOLDEN_RATIO = (5.0 ** 0.5 - 1.0) / 2.0
-_INCHES_PER_POINT = 1.0 * 72.27
+_GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
+_POINTS_PER_INCH = 72.27
 
 # Double-column formats
 
@@ -178,7 +178,7 @@ def neurips2021(
 
 
 def _from_base_pt(*, base_width_pt, **kwargs):
-    base_width_in = base_width_pt / _INCHES_PER_POINT
+    base_width_in = base_width_pt / _POINTS_PER_INCH
     return _from_base_in(base_width_in=base_width_in, **kwargs)
 
 
