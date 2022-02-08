@@ -29,28 +29,37 @@ def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def jmlr2001(*, nrows=1, ncols=1, family="sans-serif"):
+def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
     """JMLR 2001 bundle."""
-    size = figsizes.jmlr2001(nrows=nrows, ncols=ncols)
+    size = figsizes.jmlr2001(rel_width=rel_width, nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
     fontsize_config = fontsizes.jmlr2001()
     return {**font_config, **size, **fontsize_config}
 
 
-def neurips2021(*, usetex=True, nrows=1, ncols=1, family="sans-serif"):
+def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
     """Neurips 2021 bundle."""
     if usetex is True:
         font_config = fonts.neurips2021_tex(family=family)
     elif usetex is False:
         font_config = fonts.neurips2021(family=family)
-    size = figsizes.neurips2021(nrows=nrows, ncols=ncols)
+    size = figsizes.neurips2021(rel_width=rel_width, nrows=nrows, ncols=ncols)
     fontsize_config = fontsizes.neurips2021()
     return {**font_config, **size, **fontsize_config}
 
 
-def beamer_moml(*, rel_width=1.0, rel_height=0.8):
+def beamer_moml(
+    *,
+    # constrained_layout produces figures which are slightly larger than specified
+    rel_width=0.97,
+    rel_height=0.8,
+    nrows=1,
+    ncols=1,
+):
     """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
-    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
+    size = figsizes.beamer_169(
+        rel_width=rel_width, rel_height=rel_height, nrows=nrows, ncols=ncols
+    )
     font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
