@@ -50,8 +50,7 @@ def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-se
 
 def beamer_moml(
     *,
-    # constrained_layout produces figures which are slightly larger than specified
-    rel_width=0.97,
+    rel_width=1.0,
     rel_height=0.8,
 ):
     """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
