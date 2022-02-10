@@ -53,13 +53,9 @@ def beamer_moml(
     # constrained_layout produces figures which are slightly larger than specified
     rel_width=0.97,
     rel_height=0.8,
-    nrows=1,
-    ncols=1,
 ):
     """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
-    size = figsizes.beamer_169(
-        rel_width=rel_width, rel_height=rel_height, nrows=nrows, ncols=ncols
-    )
+    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()

@@ -1,7 +1,7 @@
 """Figure size settings."""
 
 # Some useful constants
-_GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
+_GOLDEN_RATIO = (5.0 ** 0.5 - 1.0) / 2.0
 _POINTS_PER_INCH = 72.27
 
 # Double-column formats
@@ -197,8 +197,6 @@ def beamer_169(
     *,
     rel_width=0.9,
     rel_height=0.6,
-    nrows=1,
-    ncols=1,
     constrained_layout=True,
     tight_layout=False,
 ):
@@ -207,8 +205,8 @@ def beamer_169(
         base_width_pt=398.3386,  # via '\showthe\textwidth' in latex
         rel_width=rel_width,
         height_to_width_ratio=(9 / 16) * (rel_height / rel_width),
-        nrows=nrows,
-        ncols=ncols,
+        nrows=1,
+        ncols=1,
     )
 
     return _figsize_to_output_dict(
