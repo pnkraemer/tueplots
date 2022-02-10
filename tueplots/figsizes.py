@@ -36,10 +36,11 @@ def _icml2022_and_aistats2022_half(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
     figsize = _from_base_in(
-        width_in=3.25,
+        base_width_in=3.25,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -50,6 +51,7 @@ def _icml2022_and_aistats2022_half(
 
 def _icml2022_and_aistats2022_full(
     *,
+    rel_width=1.0,
     nrows=1,
     ncols=2,
     constrained_layout=True,
@@ -57,10 +59,11 @@ def _icml2022_and_aistats2022_full(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
     figsize = _from_base_in(
-        width_in=6.75,
+        base_width_in=6.75,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -80,10 +83,11 @@ def cvpr2022_half(
     """Double-column (half-width) figures for CVPR 2022."""
 
     figsize = _from_base_pt(
-        width_pt=237.13594,
+        base_width_pt=237.13594,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -94,6 +98,7 @@ def cvpr2022_half(
 
 def cvpr2022_full(
     *,
+    rel_width=1.0,
     nrows=1,
     ncols=2,
     constrained_layout=True,
@@ -103,10 +108,11 @@ def cvpr2022_full(
     """Single-column (full-width) figures for CVPR 2022."""
 
     figsize = _from_base_pt(
-        width_pt=496.85625,
+        base_width_pt=496.85625,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -120,6 +126,7 @@ def cvpr2022_full(
 
 def jmlr2001(
     *,
+    rel_width=1.0,
     nrows=1,
     ncols=2,
     constrained_layout=True,
@@ -134,10 +141,11 @@ def jmlr2001(
     """
 
     figsize = _from_base_in(
-        width_in=6.0,
+        base_width_in=6.0,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -148,6 +156,7 @@ def jmlr2001(
 
 def neurips2021(
     *,
+    rel_width=1.0,
     nrows=1,
     ncols=2,
     constrained_layout=True,
@@ -157,10 +166,11 @@ def neurips2021(
     """Neurips 2021 figure size."""
 
     figsize = _from_base_pt(
-        width_pt=397.48499,
+        base_width_pt=397.48499,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-        height_to_width_ratio=height_to_width_ratio,
     )
     return _figsize_to_output_dict(
         figsize=figsize,
@@ -169,13 +179,16 @@ def neurips2021(
     )
 
 
-def _from_base_pt(*, width_pt, **kwargs):
-    width_in = width_pt / _POINTS_PER_INCH
-    return _from_base_in(width_in=width_in, **kwargs)
+def _from_base_pt(*, base_width_pt, **kwargs):
+    base_width_in = base_width_pt / _POINTS_PER_INCH
+    return _from_base_in(base_width_in=base_width_in, **kwargs)
 
 
-def _from_base_in(*, width_in, nrows, height_to_width_ratio, ncols):
-    height_in = height_to_width_ratio * width_in * nrows / ncols
+def _from_base_in(*, base_width_in, rel_width, height_to_width_ratio, nrows, ncols):
+    width_in = base_width_in * rel_width
+    subplot_width_in = width_in / ncols
+    subplot_height_in = height_to_width_ratio * subplot_width_in
+    height_in = subplot_height_in * nrows
     return width_in, height_in
 
 
@@ -183,14 +196,21 @@ def _from_base_in(*, width_in, nrows, height_to_width_ratio, ncols):
 
 
 def beamer_169(
-    *, rel_width=0.9, rel_height=0.6, constrained_layout=True, tight_layout=False
+    *,
+    rel_width=0.9,
+    rel_height=0.6,
+    constrained_layout=True,
+    tight_layout=False,
 ):
     """Beamer figure size for `aspectratio=169`."""
-    textwidth_169_pt = 398.3386  # via '\showthe\textwidth' in latex
-    textwidth_169_in = textwidth_169_pt / _POINTS_PER_INCH
-    textheight_169_in = textwidth_169_in / 16.0 * 9.0
+    figsize = _from_base_pt(
+        base_width_pt=398.3386,  # via '\showthe\textwidth' in latex
+        rel_width=rel_width,
+        height_to_width_ratio=(9 / 16) * (rel_height / rel_width),
+        nrows=1,
+        ncols=1,
+    )
 
-    figsize = (textwidth_169_in * rel_width, textheight_169_in * rel_height)
     return _figsize_to_output_dict(
         figsize=figsize,
         constrained_layout=constrained_layout,
