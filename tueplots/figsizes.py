@@ -37,6 +37,7 @@ def _icml2022_and_aistats2022_half(
 ):
     figsize = _from_base_in(
         base_width_in=3.25,
+        rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
@@ -83,6 +84,7 @@ def cvpr2022_half(
 
     figsize = _from_base_pt(
         base_width_pt=237.13594,
+        rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
@@ -182,7 +184,7 @@ def _from_base_pt(*, base_width_pt, **kwargs):
     return _from_base_in(base_width_in=base_width_in, **kwargs)
 
 
-def _from_base_in(*, base_width_in, rel_width=1.0, height_to_width_ratio, nrows, ncols):
+def _from_base_in(*, base_width_in, rel_width, height_to_width_ratio, nrows, ncols):
     width_in = base_width_in * rel_width
     subplot_width_in = width_in / ncols
     subplot_height_in = height_to_width_ratio * subplot_width_in
