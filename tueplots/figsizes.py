@@ -1,7 +1,7 @@
 """Figure size settings."""
 
 # Some useful constants
-_GOLDEN_RATIO = (5.0 ** 0.5 - 1.0) / 2.0
+_GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
 _POINTS_PER_INCH = 72.27
 
 # Double-column formats
