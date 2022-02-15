@@ -42,7 +42,7 @@ Usage examples are given below.
 
 
 **`tueplots` has no opinions:**
-It does not tell you what your figures should like like in the end, but helps you to tailor your plots to your own needs.
+It does not tell you what your figures should look like in the end, but helps you to tailor your plots to your own needs.
 We like all the colors, frame-styles, markers, or linewidths.
 But we _do_ think that figure sizes should match the text-width in your publication, 
 and that the font-size in the plot should be readable, and similar to the rest of the paper/presentation/....
