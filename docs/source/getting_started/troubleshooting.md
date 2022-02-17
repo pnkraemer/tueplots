@@ -1,4 +1,3 @@
-
 # Troubleshooting
 
 ## My version of matplotlib cannot find font XYZ?!
@@ -23,20 +22,20 @@ Visually, this does not make any difference,
 but it might lead to 'overfull hbox' raised by, e.g., 'pdflatex'.
 This is not tueplots fault, but likely due to the optimisation that matplotlib carries out
 as part of constrained_layout=True or tight_layout=True.
-Refer to the ![constrained layout documentation](https://matplotlib.org/stable/tutorials/intermediate/constrainedlayout_guide.html)
+Refer to the <a href=https://matplotlib.org/stable/tutorials/intermediate/constrainedlayout_guide.html>constrained layout documentation</a>
 for more info.
 
 **Solution:**
 If you really cannot live with this warning, there are the following possible solutions:
 * Instead of `\includegraphics(<plot>)`, use `\includegraphics[width=\textwidth](<plot>)`
-  (to fix the final few pt -- the visual difference is zero).
+(to fix the final few pt -- the visual difference is zero).
 * Set the `rel_width` in the figsizes to, e.g., `rel_width=0.97` and use `\includegraphics(<plot>)` as usual.
 
 
 ## My submission template requires Type 1 fonts
 
 Type 1 fonts are a tricky requirements; for example, because
-![Adobe will disable support for authoring with Type 1 fonts in January 2023](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html).
+<a href=https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html> Adobe will disable support for authoring with Type 1 fonts in January 2023 </a>.
 Matplotlib cannot do Type 1 fonts, but uses Type 3 fonts as a default.
 There is also no way of making matplotlib use Type 1 fonts.
 The only options are Type 3 fonts and Type 42 (/TrueType) fonts.
@@ -46,4 +45,4 @@ If you _need_ Type 1 fonts, using TeX typesetting usually does the trick: E.g., 
 or `fonts.icml2022_tex()`.
 If the goal, however, is only to avoid type 3 fonts, adding
 `plt.rcParams.update({"pdf.fonttype": 42})` to your plotting code will a PDF with `TrueType` fonts.
-See ![this issue](https://github.com/pnkraemer/tueplots/issues/77) for more details.
+See <a href=https://github.com/pnkraemer/tueplots/issues/77>this issue</a> for more details.
