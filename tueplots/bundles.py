@@ -48,6 +48,17 @@ def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-se
     return {**font_config, **size, **fontsize_config}
 
 
+def neurips2022(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
+    """Neurips 2022 bundle."""
+    if usetex is True:
+        font_config = fonts.neurips2022_tex(family=family)
+    elif usetex is False:
+        font_config = fonts.neurips2022(family=family)
+    size = figsizes.neurips2022(rel_width=rel_width, nrows=nrows, ncols=ncols)
+    fontsize_config = fontsizes.neurips2022()
+    return {**font_config, **size, **fontsize_config}
+
+
 def beamer_moml(
     *,
     rel_width=1.0,
