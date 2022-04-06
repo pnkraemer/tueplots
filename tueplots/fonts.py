@@ -1,8 +1,8 @@
 """Font settings for conference papers and journals."""
 
 
-def neurips2021(*, family="serif"):
-    """Fonts for Neurips 2021."""
+def neurips_base(*, family="serif"):
+    """Base fonts for Neurips."""
     return {
         "text.usetex": False,
         "font.serif": ["Times New Roman"],
@@ -12,57 +12,45 @@ def neurips2021(*, family="serif"):
         "mathtext.bf": "Times New Roman:bold",
         "font.family": family,
     }
+
+
+def neurips_tex_base(*, family="serif"):
+    """Base fonts for Neurips. LaTeX version."""
+    preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
+    if family == "serif":
+        return {
+            "text.usetex": True,
+            "font.family": "serif",
+            "text.latex.preamble": preamble,
+        }
+    preamble += (
+        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
+    )
+    return {
+        "text.usetex": True,
+        "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
+    }
+
+
+def neurips2021(*, family="serif"):
+    """Fonts for Neurips 2021."""
+    return neurips_base(family=family)
 
 
 def neurips2021_tex(*, family="serif"):
     """Fonts for Neurips 2021. LaTeX version."""
-    preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
-    if family == "serif":
-        return {
-            "text.usetex": True,
-            "font.family": "serif",
-            "text.latex.preamble": preamble,
-        }
-    preamble += (
-        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
-    )
-    return {
-        "text.usetex": True,
-        "font.family": "sans-serif",
-        "text.latex.preamble": preamble,
-    }
+    return neurips_tex_base(family=family)
 
 
 def neurips2022(*, family="serif"):
     """Fonts for Neurips 2022."""
-    return {
-        "text.usetex": False,
-        "font.serif": ["Times New Roman"],
-        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-        "mathtext.rm": "Times New Roman",
-        "mathtext.it": "Times New Roman:italic",
-        "mathtext.bf": "Times New Roman:bold",
-        "font.family": family,
-    }
+    return neurips_base(family=family)
 
 
 def neurips2022_tex(*, family="serif"):
     """Fonts for Neurips 2022. LaTeX version."""
-    preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
-    if family == "serif":
-        return {
-            "text.usetex": True,
-            "font.family": "serif",
-            "text.latex.preamble": preamble,
-        }
-    preamble += (
-        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
-    )
-    return {
-        "text.usetex": True,
-        "font.family": "sans-serif",
-        "text.latex.preamble": preamble,
-    }
+    return neurips_tex_base(family=family)
 
 
 def icml2022(*, family="serif"):
