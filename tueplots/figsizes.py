@@ -154,6 +154,31 @@ def jmlr2001(
     )
 
 
+def neurips_defaults(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+    """Neurips figure size defaults."""
+
+    figsize = _from_base_in(
+        base_width_in=5.5,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+    )
+
+
 def neurips2021(
     *,
     rel_width=1.0,
@@ -164,18 +189,13 @@ def neurips2021(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
     """Neurips 2021 figure size."""
-
-    figsize = _from_base_pt(
-        base_width_pt=397.48499,
+    return neurips_defaults(
         rel_width=rel_width,
-        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-    )
-    return _figsize_to_output_dict(
-        figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
     )
 
 
@@ -189,18 +209,13 @@ def neurips2022(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
     """Neurips 2022 figure size."""
-
-    figsize = _from_base_in(
-        base_width_in=5.5,
+    return neurips_defaults(
         rel_width=rel_width,
-        height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
         ncols=ncols,
-    )
-    return _figsize_to_output_dict(
-        figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
     )
 
 
