@@ -179,6 +179,31 @@ def neurips2021(
     )
 
 
+def neurips2022(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+    """Neurips 2022 figure size."""
+
+    figsize = _from_base_in(
+        base_width_in=5.5,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+    )
+
+
 def _from_base_pt(*, base_width_pt, **kwargs):
     base_width_in = base_width_pt / _POINTS_PER_INCH
     return _from_base_in(base_width_in=base_width_in, **kwargs)
