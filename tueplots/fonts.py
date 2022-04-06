@@ -1,8 +1,8 @@
 """Font settings for conference papers and journals."""
 
 
-def neurips_base(*, family="serif"):
-    """Base fonts for Neurips."""
+def neurips_defaults(*, family="serif"):
+    """Default fonts for Neurips."""
     return {
         "text.usetex": False,
         "font.serif": ["Times New Roman"],
@@ -14,8 +14,8 @@ def neurips_base(*, family="serif"):
     }
 
 
-def neurips_tex_base(*, family="serif"):
-    """Base fonts for Neurips. LaTeX version."""
+def neurips_tex_defaults(*, family="serif"):
+    """Default fonts for Neurips. LaTeX version."""
     preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
     if family == "serif":
         return {
@@ -35,22 +35,22 @@ def neurips_tex_base(*, family="serif"):
 
 def neurips2021(*, family="serif"):
     """Fonts for Neurips 2021."""
-    return neurips_base(family=family)
+    return neurips_defaults(family=family)
 
 
 def neurips2021_tex(*, family="serif"):
     """Fonts for Neurips 2021. LaTeX version."""
-    return neurips_tex_base(family=family)
+    return neurips_tex_defaults(family=family)
 
 
 def neurips2022(*, family="serif"):
     """Fonts for Neurips 2022."""
-    return neurips_base(family=family)
+    return neurips_defaults(family=family)
 
 
 def neurips2022_tex(*, family="serif"):
     """Fonts for Neurips 2022. LaTeX version."""
-    return neurips_tex_base(family=family)
+    return neurips_tex_defaults(family=family)
 
 
 def icml2022(*, family="serif"):
