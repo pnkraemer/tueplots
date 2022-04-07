@@ -46,6 +46,10 @@ jobs:
       run: |
         pip install tox
         tox -e py3
+    - name: Run doctests in markdown files
+      run: |
+        pip install tox
+        tox -e doctest
   docs:
     runs-on: ubuntu-latest
     steps:
