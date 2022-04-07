@@ -46,17 +46,6 @@ jobs:
       run: |
         pip install tox
         tox -e py3
-  readme-snippets:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/setup-python@v2
-      with:
-        python-version: "3.x"
-    - uses: actions/checkout@v2
-    - name: Run python snippets in README.md
-      run: |
-        pip install tox
-        tox -e byexample
   docs:
     runs-on: ubuntu-latest
     steps:
