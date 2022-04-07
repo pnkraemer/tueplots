@@ -14,7 +14,7 @@ within one module, the functions have a unified interface (wherever possible)
 (6.0, 3.7082039324993694)
 >>>
 >>> figsizes.neurips2021(nrows=3)["figure.figsize"]
-(5.499999861629998, 5.098780278910587)
+(5.5, 5.0987804071866325)
 >>>
 >>> # The full output:
 >>> figsizes.icml2022_full(nrows=4)
