@@ -164,9 +164,49 @@ def neurips2021(
     height_to_width_ratio=_GOLDEN_RATIO,
 ):
     """Neurips 2021 figure size."""
+    return _neurips_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+    )
 
-    figsize = _from_base_pt(
-        base_width_pt=397.48499,
+
+def neurips2022(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+    """Neurips 2022 figure size."""
+    return _neurips_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+    )
+
+
+def _neurips_common(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+    """Neurips figure size defaults."""
+
+    figsize = _from_base_in(
+        base_width_in=5.5,
         rel_width=rel_width,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,

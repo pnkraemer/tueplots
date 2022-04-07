@@ -36,6 +36,22 @@ def case_fonts_neurips2021_tex_custom():
     return fonts.neurips2021_tex(family="serif")
 
 
+def case_fonts_neurips2022_default():
+    return fonts.neurips2022()
+
+
+def case_fonts_neurips2022_custom():
+    return fonts.neurips2022(family="serif")
+
+
+def case_fonts_neurips2022_tex_default():
+    return fonts.neurips2022_tex()
+
+
+def case_fonts_neurips2022_tex_custom():
+    return fonts.neurips2022_tex(family="serif")
+
+
 def case_fonts_jmlr2001_tex_default():
     return fonts.jmlr2001_tex()
 

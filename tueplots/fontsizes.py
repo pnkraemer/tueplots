@@ -16,6 +16,11 @@ def neurips2021():
     return _from_base(base=10)
 
 
+def neurips2022():
+    """Font size for Neurips 2022."""
+    return _from_base(base=10)
+
+
 def aistats2022():
     """Font size for AISTATS 2022."""
     return _from_base(base=10)
