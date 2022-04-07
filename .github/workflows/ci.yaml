@@ -46,7 +46,7 @@ jobs:
       run: |
         pip install tox
         tox -e py3
-    - name: Run doctests in markdown files
+    - name: Run doctests for python snippets in markdown files
       run: |
         pip install tox
         tox -e doctest
