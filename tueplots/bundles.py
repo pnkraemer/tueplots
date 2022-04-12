@@ -4,7 +4,7 @@ from tueplots import axes, cycler, figsizes, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
 
 
-def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="sans-serif"):
+def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
     """ICML 2022 bundle."""
     if column == "half":
         size = figsizes.icml2022_half(nrows=nrows, ncols=ncols)
@@ -18,7 +18,7 @@ def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="sans-serif
     return {**font_config, **size, **fontsize_config}
 
 
-def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
+def aistats2022(*, column="half", nrows=1, ncols=1, family="serif"):
     """AISTATS 2022 bundle."""
     if column == "half":
         size = figsizes.aistats2022_half(nrows=nrows, ncols=ncols)
@@ -29,7 +29,7 @@ def aistats2022(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
+def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """JMLR 2001 bundle."""
     size = figsizes.jmlr2001(rel_width=rel_width, nrows=nrows, ncols=ncols)
     font_config = fonts.jmlr2001_tex(family=family)
@@ -37,7 +37,7 @@ def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
+def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """Neurips 2021 bundle."""
     if usetex is True:
         font_config = fonts.neurips2021_tex(family=family)
@@ -48,7 +48,7 @@ def neurips2021(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-se
     return {**font_config, **size, **fontsize_config}
 
 
-def neurips2022(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
+def neurips2022(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """Neurips 2022 bundle."""
     if usetex is True:
         font_config = fonts.neurips2022_tex(family=family)
