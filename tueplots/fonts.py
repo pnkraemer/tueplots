@@ -118,8 +118,10 @@ def beamer_moml():
     """Fonts that are compatible with the beamer template of the method-of-machine-learning group in Tübingen."""
     return {
         "text.usetex": False,
-        "font.serif": ["Roboto Condensed"],
-        "font.family": "serif",
+        "mathtext.fontset": "custom",
+        "mathtext.it": "sans:italic",
+        "font.sans-serif": ["Roboto Condensed"],
+        "font.family": "sans-serif",
         "font.weight": "light",
         "axes.labelweight": "light",
         "axes.titleweight": "light",
