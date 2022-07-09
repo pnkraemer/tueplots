@@ -1,47 +1,53 @@
 """Fontsize settings."""
 
 
-def icml2022():
+def icml2022(*, default_smaller=1):
     r"""Font size for ICML 2022.
 
     Source: https://media.icml.cc/Conferences/ICML2022/Styles/example_paper.pdf
     """
     # ICML text size is 10, but captions are in size 9.
     # Therefore, we use base 9 instead of 10.
-    return _from_base(base=9)
+    return _from_base(base=9 - default_smaller)
 
 
-def neurips2021():
+def neurips2021(*, default_smaller=1):
     """Font size for Neurips 2021."""
-    return _from_base(base=10)
+    return _from_base(base=10 - default_smaller)
 
 
-def neurips2022():
+def neurips2022(*, default_smaller=1):
     """Font size for Neurips 2022."""
-    return _from_base(base=10)
+    return _from_base(base=10 - default_smaller)
 
 
-def aistats2022():
+def aistats2022(*, default_smaller=1):
     """Font size for AISTATS 2022."""
-    return _from_base(base=10)
+    return _from_base(base=10 - default_smaller)
 
 
-def jmlr2001():
+def jmlr2001(*, default_smaller=1):
     """Font size for JMLR 2021."""
-    return _from_base(base=10.95)
+    return _from_base(base=10.95 - default_smaller)
 
 
-def beamer_moml():
+def beamer_moml(*, default_smaller=1):
     """Font size for a beamer slide in aspectratio 16:9 with 10pt font."""
-    return _from_base(base=10)
+    return _from_base(base=10 - default_smaller)
 
 
-def _from_base(*, base):
+def _from_base(*, base, small_offset=2):
+    """Set all font-sizes based on a base-size.
+
+    "small_offset" is the amount by which
+    the small elements of the figure should be smaller than "base".
+    This affects legends, xticks, yticks, etc.
+    """
     return {
-        "font.size": base - 1,
-        "axes.labelsize": base - 1,
-        "legend.fontsize": base - 3,
-        "xtick.labelsize": base - 3,
-        "ytick.labelsize": base - 3,
-        "axes.titlesize": base - 1,
+        "font.size": base,
+        "axes.labelsize": base,
+        "legend.fontsize": base - small_offset,
+        "xtick.labelsize": base - small_offset,
+        "ytick.labelsize": base - small_offset,
+        "axes.titlesize": base,
     }
