@@ -46,8 +46,8 @@ def _from_base(*, base, small_offset=2):
     return {
         "font.size": base,
         "axes.labelsize": base,
-        "axes.titlesize": base,
         "legend.fontsize": base - small_offset,
         "xtick.labelsize": base - small_offset,
         "ytick.labelsize": base - small_offset,
+        "axes.titlesize": base,
     }
