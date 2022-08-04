@@ -67,6 +67,6 @@ The [**matplotlib third-party plots**](https://matplotlib.org/mpl-third-party/) 
 If you know of any others, please feel invited to open an issue/PR. 
 
 
-# Miscellanous
+# Miscellaneous
 
 `tueplots`has been developed at the University of Tübingen (hence the name).
