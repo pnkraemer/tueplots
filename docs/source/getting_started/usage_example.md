@@ -20,7 +20,7 @@ within one module, the functions have a unified interface (wherever possible)
 >>>
 >>> # The full output:
 >>> figsizes.icml2022_full(nrows=4)
-{'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False}
+{'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.bbox': 'tight', 'savefig.pad_inches': 0.015}
 
 ```
 
