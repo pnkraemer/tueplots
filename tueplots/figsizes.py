@@ -2,7 +2,15 @@
 
 # Some useful constants
 _GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
+"""Default height-to-width ratio for subplots."""
+
 _POINTS_PER_INCH = 72.27
+"""Translate pt to inches and back."""
+
+
+_PAD_INCHES = 0.015
+"""Default whitespace around figures when saving."""
+
 
 # Double-column formats
 
@@ -34,6 +42,7 @@ def _icml2022_and_aistats2022_half(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     figsize = _from_base_in(
         base_width_in=3.25,
@@ -46,6 +55,7 @@ def _icml2022_and_aistats2022_half(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -57,6 +67,7 @@ def _icml2022_and_aistats2022_full(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     figsize = _from_base_in(
         base_width_in=6.75,
@@ -69,6 +80,7 @@ def _icml2022_and_aistats2022_full(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -79,6 +91,7 @@ def cvpr2022_half(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """Double-column (half-width) figures for CVPR 2022."""
 
@@ -93,6 +106,7 @@ def cvpr2022_half(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -104,6 +118,7 @@ def cvpr2022_full(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """Single-column (full-width) figures for CVPR 2022."""
 
@@ -118,6 +133,7 @@ def cvpr2022_full(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -132,6 +148,7 @@ def jmlr2001(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """JMLR figure size.
 
@@ -151,6 +168,7 @@ def jmlr2001(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -162,6 +180,7 @@ def neurips2021(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """Neurips 2021 figure size."""
     return _neurips_common(
@@ -171,6 +190,7 @@ def neurips2021(
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
         height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
     )
 
 
@@ -182,6 +202,7 @@ def neurips2022(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """Neurips 2022 figure size."""
     return _neurips_common(
@@ -191,6 +212,7 @@ def neurips2022(
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
         height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
     )
 
 
@@ -202,6 +224,7 @@ def _neurips_common(
     constrained_layout=True,
     tight_layout=False,
     height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
 ):
     """Neurips figure size defaults."""
 
@@ -216,6 +239,7 @@ def _neurips_common(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
@@ -241,6 +265,7 @@ def beamer_169(
     rel_height=0.6,
     constrained_layout=True,
     tight_layout=False,
+    pad_inches=_PAD_INCHES,
 ):
     """Beamer figure size for `aspectratio=169`."""
     figsize = _from_base_pt(
@@ -255,12 +280,24 @@ def beamer_169(
         figsize=figsize,
         constrained_layout=constrained_layout,
         tight_layout=tight_layout,
+        pad_inches=pad_inches,
     )
 
 
-def _figsize_to_output_dict(*, figsize, constrained_layout, tight_layout):
+def _figsize_to_output_dict(
+    *,
+    figsize,
+    constrained_layout,
+    tight_layout,
+    pad_inches,
+):
+    save_with_tight_box = (
+        "tight" if (constrained_layout or tight_layout) else "standard"
+    )
     return {
         "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
+        "savefig.bbox": save_with_tight_box,
+        "savefig.pad_inches": pad_inches,
     }
