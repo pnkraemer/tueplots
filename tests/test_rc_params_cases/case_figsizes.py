@@ -20,6 +20,14 @@ def case_figsizes_aistats2022_half():
     return figsizes.aistats2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_aistats2023_full():
+    return figsizes.aistats2023_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aistats2023_half():
+    return figsizes.aistats2023_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_cvpr2022_half():
     return figsizes.cvpr2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 

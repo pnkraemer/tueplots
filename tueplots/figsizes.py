@@ -17,25 +17,35 @@ _PAD_INCHES = 0.015
 
 def icml2022_half(**kwargs):
     """Double-column (half-width) figures for ICML 2022."""
-    return _icml2022_and_aistats2022_half(**kwargs)
+    return _icml_and_aistats_common_half(**kwargs)
 
 
 def icml2022_full(**kwargs):
     """Single-column (full-width) figures for ICML 2022."""
-    return _icml2022_and_aistats2022_full(**kwargs)
+    return _icml_and_aistats_common_full(**kwargs)
 
 
 def aistats2022_half(**kwargs):
     """Double-column (half-width) figures for AISTATS 2022."""
-    return _icml2022_and_aistats2022_half(**kwargs)
+    return _icml_and_aistats_common_half(**kwargs)
 
 
 def aistats2022_full(**kwargs):
     """Single-column (full-width) figures for AISTATS 2022."""
-    return _icml2022_and_aistats2022_full(**kwargs)
+    return _icml_and_aistats_common_full(**kwargs)
 
 
-def _icml2022_and_aistats2022_half(
+def aistats2023_half(**kwargs):
+    """Double-column (half-width) figures for AISTATS 2023."""
+    return _icml_and_aistats_common_half(**kwargs)
+
+
+def aistats2023_full(**kwargs):
+    """Single-column (full-width) figures for AISTATS 2023."""
+    return _icml_and_aistats_common_full(**kwargs)
+
+
+def _icml_and_aistats_common_half(
     *,
     nrows=1,
     ncols=1,
@@ -59,7 +69,7 @@ def _icml2022_and_aistats2022_half(
     )
 
 
-def _icml2022_and_aistats2022_full(
+def _icml_and_aistats_common_full(
     *,
     rel_width=1.0,
     nrows=1,

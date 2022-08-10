@@ -69,7 +69,25 @@ def icml2022(*, family="serif"):
 
 def icml2022_tex(*, family="serif"):
     """Fonts for ICML 2022. LaTeX version."""
+    return _tex_times(family=family)
 
+
+def jmlr2001_tex(*, family="serif"):
+    """Fonts for JMLR. LaTeX version."""
+    return _tex_computer_modern(family=family)
+
+
+def aistats2022_tex(*, family="serif"):
+    """Fonts for AISTATS 2022. LaTeX version."""
+    return _tex_computer_modern(family=family)
+
+
+def aistats2023_tex(*, family="serif"):
+    """Fonts for AISTATS 2023. LaTeX version."""
+    return _tex_times(family=family)
+
+
+def _tex_times(*, family):
     preamble = r"\usepackage{times} "
     if family == "serif":
         return {
@@ -87,17 +105,7 @@ def icml2022_tex(*, family="serif"):
     }
 
 
-def jmlr2001_tex(*, family="serif"):
-    """Fonts for JMLR. LaTeX version."""
-    return _tex_computer_modern(family=family)
-
-
-def aistats2022_tex(*, family="serif"):
-    """Fonts for AISTATS 2022. LaTeX version."""
-    return _tex_computer_modern(family=family)
-
-
-def _tex_computer_modern(*, family="serif"):
+def _tex_computer_modern(*, family):
     if family == "serif":
         return {
             "text.usetex": True,

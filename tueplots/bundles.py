@@ -29,6 +29,17 @@ def aistats2022(*, column="half", nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def aistats2023(*, column="half", nrows=1, ncols=1, family="serif"):
+    """AISTATS 2023 bundle."""
+    if column == "half":
+        size = figsizes.aistats2023_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.aistats2023_full(nrows=nrows, ncols=ncols)
+    font_config = fonts.aistats2023_tex(family=family)
+    fontsize_config = fontsizes.aistats2023()
+    return {**font_config, **size, **fontsize_config}
+
+
 def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """JMLR 2001 bundle."""
     size = figsizes.jmlr2001(rel_width=rel_width, nrows=nrows, ncols=ncols)
