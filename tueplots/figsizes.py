@@ -291,13 +291,10 @@ def _figsize_to_output_dict(
     tight_layout,
     pad_inches,
 ):
-    save_with_tight_box = (
-        "tight" if (constrained_layout or tight_layout) else "standard"
-    )
     return {
         "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
-        "savefig.bbox": save_with_tight_box,
+        "savefig.bbox": "tight",
         "savefig.pad_inches": pad_inches,
     }
