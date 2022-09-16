@@ -3,25 +3,35 @@
 
 def neurips2021(*, family="serif"):
     """Fonts for Neurips 2021."""
-    return _neurips_common(family=family)
+    return _neurips_and_iclr_common(family=family)
 
 
 def neurips2021_tex(*, family="serif"):
     """Fonts for Neurips 2021. LaTeX version."""
-    return _neurips_tex_common(family=family)
+    return _neurips_and_iclr_tex_common(family=family)
 
 
 def neurips2022(*, family="serif"):
     """Fonts for Neurips 2022."""
-    return _neurips_common(family=family)
+    return _neurips_and_iclr_common(family=family)
 
 
 def neurips2022_tex(*, family="serif"):
     """Fonts for Neurips 2022. LaTeX version."""
-    return _neurips_tex_common(family=family)
+    return _neurips_and_iclr_tex_common(family=family)
 
 
-def _neurips_common(*, family="serif"):
+def iclr2023_tex(*, family="serif"):
+    """Fonts for ICLR 2023. LaTeX version."""
+    return _neurips_and_iclr_tex_common(family=family)
+
+
+def iclr2023(*, family="serif"):
+    """Fonts for ICLR 2023. LaTeX version."""
+    return _neurips_and_iclr_common(family=family)
+
+
+def _neurips_and_iclr_common(*, family="serif"):
     """Default fonts for Neurips."""
     return {
         "text.usetex": False,
@@ -34,7 +44,7 @@ def _neurips_common(*, family="serif"):
     }
 
 
-def _neurips_tex_common(*, family="serif"):
+def _neurips_and_iclr_tex_common(*, family="serif"):
     """Default fonts for Neurips. LaTeX version."""
     preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
     if family == "serif":
