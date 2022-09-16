@@ -70,6 +70,17 @@ def neurips2022(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif")
     return {**font_config, **size, **fontsize_config}
 
 
+def iclr2023(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
+    """ICLR 2023 bundle."""
+    if usetex is True:
+        font_config = fonts.iclr2023_tex(family=family)
+    elif usetex is False:
+        font_config = fonts.iclr2023(family=family)
+    size = figsizes.iclr2023(rel_width=rel_width, nrows=nrows, ncols=ncols)
+    fontsize_config = fontsizes.iclr2023()
+    return {**font_config, **size, **fontsize_config}
+
+
 def beamer_moml(
     *,
     rel_width=1.0,

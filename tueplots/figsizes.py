@@ -193,7 +193,7 @@ def neurips2021(
     pad_inches=_PAD_INCHES,
 ):
     """Neurips 2021 figure size."""
-    return _neurips_common(
+    return _neurips_and_iclr_common(
         rel_width=rel_width,
         nrows=nrows,
         ncols=ncols,
@@ -215,7 +215,7 @@ def neurips2022(
     pad_inches=_PAD_INCHES,
 ):
     """Neurips 2022 figure size."""
-    return _neurips_common(
+    return _neurips_and_iclr_common(
         rel_width=rel_width,
         nrows=nrows,
         ncols=ncols,
@@ -226,7 +226,29 @@ def neurips2022(
     )
 
 
-def _neurips_common(
+def iclr2023(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """ICLR 2023 figure size."""
+    return _neurips_and_iclr_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
+    )
+
+
+def _neurips_and_iclr_common(
     *,
     rel_width=1.0,
     nrows=1,
