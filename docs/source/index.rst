@@ -12,6 +12,20 @@ It produces configurations that are compatible with matplotlib's `rcParams`,
 and provides fonts, figure sizes, font sizes, color schemes, and more, for a number of publication formats.
 
 
+Supported Venues
+----------------
+
+The following venues are currently supported by TUEplots out of the box as pre-configured bundles:
+
+- Conference on Neural Information Processing Systems (NeurIPS)
+- International Conference on Artificial Intelligence and Statistics (AISTATS)
+- International Conference on Learning Representations (ICLR)
+- International Conference on Machine Learning (ICML)
+- Journal of Machine Learning Research (JMLR)
+
+For further details on the available bundles, check out the `tueplots.bundles API documentation <https://tueplots.readthedocs.io/en/latest/docs_api/tueplots.bundles.html>`_.
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Getting started

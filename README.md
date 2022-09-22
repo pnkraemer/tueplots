@@ -55,6 +55,18 @@ A more specific tutorial, applying `tueplots` to figures intended for ICML 2022,
 If something is not working as promised, please refer to the [**troubleshooting**](https://tueplots.readthedocs.io/en/latest/getting_started/troubleshooting.html) site.
 For more advanced tutorials, you may refer to the example notebooks.
 
+## Supported Venues
+
+The following venues are currently supported by tueplots out of the box as pre-configured bundles:
+
+- Conference on Neural Information Processing Systems (NeurIPS)
+- International Conference on Artificial Intelligence and Statistics (AISTATS)
+- International Conference on Learning Representations (ICLR)
+- International Conference on Machine Learning (ICML)
+- Journal of Machine Learning Research (JMLR)
+
+For further details on the available bundles, check out the [`tueplots.bundles` API documentation](https://tueplots.readthedocs.io/en/latest/docs_api/tueplots.bundles.html).
+
 ## Related packages
 There are similar packages to `tueplots` (with different foci, respectively):
 * Seaborn: https://seaborn.pydata.org/index.html
