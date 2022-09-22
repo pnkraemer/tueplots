@@ -47,6 +47,21 @@ We like all the colors, frame-styles, markers, or linewidths.
 But we _do_ think that figure sizes should match the text-width in your publication, 
 and that the font-size in the plot should be readable, and similar to the rest of the paper/presentation/....
 
+## Supported Venues
+
+The following venues are currently supported by `tueplots` out of the box.
+
+| tueplots bundle                 | Venue Name and Year                                                      |
+|---------------------------------|--------------------------------------------------------------------------|
+| `tueplots.bundle.icml2022()`    | International Conference on Machine Learning, 2022                       |
+| `tueplots.bundle.aistats2022()` | International Conference on Artificial Intelligence and Statistics, 2022 |
+| `tueplots.bundle.aistats2023()` | International Conference on Artificial Intelligence and Statistics, 2023 |
+| `tueplots.bundle.jmlr2001()`    | Journal of Machine Learning Research, 2001                               |
+| `tueplots.bundle.neurips2021()` | Conference on Neural Information Processing Systems, 2021                |
+| `tueplots.bundle.neurips2022()` | Conference on Neural Information Processing Systems, 2022                |
+| `tueplots.bundle.iclr2023()`    | International Conference on Learning Representations, 2023               |
+
+
 ## Getting started 
 
 Installing `tueplots` is explained [**here**](https://tueplots.readthedocs.io/en/latest/getting_started/installation.html).
