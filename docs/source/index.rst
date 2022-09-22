@@ -23,7 +23,7 @@ The following venues are currently supported by TUEplots out of the box as pre-c
 - International Conference on Machine Learning (ICML)
 - Journal of Machine Learning Research (JMLR)
 
-For further details on the available bundles, check out the `tueplots.bundles API documentation <https://tueplots.readthedocs.io/en/latest/docs_api/tueplots.bundles.html>`_.
+For further details on the available bundles, check out the `tueplots.bundles API documentation <docs_api/tueplots.bundles.rst>`_.
 
 
 .. toctree::
