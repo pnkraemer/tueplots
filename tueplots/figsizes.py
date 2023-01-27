@@ -105,8 +105,8 @@ def uai2023_half(
 ):
     """Double-column (half-width) figures for UAI 2023."""
 
-    figsize = _from_base_pt(
-        base_width_pt=234.8775,
+    figsize = _from_base_in(
+        base_width_in=3.25,
         rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
@@ -131,8 +131,8 @@ def uai2023_full(
 ):
     """Double-column (full-width) figures for UAI 2023."""
 
-    figsize = _from_base_pt(
-        base_width_pt=487.8225,
+    figsize = _from_base_in(
+        base_width_in=6.75,
         rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
