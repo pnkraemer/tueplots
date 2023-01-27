@@ -94,6 +94,58 @@ def _icml_and_aistats_common_full(
     )
 
 
+def uai2023_half(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Double-column (half-width) figures for UAI 2023."""
+
+    figsize = _from_base_pt(
+        base_width_pt=234.8775,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def uai2023_full(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Double-column (full-width) figures for UAI 2023."""
+
+    figsize = _from_base_pt(
+        base_width_pt=487.8225,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
 def cvpr2022_half(
     *,
     nrows=1,
