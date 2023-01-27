@@ -40,6 +40,17 @@ def aistats2023(*, column="half", nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def uai2023(*, column="half", nrows=1, ncols=1, family="serif"):
+    """UAI 2023 bundle."""
+    if column == "half":
+        size = figsizes.uai2023_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.uai2023_full(nrows=nrows, ncols=ncols)
+    font_config = fonts.uai2023_tex(family=family)
+    fontsize_config = fontsizes.uai2023()
+    return {**font_config, **size, **fontsize_config}
+
+
 def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """JMLR 2001 bundle."""
     size = figsizes.jmlr2001(rel_width=rel_width, nrows=nrows, ncols=ncols)

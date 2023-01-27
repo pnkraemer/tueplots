@@ -21,6 +21,7 @@ The following venues are currently supported by TUEplots out of the box as pre-c
 - International Conference on Artificial Intelligence and Statistics (AISTATS)
 - International Conference on Learning Representations (ICLR)
 - International Conference on Machine Learning (ICML)
+- Conference on Uncertainty in Artificial Intelligence (UAI)
 - Journal of Machine Learning Research (JMLR)
 
 For further details on the available bundles, check out the `tueplots.bundles API documentation <docs_api/tueplots.bundles.rst>`_.
