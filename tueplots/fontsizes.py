@@ -46,6 +46,11 @@ def jmlr2001(*, default_smaller=1):
     return _from_base(base=10.95 - default_smaller)
 
 
+def tmlr2023(*, default_smaller=1):
+    """Font size for TMLR 2023."""
+    return _from_base(base=10 - default_smaller)
+
+
 def beamer_moml(*, default_smaller=1):
     """Font size for a beamer slide in aspectratio 16:9 with 10pt font."""
     return _from_base(base=10 - default_smaller)

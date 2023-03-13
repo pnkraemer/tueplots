@@ -47,6 +47,10 @@ def case_bundles_jmlr2001():
     return bundles.jmlr2001(nrows=2, ncols=2, family="serif")
 
 
+def case_bundles_tmlr2023():
+    return bundles.tmlr2023(nrows=2, ncols=2, family="serif")
+
+
 def case_bundles_beamer_moml():
     return bundles.beamer_moml(rel_width=0.9, rel_height=0.9)
 
