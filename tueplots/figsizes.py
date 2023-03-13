@@ -194,8 +194,7 @@ def tmlr2023(
 ):
     """TMLR figure size.
 
-    Source: https://www.overleaf.com/latex/templates/tmlr-journal-submissions/mwchznnhdtwx
-    """
+    Source: https://www.jmlr.org/tmlr/author-guide.html"""
 
     figsize = _from_base_in(
         base_width_in=6.5,
