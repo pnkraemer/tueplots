@@ -87,6 +87,11 @@ def jmlr2001_tex(*, family="serif"):
     return _tex_computer_modern(family=family)
 
 
+def tmlr2023_tex(*, family="serif"):
+    """Fonts for TMLR. LaTeX version."""
+    return _tex_computer_modern(family=family)
+
+
 def aistats2022_tex(*, family="serif"):
     """Fonts for AISTATS 2022. LaTeX version."""
     return _tex_computer_modern(family=family)
