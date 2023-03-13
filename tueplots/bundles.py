@@ -60,7 +60,7 @@ def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
 
 
 def tmlr2023(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
-    """JMLR 2001 bundle."""
+    """TMLR 2023 bundle."""
     size = figsizes.tmlr2023(rel_width=rel_width, nrows=nrows, ncols=ncols)
     font_config = fonts.tmlr2023_tex(family=family)
     fontsize_config = fontsizes.tmlr2023()

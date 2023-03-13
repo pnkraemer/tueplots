@@ -47,7 +47,7 @@ def jmlr2001(*, default_smaller=1):
 
 
 def tmlr2023(*, default_smaller=1):
-    """Font size for JMLR 2021."""
+    """Font size for TMLR 2023."""
     return _from_base(base=10 - default_smaller)
 
 
