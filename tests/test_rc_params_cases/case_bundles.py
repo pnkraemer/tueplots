@@ -38,6 +38,11 @@ def case_bundles_iclr2023(usetex):
     return bundles.iclr2023(usetex=usetex, nrows=2, ncols=2, family="serif")
 
 
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_uai2023(column):
+    return bundles.uai2023(column=column, nrows=2, ncols=2, family="serif")
+
+
 def case_bundles_jmlr2001():
     return bundles.jmlr2001(nrows=2, ncols=2, family="serif")
 
