@@ -44,6 +44,10 @@ def case_figsizes_neurips2022():
     return figsizes.neurips2022(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_neurips2023():
+    return figsizes.neurips2023(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_iclr2023():
     return figsizes.iclr2023(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
