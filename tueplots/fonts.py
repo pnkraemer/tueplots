@@ -21,6 +21,16 @@ def neurips2022_tex(*, family="serif"):
     return _neurips_and_iclr_tex_common(family=family)
 
 
+def neurips2023(*, family="serif"):
+    """Fonts for Neurips 2023."""
+    return _neurips_and_iclr_common(family=family)
+
+
+def neurips2023_tex(*, family="serif"):
+    """Fonts for Neurips 2023. LaTeX version."""
+    return _neurips_and_iclr_tex_common(family=family)
+
+
 def iclr2023_tex(*, family="serif"):
     """Fonts for ICLR 2023. LaTeX version."""
     return _neurips_and_iclr_tex_common(family=family)

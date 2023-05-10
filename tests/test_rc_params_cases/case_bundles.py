@@ -34,6 +34,11 @@ def case_bundles_neurips2022(usetex):
 
 
 @pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_neurips2023(usetex):
+    return bundles.neurips2023(usetex=usetex, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(usetex=[True, False])
 def case_bundles_iclr2023(usetex):
     return bundles.iclr2023(usetex=usetex, nrows=2, ncols=2, family="serif")
 
