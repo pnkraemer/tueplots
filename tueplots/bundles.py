@@ -40,6 +40,20 @@ def aistats2023(*, column="half", nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def aaai2024(*, column="half", nrows=1, ncols=1, family="serif", rel_width=1.0):
+    """AAAI 2024 bundle.
+
+    Source: https://aaai.org/wp-content/uploads/2023/06/AuthorKit24.zip
+    """
+    if column == "half":
+        size = figsizes.aaai2024_half(nrows=nrows, ncols=ncols, rel_width=rel_width)
+    elif column == "full":
+        size = figsizes.aaai2024_full(nrows=nrows, ncols=ncols, rel_width=rel_width)
+    font_config = fonts.aaai2024_tex(family=family)
+    fontsize_config = fontsizes.aaai2024()
+    return {**font_config, **size, **fontsize_config}
+
+
 def uai2023(*, column="half", nrows=1, ncols=1, family="serif"):
     """UAI 2023 bundle."""
     if column == "half":
