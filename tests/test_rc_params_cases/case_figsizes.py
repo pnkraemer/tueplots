@@ -52,6 +52,14 @@ def case_figsizes_iclr2023():
     return figsizes.iclr2023(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_aaai2024_half():
+    return figsizes.aaai2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aaai2024_full():
+    return figsizes.aaai2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_uai2023_half():
     return figsizes.uai2023_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
