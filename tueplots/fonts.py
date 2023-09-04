@@ -117,6 +117,11 @@ def uai2023_tex(*, family="serif"):
     return _tex_times(family=family)
 
 
+def aaai2024_tex(*, family="serif"):
+    """Fonts for AAAI 2024. LaTeX version."""
+    return _tex_times(family=family)
+
+
 def _tex_times(*, family):
     preamble = r"\usepackage{times} "
     if family == "serif":

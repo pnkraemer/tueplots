@@ -94,6 +94,60 @@ def _icml_and_aistats_common_full(
     )
 
 
+def aaai2024_half(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+    rel_width=1.0,
+):
+    """Double-column (half-width) figures for AAAI 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=3.3,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def aaai2024_full(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+    rel_width=1.0,
+):
+    """Double-column (full-width) figures for AAAI 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=6.975,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
 def uai2023_half(
     *,
     nrows=1,

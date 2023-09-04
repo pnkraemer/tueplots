@@ -80,6 +80,14 @@ def case_fonts_iclr2023_custom():
     return fonts.iclr2023(family="serif")
 
 
+def case_fonts_aaai2024_tex_default():
+    return fonts.aaai2024_tex()
+
+
+def case_fonts_aaai2024_tex_custom():
+    return fonts.aaai2024_tex(family="serif")
+
+
 def case_fonts_uai2023_tex_default():
     return fonts.uai2023_tex()
 

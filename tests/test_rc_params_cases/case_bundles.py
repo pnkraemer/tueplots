@@ -44,6 +44,11 @@ def case_bundles_iclr2023(usetex):
 
 
 @pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_aaai2024(column):
+    return bundles.aaai2024(column=column, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(column=["full", "half"])
 def case_bundles_uai2023(column):
     return bundles.uai2023(column=column, nrows=2, ncols=2, family="serif")
 
