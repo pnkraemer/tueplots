@@ -23,6 +23,10 @@ def case_fontsizes_iclr2023():
     return fontsizes.iclr2023()
 
 
+def case_fontsizes_iclr2024():
+    return fontsizes.iclr2024()
+
+
 def case_fontsizes_aistats2022():
     return fontsizes.aistats2022()
 

@@ -31,6 +31,11 @@ def iclr2023(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def iclr2024(*, default_smaller=1):
+    """Font size for ICLR 2024."""
+    return _from_base(base=10 - default_smaller)
+
+
 def aistats2022(*, default_smaller=1):
     """Font size for AISTATS 2022."""
     return _from_base(base=10 - default_smaller)
