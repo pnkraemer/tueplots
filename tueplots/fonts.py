@@ -36,8 +36,18 @@ def iclr2023_tex(*, family="serif"):
     return _neurips_and_iclr_tex_common(family=family)
 
 
+def iclr2024_tex(*, family="serif"):
+    """Fonts for ICLR 2024. LaTeX version."""
+    return _neurips_and_iclr_tex_common(family=family)
+
+
 def iclr2023(*, family="serif"):
     """Fonts for ICLR 2023. LaTeX version."""
+    return _neurips_and_iclr_common(family=family)
+
+
+def iclr2024(*, family="serif"):
+    """Fonts for ICLR 2024. LaTeX version."""
     return _neurips_and_iclr_common(family=family)
 
 
