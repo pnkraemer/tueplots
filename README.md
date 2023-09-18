@@ -10,7 +10,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/pnkraemer/tueplots.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/pnkraemer/tueplots)
 [![gh-actions](https://img.shields.io/github/actions/workflow/status/pnkraemer/tueplots/ci.yaml?branch=main&style=flat-square)](https://github.com/pnkraemer/tueplots/actions?query=workflow%3Aci)
 <a href="https://github.com/pnkraemer/tueplots/blob/master/LICENSE"><img src="https://img.shields.io/github/license/pnkraemer/tueplots?style=flat-square&color=2b9348" alt="License Badge"/></a>
-
+![PyPI - Downloads](https://img.shields.io/pypi/dm/tueplots?style=flat-square&color=yellow)
 
 
 ## Why?
