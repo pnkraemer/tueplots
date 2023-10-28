@@ -23,9 +23,9 @@ def case_palettes_pn():
     return palettes.pn
 
 
-def case_palettes_bright():
-    return palettes.bright
+def case_palettes_paultol_bright():
+    return palettes.paultol_bright
 
 
-def case_palettes_muted():
-    return palettes.muted
+def case_palettes_paultol_muted():
+    return palettes.paultol_muted

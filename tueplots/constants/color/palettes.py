@@ -73,9 +73,9 @@ pn = np.array(
         rgb.pn_red,
     ]
 )
-"""Colors of ProbNum: probnum.org."""
+"""Colors used for probnum.org."""
 
-bright = np.array(
+paultol_bright = np.array(
     [
         "4477AA",
         "EE6677",
@@ -88,16 +88,16 @@ bright = np.array(
 )
 """Bright colors.
 
-From Paul Tot's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://personal.sron.nl/~pault/.
 """
 
-high_contrast = np.array(["004488", "DDAA33", "BB5566"])
+paultol_high_contrast = np.array(["004488", "DDAA33", "BB5566"])
 """High-contrast colors.
 
-From Paul Tot's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://personal.sron.nl/~pault/.
 """
 
-muted = np.array(
+paultol_muted = np.array(
     [
         "CC6677",
         "332288",
@@ -113,5 +113,5 @@ muted = np.array(
 )
 """Muted colors.
 
-From Paul Tot's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://personal.sron.nl/~pault/.
 """
