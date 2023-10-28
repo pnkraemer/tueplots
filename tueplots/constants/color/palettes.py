@@ -115,3 +115,55 @@ paultol_muted = np.array(
 
 From Paul Tol's website: https://personal.sron.nl/~pault/.
 """
+
+
+paultol_medium_contrast = np.array(
+    [
+        "EECC66",
+        "EE99AA",
+        "6699CC",
+        "997700",
+        "994455",
+        "004488",
+    ]
+)
+"""Medium-contrast colors.
+
+From Paul Tol's website: https://personal.sron.nl/~pault/.
+"""
+
+
+paultol_vibrant = np.array(
+    [
+        "0077BB",
+        "33BBEE",
+        "009988",
+        "EE7733",
+        "CC3311",
+        "EE3377",
+        "BBBBBB",
+    ]
+)
+"""Vibrant colors.
+
+From Paul Tol's website: https://personal.sron.nl/~pault/.
+"""
+
+
+paultol_light = np.array(
+    [
+        "77AADD",
+        "99DDFF",
+        "44BB99",
+        "BBCC33",
+        "AAAA00",
+        "EEDD88",
+        "EE8866",
+        "FFAABB",
+        "DDDDDD",
+    ]
+)
+"""Light colors.
+
+From Paul Tol's website: https://personal.sron.nl/~pault/.
+"""

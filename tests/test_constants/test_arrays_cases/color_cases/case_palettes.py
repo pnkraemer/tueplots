@@ -29,3 +29,19 @@ def case_palettes_paultol_bright():
 
 def case_palettes_paultol_muted():
     return palettes.paultol_muted
+
+
+def case_palettes_paultol_high_contrast():
+    return palettes.paultol_high_contrast
+
+
+def case_palettes_paultol_medium_contrast():
+    return palettes.paultol_medium_contrast
+
+
+def case_palettes_paultol_vibrant():
+    return palettes.paultol_vibrant
+
+
+def case_palettes_paultol_light():
+    return palettes.paultol_light
