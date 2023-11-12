@@ -292,7 +292,7 @@ def cvpr2024_full(
     """Single-column (full-width) figures for CVPR 2024."""
 
     figsize = _from_base_in(
-        base_width_in=6 + 7 / 8,
+        base_width_in=6.875,
         rel_width=rel_width,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
