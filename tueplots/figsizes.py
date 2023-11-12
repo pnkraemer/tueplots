@@ -265,7 +265,7 @@ def cvpr2024_half(
     """Double-column (half-width) figures for CVPR 2022."""
 
     figsize = _from_base_in(
-        base_width_in=3 / 14,
+        base_width_in=3 + 1 / 4,
         rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
@@ -292,7 +292,7 @@ def cvpr2024_full(
     """Single-column (full-width) figures for CVPR 2022."""
 
     figsize = _from_base_in(
-        base_width_in=6 / 78,
+        base_width_in=6 + 7 / 8,
         rel_width=rel_width,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
