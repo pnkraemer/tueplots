@@ -289,7 +289,7 @@ def cvpr2024_full(
     height_to_width_ratio=_GOLDEN_RATIO,
     pad_inches=_PAD_INCHES,
 ):
-    """Single-column (full-width) figures for CVPR 2022."""
+    """Single-column (full-width) figures for CVPR 2024."""
 
     figsize = _from_base_in(
         base_width_in=6 + 7 / 8,
