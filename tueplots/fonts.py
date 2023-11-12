@@ -57,7 +57,7 @@ def cvpr2024_tex(*, family="serif"):
 
 
 def cvpr2024(*, family="serif"):
-    """Fonts for ICLR 2023. LaTeX version."""
+    """Fonts for CVPR 2024. LaTeX version."""
     return _neurips_and_iclr_common(family=family)
 
 
