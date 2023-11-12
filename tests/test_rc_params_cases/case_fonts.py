@@ -130,3 +130,19 @@ def case_fonts_aistats2022_tex_custom():
 
 def case_fonts_aistats2023_tex_custom():
     return fonts.aistats2023_tex(family="serif")
+
+
+def case_fonts_cvpr2024_default():
+    return fonts.cvpr2024()
+
+
+def case_fonts_cvpr2024_custom():
+    return fonts.cvpr2024(family="serif")
+
+
+def case_fonts_cvpr2024_tex_default():
+    return fonts.cvpr2024_tex()
+
+
+def case_fonts_cvpr2024_tex_custom():
+    return fonts.cvpr2024_tex(family="serif")

@@ -51,6 +51,16 @@ def iclr2024(*, family="serif"):
     return _neurips_and_iclr_common(family=family)
 
 
+def cvpr2024_tex(*, family="serif"):
+    """Fonts for CVPR 2024. LaTeX version."""
+    return _neurips_and_iclr_tex_common(family=family)
+
+
+def cvpr2024(*, family="serif"):
+    """Fonts for CVPR 2024. LaTeX version."""
+    return _neurips_and_iclr_common(family=family)
+
+
 def _neurips_and_iclr_common(*, family="serif"):
     """Default fonts for Neurips."""
     return {
