@@ -262,7 +262,7 @@ def cvpr2024_half(
     height_to_width_ratio=_GOLDEN_RATIO,
     pad_inches=_PAD_INCHES,
 ):
-    """Double-column (half-width) figures for CVPR 2022."""
+    """Double-column (half-width) figures for CVPR 2024."""
 
     figsize = _from_base_in(
         base_width_in=3 + 1 / 4,
