@@ -36,6 +36,14 @@ def case_figsizes_cvpr2022_full():
     return figsizes.cvpr2022_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_cvpr2024_half():
+    return figsizes.cvpr2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_cvpr2024_full():
+    return figsizes.cvpr2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_neurips2021():
     return figsizes.neurips2021(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
