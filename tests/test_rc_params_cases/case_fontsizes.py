@@ -3,6 +3,10 @@
 from tueplots import fontsizes
 
 
+def case_fontsizes_cvpr2024():
+    return fontsizes.cvpr2024()
+
+
 def case_fontsizes_icml2022():
     return fontsizes.icml2022()
 
