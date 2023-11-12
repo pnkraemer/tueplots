@@ -5,7 +5,7 @@ from tueplots.constants.color import palettes, rgb
 
 
 def cvpr2024(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
-    """ICML 2022 bundle."""
+    """CVPR 2024 bundle."""
     if column == "half":
         size = figsizes.cvpr2024_half(nrows=nrows, ncols=ncols)
     elif column == "full":
