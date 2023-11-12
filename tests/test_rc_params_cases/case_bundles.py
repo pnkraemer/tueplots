@@ -7,6 +7,14 @@ from tueplots import bundles
 
 @pytest_cases.parametrize(column=["full", "half"])
 @pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_cvpr2024(column, usetex):
+    return bundles.cvpr2024(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
+
+
+@pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
 def case_bundles_icml2022(column, usetex):
     return bundles.icml2022(
         nrows=2, ncols=2, family="serif", column=column, usetex=usetex

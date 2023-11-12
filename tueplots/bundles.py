@@ -4,6 +4,20 @@ from tueplots import axes, cycler, figsizes, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb
 
 
+def cvpr2024(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
+    """ICML 2022 bundle."""
+    if column == "half":
+        size = figsizes.cvpr2024_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.cvpr2024_full(nrows=nrows, ncols=ncols)
+    if usetex is True:
+        font_config = fonts.cvpr2024_tex(family=family)
+    elif usetex is False:
+        font_config = fonts.cvpr2024(family=family)
+    fontsize_config = fontsizes.cvpr2024()
+    return {**font_config, **size, **fontsize_config}
+
+
 def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
     """ICML 2022 bundle."""
     if column == "half":
