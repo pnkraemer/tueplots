@@ -23,6 +23,10 @@ Making a pull request on GitHub can seem complicated if one is not used to doing
 - And [here](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) is how we can all write better commit messages.
 - Using a virtual environment is generally a good idea when working with Python projects (such as `tueplots`). [Here](https://realpython.com/python-virtual-environments-a-primer/) are the basics. Be aware that if you place your environment inside the tueplots root folder, tueplots' auto-formatting might attempt to format the source code inside the environment, which is unnecessary.
 
+
+A small project like tueplots might be the perfect place to start contributing to open-source projects.
+If you would like to help but do not know where to start, reach out!
+
 ## Where do I put my code?
 
 Once you've got the basic setup (forks, clones, git) going, it is time to write code.

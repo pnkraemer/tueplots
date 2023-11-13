@@ -62,6 +62,7 @@ For further details on the available bundles, check out the `tueplots.bundles AP
    :caption: Developer documentation
 
    docs_dev/contribution_guide
+   docs_dev/continuous_integration
    docs_dev/examples
 
 
