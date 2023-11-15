@@ -61,52 +61,6 @@ def cvpr2024(*, family="serif"):
     return _neurips_and_iclr_common(family=family)
 
 
-def _neurips_and_iclr_common(*, family="serif"):
-    """Default fonts for Neurips."""
-    return {
-        "text.usetex": False,
-        "font.serif": ["Times New Roman"],
-        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-        "mathtext.rm": "Times New Roman",
-        "mathtext.it": "Times New Roman:italic",
-        "mathtext.bf": "Times New Roman:bold",
-        "font.family": family,
-    }
-
-
-def _neurips_and_iclr_tex_common(*, family="serif"):
-    """Default fonts for Neurips. LaTeX version."""
-    preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
-    if family == "serif":
-        return {
-            "text.usetex": True,
-            "font.family": "serif",
-            "text.latex.preamble": preamble,
-        }
-    preamble += (
-        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
-    )
-    return {
-        "text.usetex": True,
-        "font.family": "sans-serif",
-        "text.latex.preamble": preamble,
-    }
-
-
-def icml2022(*, family="serif"):
-    """Fonts for ICML 2022."""
-
-    return {
-        "text.usetex": False,
-        "font.serif": ["Times"],
-        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-        "mathtext.rm": "Times",
-        "mathtext.it": "Times:italic",
-        "mathtext.bf": "Times:bold",
-        "font.family": family,
-    }
-
-
 def icml2022_tex(*, family="serif"):
     """Fonts for ICML 2022. LaTeX version."""
     return _tex_times(family=family)
@@ -140,6 +94,52 @@ def uai2023_tex(*, family="serif"):
 def aaai2024_tex(*, family="serif"):
     """Fonts for AAAI 2024. LaTeX version."""
     return _tex_times(family=family)
+
+
+def icml2022(*, family="serif"):
+    """Fonts for ICML 2022."""
+
+    return {
+        "text.usetex": False,
+        "font.serif": ["Times"],
+        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
+        "mathtext.rm": "Times",
+        "mathtext.it": "Times:italic",
+        "mathtext.bf": "Times:bold",
+        "font.family": family,
+    }
+
+
+def _neurips_and_iclr_common(*, family="serif"):
+    """Default fonts for Neurips."""
+    return {
+        "text.usetex": False,
+        "font.serif": ["Times New Roman"],
+        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
+        "mathtext.rm": "Times New Roman",
+        "mathtext.it": "Times New Roman:italic",
+        "mathtext.bf": "Times New Roman:bold",
+        "font.family": family,
+    }
+
+
+def _neurips_and_iclr_tex_common(*, family="serif"):
+    """Default fonts for Neurips. LaTeX version."""
+    preamble = r"\renewcommand{\rmdefault}{ptm}\renewcommand{\sfdefault}{phv}"
+    if family == "serif":
+        return {
+            "text.usetex": True,
+            "font.family": "serif",
+            "text.latex.preamble": preamble,
+        }
+    preamble += (
+        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
+    )
+    return {
+        "text.usetex": True,
+        "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
+    }
 
 
 def _tex_times(*, family):
