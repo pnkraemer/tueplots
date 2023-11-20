@@ -159,19 +159,6 @@ def _times(*, family="serif"):
     }
 
 
-# def _times_new_roman(*, family="serif"):
-#     """Default fonts for Neurips."""
-#     return {
-#         "text.usetex": False,
-#         "font.serif": ["Times New Roman"],
-#         "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-#         "mathtext.rm": "Times New Roman",
-#         "mathtext.it": "Times New Roman:italic",
-#         "mathtext.bf": "Times New Roman:bold",
-#         "font.family": family,
-#     }
-
-
 def _times_tex_via_pkg_ptm(*, family):
     """Times font, implemented in Latex via the ptm-package.
 
