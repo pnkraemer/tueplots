@@ -18,22 +18,23 @@ For anything else, create an issue, and we will have a look together!
 
 A good source for the concrete values of, e.g., the figure sizes, are the conference's/journal's instructions for the authors.
 Some values are easy to find; for others, you have to dig deeper.
-The figure size and font size are usually easy to find. (For the font size, use the font size for the Figure captions as a reference, not the font size for the main text.)
+The figure size and font size are usually mentioned fairly prominently.
+When implementing the font size in Tueplots, use the Figure captions as a reference, not the main text.
 
 The correct font implementation can sometimes be tricky because most templates use 'Times'; however, there are different ways of achieving a "Times"-like font.
 One often has to look at the source code for the Latex style file to find the correct font.
 Look out for the following information:
 
-* If the document uses `\includepackage{times}`, then the template uses the 'Times' font. Use the same font configuration as the ICLR-2023 template.
-* If the document uses `\includepackage{ptm}`, the template also uses the 'Times' font but with a different package. Tueplots attempts to mirror this choice as closely as possible (by also including the `ptm` package instead of `times`, even though `ptm` seems to be the recommended source [according to Overleaf's font suggestions](https://www.overleaf.com/learn/latex/Font_typefaces). If your template includes `ptm`, use the same code as NeurIPS-2023.
-* If the document includes no font-related package, then use Computer Modern. Copy the configuration from JMLR-2001.
+* If the document uses `\includepackage{times}`, then the template uses the 'Times' font. Use the same font configuration as ICLR-2023.
+* If the document uses `\includepackage{ptm}`, the template also uses the 'Times' font but with a different package. Tueplots attempts to mirror this choice as closely as possible (by including the same package as the Latex template) even though one generally seems to be preferred over the other ([Overleaf's font suggestions](https://www.overleaf.com/learn/latex/Font_typefaces) only mention `ptm`, not `times`). If your template includes `ptm`, use the same code as NeurIPS-2023.
+* If the document includes no font-related package, it likely uses Computer Modern. Copy the configuration from JMLR-2001.
 
 **Note 1:**
 The `times` vs `ptm` usage in Tueplots has been clarified by [pull request #125](https://github.com/pnkraemer/tueplots/pull/125) and does not affect version `v0.0.12` or older.
 
 **Note 2:**
 [Times and Times New Roman are different fonts](https://creativepro.com/times-roman-vs-times-new-roman/).
-And since there is no native Times New Roman implementation in Latex [see this link](https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command), be sceptical if a template claims to use Times New Roman but provides a Latex style file.
+And since there is no native Times New Roman implementation in Latex unless one uses XeLatex ([see this link](https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command)), be sceptical if a template claims to use Times New Roman but provides a Latex style file.
 Always consult the style file's source code to identify the correct font.
 
 
