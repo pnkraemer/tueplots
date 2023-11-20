@@ -12,6 +12,7 @@ See also [this question on Stack Overflow](https://stackoverflow.com/questions/4
 On a related note: if you want to use the Latex version of the fonts/bundles, your system must include the required tex packages.
 See [this Stack Overflow discussion](https://stackoverflow.com/questions/55746749/latex-equations-do-not-render-in-google-colaboratory-when-using-matplotlib)
 for information.
+You may encounter this problem when using Tueplots in combination with a Google Colab notebook.
 
 
 
