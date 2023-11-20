@@ -147,7 +147,7 @@ def _times(*, family="serif"):
 
     Used, e.g., for ICML 2022.
     """
-    # todo: remove default family.
+
     return {
         "text.usetex": False,
         "font.serif": ["Times"],
