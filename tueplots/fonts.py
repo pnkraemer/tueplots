@@ -78,6 +78,11 @@ def icml2022_tex(*, family="serif"):
     return _times_tex_via_pkg_times(family=family)
 
 
+def icml2024_tex(*, family="serif"):
+    """Fonts for ICML 2024. LaTeX version."""
+    return _times_tex_via_pkg_times(family=family)
+
+
 def jmlr2001_tex(*, family="serif"):
     """Fonts for JMLR. LaTeX version."""
     return _computer_modern_tex(family=family)
@@ -110,6 +115,11 @@ def aaai2024_tex(*, family="serif"):
 
 def icml2022(*, family="serif"):
     """Fonts for ICML 2022."""
+    return _times(family=family)
+
+
+def icml2024(*, family="serif"):
+    """Fonts for ICML 2024."""
     return _times(family=family)
 
 

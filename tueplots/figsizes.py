@@ -25,6 +25,16 @@ def icml2022_full(**kwargs):
     return _icml_and_aistats_common_full(**kwargs)
 
 
+def icml2024_half(**kwargs):
+    """Double-column (half-width) figures for ICML 2024."""
+    return _icml_and_aistats_common_half(**kwargs)
+
+
+def icml2024_full(**kwargs):
+    """Single-column (full-width) figures for ICML 2024."""
+    return _icml_and_aistats_common_full(**kwargs)
+
+
 def aistats2022_half(**kwargs):
     """Double-column (half-width) figures for AISTATS 2022."""
     return _icml_and_aistats_common_half(**kwargs)

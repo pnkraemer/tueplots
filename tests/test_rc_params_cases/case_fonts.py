@@ -20,6 +20,22 @@ def case_fonts_icml2022_tex_custom():
     return fonts.icml2022_tex(family="serif")
 
 
+def case_fonts_icml2024_default():
+    return fonts.icml2024()
+
+
+def case_fonts_icml2024_custom():
+    return fonts.icml2024(family="serif")
+
+
+def case_fonts_icml2024_tex_default():
+    return fonts.icml2024_tex()
+
+
+def case_fonts_icml2024_tex_custom():
+    return fonts.icml2024_tex(family="serif")
+
+
 def case_fonts_neurips2021_default():
     return fonts.neurips2021()
 

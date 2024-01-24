@@ -32,6 +32,20 @@ def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def icml2024(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
+    """ICML 2024 bundle."""
+    if column == "half":
+        size = figsizes.icml2024_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.icml2024_full(nrows=nrows, ncols=ncols)
+    if usetex is True:
+        font_config = fonts.icml2024_tex(family=family)
+    elif usetex is False:
+        font_config = fonts.icml2024(family=family)
+    fontsize_config = fontsizes.icml2024()
+    return {**font_config, **size, **fontsize_config}
+
+
 def aistats2022(*, column="half", nrows=1, ncols=1, family="serif"):
     """AISTATS 2022 bundle."""
     if column == "half":
