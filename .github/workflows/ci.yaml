@@ -59,6 +59,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the HTML docs
       run: |
+        pip install setuptools
         pip install tox
         sudo apt-get install pandoc
         tox -e docs
