@@ -1,6 +1,5 @@
 """Test cases for font settings."""
 
-
 from tueplots import fonts
 
 
