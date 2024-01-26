@@ -11,6 +11,14 @@ def case_figsizes_icml2022_half():
     return figsizes.icml2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_icml2024_full():
+    return figsizes.icml2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_icml2024_half():
+    return figsizes.icml2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_aistats2022_full():
     return figsizes.aistats2022_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 

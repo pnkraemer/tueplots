@@ -22,6 +22,14 @@ def case_bundles_icml2022(column, usetex):
 
 
 @pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_icml2024(column, usetex):
+    return bundles.icml2024(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
+
+
+@pytest_cases.parametrize(column=["full", "half"])
 def case_bundles_aistats2022(column):
     return bundles.aistats2022(column=column, nrows=2, ncols=2, family="serif")
 

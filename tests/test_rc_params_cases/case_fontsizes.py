@@ -11,6 +11,10 @@ def case_fontsizes_icml2022():
     return fontsizes.icml2022()
 
 
+def case_fontsizes_icml2024():
+    return fontsizes.icml2024()
+
+
 def case_fontsizes_neurips2021():
     return fontsizes.neurips2021()
 

@@ -11,6 +11,16 @@ def icml2022(*, default_smaller=1):
     return _from_base(base=9 - default_smaller)
 
 
+def icml2024(*, default_smaller=1):
+    r"""Font size for ICML 2024.
+
+    Source: https://media.icml.cc/Conferences/ICML2024/Styles/example_paper.pdf
+    """
+    # ICML text size is 10, but captions are in size 9.
+    # Therefore, we use base 9 instead of 10.
+    return _from_base(base=9 - default_smaller)
+
+
 def cvpr2024(*, default_smaller=1):
     """Font size for CVPR 2024."""
     # CVPR text size is 10, but captions are in size 9.
