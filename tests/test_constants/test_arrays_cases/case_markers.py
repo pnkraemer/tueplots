@@ -1,6 +1,5 @@
 """Test cases for markers."""
 
-
 from tueplots.constants import markers
 
 

@@ -1,6 +1,5 @@
 """Test cases for axes."""
 
-
 from tueplots import axes
 
 

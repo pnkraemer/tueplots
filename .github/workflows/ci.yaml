@@ -55,7 +55,8 @@ jobs:
     steps:
     - uses: actions/setup-python@v2
       with:
-        python-version: "3.x"
+        # Ensure that this version matches .readthedocs.yaml
+        python-version: "3.9"
     - uses: actions/checkout@v2
     - name: Build the HTML docs
       run: |

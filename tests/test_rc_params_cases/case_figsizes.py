@@ -1,6 +1,5 @@
 """Test-cases for figsizes."""
 
-
 from tueplots import figsizes
 
 
