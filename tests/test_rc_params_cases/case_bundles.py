@@ -74,6 +74,10 @@ def case_bundles_uai2023(column):
     return bundles.uai2023(column=column, nrows=2, ncols=2, family="serif")
 
 
+def case_bundles_eccv2024():
+    return bundles.eccv2024(nrows=2, ncols=2, family="serif")
+
+
 def case_bundles_jmlr2001():
     return bundles.jmlr2001(nrows=2, ncols=2, family="serif")
 

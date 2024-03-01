@@ -123,6 +123,14 @@ def case_fonts_uai2023_tex_custom():
     return fonts.uai2023_tex(family="serif")
 
 
+def case_fonts_eccv2024_tex_default():
+    return fonts.eccv2024_tex()
+
+
+def case_fonts_eccv2024_tex_custom():
+    return fonts.eccv2024_tex(family="serif")
+
+
 def case_fonts_jmlr2001_tex_default():
     return fonts.jmlr2001_tex()
 
