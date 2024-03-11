@@ -51,6 +51,10 @@ def case_fontsizes_uai2023():
     return fontsizes.uai2023()
 
 
+def case_fontsizes_eccv2024():
+    return fontsizes.eccv2024()
+
+
 def case_fontsizes_jmlr2001():
     return fontsizes.jmlr2001()
 

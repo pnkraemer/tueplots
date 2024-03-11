@@ -87,6 +87,10 @@ def case_figsizes_uai2023_full():
     return figsizes.uai2023_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_eccv2024():
+    return figsizes.eccv2024(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_jmlr2001():
     return figsizes.jmlr2001(nrows=2, ncols=3, height_to_width_ratio=1.0)
 

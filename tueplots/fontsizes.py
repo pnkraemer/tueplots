@@ -73,6 +73,13 @@ def uai2023(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def eccv2024(*, default_smaller=1):
+    """Font size for ECCV 2024."""
+    # ECCV text size is 10, but captions are in size 9.
+    # Therefore, we use base 9 instead of 10.
+    return _from_base(base=9 - default_smaller)
+
+
 def jmlr2001(*, default_smaller=1):
     """Font size for JMLR 2021."""
     return _from_base(base=10.95 - default_smaller)

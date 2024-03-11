@@ -83,6 +83,11 @@ def icml2024_tex(*, family="serif"):
     return _times_tex_via_pkg_times(family=family)
 
 
+def eccv2024_tex(*, family="serif"):
+    """Fonts for ECCV 2024. LaTeX version."""
+    return _computer_modern_tex(family=family)
+
+
 def jmlr2001_tex(*, family="serif"):
     """Fonts for JMLR. LaTeX version."""
     return _computer_modern_tex(family=family)
