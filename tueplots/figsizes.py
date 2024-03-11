@@ -362,6 +362,8 @@ def jmlr2001(
     """JMLR figure size.
 
     Source: https://www.jmlr.org/format/format.html
+
+    The present format is for US letter format.
     """
 
     figsize = _from_base_in(
