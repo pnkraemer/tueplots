@@ -1,5 +1,5 @@
 sphinx
 nbsphinx
-m2r2
+myst-parser
 jupyter
 sphinx-book-theme
