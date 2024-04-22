@@ -24,7 +24,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.napoleon",
     "nbsphinx",
-    "m2r2",
+    "myst_parser",
 ]
 
 source_suffix = [".rst", ".md"]
