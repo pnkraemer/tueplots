@@ -476,6 +476,29 @@ def neurips2023(
     )
 
 
+def neurips2024(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Neurips 2024 figure size.
+    Source: https://nips.cc/Conferences/2024/CallForPapers"""
+    return _neurips_and_iclr_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
+    )
+
+
 def iclr2023(
     *,
     rel_width=1.0,

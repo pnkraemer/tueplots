@@ -27,6 +27,10 @@ def case_fontsizes_neurips2023():
     return fontsizes.neurips2023()
 
 
+def case_fontsizes_neurips2024():
+    return fontsizes.neurips2024()
+
+
 def case_fontsizes_iclr2023():
     return fontsizes.iclr2023()
 
