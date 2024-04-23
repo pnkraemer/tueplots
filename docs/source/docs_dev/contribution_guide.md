@@ -54,7 +54,7 @@ If you want to contribute but need help knowing where to start, reach out!
 ## Where do I put my code?
 
 Once you've got the basic setup (forks, clones, git) going, it is time to write code.
-Check out the [continuous-integration](https://tueplots.readthedocs.io/en/latest/docs_dev/continuous_integration) page for information about installing all dev-related tools.
+Check out the [continuous-integration](https://tueplots.readthedocs.io/en/latest/docs_dev/continuous_integration.html) page for information about installing all dev-related tools.
 
 
 Then, roughly follow these steps:

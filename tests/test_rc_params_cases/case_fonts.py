@@ -83,6 +83,22 @@ def case_fonts_neurips2023_tex_custom():
     return fonts.neurips2023_tex(family="serif")
 
 
+def case_fonts_neurips2024_default():
+    return fonts.neurips2024()
+
+
+def case_fonts_neurips2024_custom():
+    return fonts.neurips2024(family="serif")
+
+
+def case_fonts_neurips2024_tex_default():
+    return fonts.neurips2024_tex()
+
+
+def case_fonts_neurips2024_tex_custom():
+    return fonts.neurips2024_tex(family="serif")
+
+
 def case_fonts_iclr2023_tex_default():
     return fonts.iclr2023_tex()
 

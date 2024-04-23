@@ -43,6 +43,20 @@ def neurips2023_tex(*, family="serif"):
     return _times_tex_via_pkg_ptm(family=family)
 
 
+def neurips2024(*, family="serif"):
+    """Fonts for Neurips 2024."""
+    # NeurIPS' style-files states that it uses Times New Roman
+    # font, but includes the 'ptm' package, which implements
+    # the 'Times' font.
+    # Therefore, refer to 'Times' instead of 'Times New Roman'
+    return _times(family=family)
+
+
+def neurips2024_tex(*, family="serif"):
+    """Fonts for Neurips 2024. LaTeX version."""
+    return _times_tex_via_pkg_ptm(family=family)
+
+
 def iclr2023_tex(*, family="serif"):
     """Fonts for ICLR 2023. LaTeX version."""
     return _times_tex_via_pkg_times(family=family)

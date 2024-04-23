@@ -43,6 +43,11 @@ def neurips2023(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def neurips2024(*, default_smaller=1):
+    """Font size for Neurips 2024."""
+    return _from_base(base=10 - default_smaller)
+
+
 def iclr2023(*, default_smaller=1):
     """Font size for ICLR 2023."""
     return _from_base(base=10 - default_smaller)
