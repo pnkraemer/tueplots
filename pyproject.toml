@@ -12,7 +12,7 @@ authors = [
 ]
 description = "Scientific plotting made easy."
 readme = "README.md"
-requires-python=">=3.8"
+requires-python=">=3.9"
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
