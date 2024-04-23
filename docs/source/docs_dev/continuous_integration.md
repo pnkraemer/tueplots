@@ -17,7 +17,7 @@ or only run the tests via
 tox -e test
 ```
 or only run the linter via
-```commandline
+```
 tox -e format-and-lint
 ```
 
