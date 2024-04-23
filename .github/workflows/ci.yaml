@@ -16,18 +16,11 @@ jobs:
       with:
         python-version: "3.x"
     - uses: actions/checkout@v4
-    - name: Lint with black through tox
+    - name: Lint through tox
       run: |
         pip install tox
-        tox -e black
-    - name: Lint with isort through tox
-      run: |
-        pip install tox
-        tox -e isort
-    - name: Lint with pylint through tox
-      run: |
-        pip install tox
-        tox -e pylint
+        tox -e format-and-lint
+
   tests:
 
     runs-on: ${{ matrix.os }}
@@ -42,14 +35,11 @@ jobs:
       with:
         python-version: "3.x"
     - uses: actions/checkout@v4
-    - name: Run tests with pytest
+    - name: Run tests through tox
       run: |
         pip install tox
-        tox -e py3
-    - name: Run doctests for python snippets in markdown files
-      run: |
-        pip install tox
-        tox -e doctest
+        tox -e test
+
   docs:
     runs-on: ubuntu-latest
     steps:
