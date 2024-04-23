@@ -21,7 +21,7 @@ jobs:
         pip install tox
         tox -e format-and-lint
 
-  tests:
+  test:
 
     runs-on: ${{ matrix.os }}
     strategy:
@@ -40,7 +40,7 @@ jobs:
         pip install tox
         tox -e test
 
-  docs:
+  build-docs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/setup-python@v4
