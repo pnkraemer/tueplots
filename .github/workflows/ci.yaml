@@ -12,10 +12,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: "3.x"
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Lint with black through tox
       run: |
         pip install tox
@@ -38,10 +38,10 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: "3.x"
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Run tests with pytest
       run: |
         pip install tox
@@ -53,11 +53,11 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         # Ensure that this version matches .readthedocs.yaml
         python-version: "3.9"
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Build the HTML docs
       run: |
         pip install tox
