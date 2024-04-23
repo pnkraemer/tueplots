@@ -69,4 +69,4 @@ If you know of any others, please feel invited to open an issue/PR.
 
 # Miscellaneous
 
-`tueplots`has been developed at the University of Tübingen (hence the name).
+`tueplots`has been started at the University of Tübingen (hence the name).
