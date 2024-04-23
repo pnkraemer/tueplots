@@ -5,18 +5,23 @@ Install `tueplots` with all ci-related dependencies via
 ```
 pip install .[ci]
 ```
+
+
+## Tox
 Run all checks via
 ```
 tox
 ```
 or only run the tests via
 ```
-tox -e pytest
+tox -e test
 ```
-or use tox (which also runs the linter, and the python-code-snippets in this readme).
+or only run the linter via
+```commandline
+tox -e format-and-lint
 ```
-tox
-```
+
+## Pre-commit hook
 The CI checks for compliance of the code with black and isort, and runs the tests and the notebooks.
 To automatically satisfy the former, there is a pre-commit that can be used (do this once):
 ```
