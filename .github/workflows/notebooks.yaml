@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run_notebooks:
+  run-notebooks:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
