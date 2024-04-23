@@ -487,7 +487,9 @@ def neurips2024(
     pad_inches=_PAD_INCHES,
 ):
     """Neurips 2024 figure size.
-    Source: https://nips.cc/Conferences/2024/CallForPapers"""
+    
+    Source: https://nips.cc/Conferences/2024/CallForPapers
+    """
     return _neurips_and_iclr_common(
         rel_width=rel_width,
         nrows=nrows,
