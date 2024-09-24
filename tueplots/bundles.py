@@ -63,6 +63,9 @@ def aistats2023(*, column="half", nrows=1, ncols=1, family="serif"):
         size = figsizes.aistats2023_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.aistats2023_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     font_config = fonts.aistats2023_tex(family=family)
     fontsize_config = fontsizes.aistats2023()
     return {**font_config, **size, **fontsize_config}
@@ -74,9 +77,18 @@ def aistats2025(*, column="half", nrows=1, ncols=1, family="serif"):
         size = figsizes.aistats2025_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.aistats2025_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     font_config = fonts.aistats2025_tex(family=family)
     fontsize_config = fontsizes.aistats2025()
     return {**font_config, **size, **fontsize_config}
+
+
+def _msg_error_wrong_column_arg(column):
+    msg = f"Argument column={column} unknown."
+    msg += "Either column='half' or column='full' expected."
+    return msg
 
 
 def aaai2024(*, column="half", nrows=1, ncols=1, family="serif", rel_width=1.0):
