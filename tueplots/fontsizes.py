@@ -103,7 +103,10 @@ def tmlr2023(*, default_smaller=1):
 
 
 def beamer_moml(**kwargs):
-    """Font size for a beamer slide in aspectratio 16:9 with 10pt font."""
+    """Font size for a beamer slide in aspectratio 16:9 with 10pt font.
+
+    Deprecated in v0.0.16. Use 'fontsizes.beamer' instead.
+    """
     msg = "'fontsizes.beamer_moml' has been renamed to 'fontsizes.beamer' in v0.0.16."
     msg += " The old API will be removed any time after January 1st, 2025."
     warnings.warn(msg, DeprecationWarning)
