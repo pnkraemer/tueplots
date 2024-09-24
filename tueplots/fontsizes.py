@@ -1,5 +1,7 @@
 """Fontsize settings."""
 
+import warnings
+
 
 def icml2022(*, default_smaller=1):
     r"""Font size for ICML 2022.
@@ -100,8 +102,19 @@ def tmlr2023(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
-def beamer_moml(*, default_smaller=1):
-    """Font size for a beamer slide in aspectratio 16:9 with 10pt font."""
+def beamer_moml(**kwargs):
+    """Font size for a beamer slide in aspectratio 16:9 with 10pt font.
+
+    Deprecated in v0.0.16. Use 'fontsizes.beamer' instead.
+    """
+    msg = "'fontsizes.beamer_moml' has been renamed to 'fontsizes.beamer' in v0.0.16."
+    msg += " The old API will be removed any time after January 1st, 2025."
+    warnings.warn(msg, DeprecationWarning)
+    return beamer(**kwargs)
+
+
+def beamer(*, default_smaller=1):
+    """Font size for a beamer slide (in aspectratio 16:9 with 10pt font)."""
     return _from_base(base=10 - default_smaller)
 
 
