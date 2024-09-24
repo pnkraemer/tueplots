@@ -119,7 +119,12 @@ def aistats2022_tex(*, family="serif"):
 
 def aistats2023_tex(*, family="serif"):
     """Fonts for AISTATS 2023. LaTeX version."""
-    return _times_tex_via_pkg_times(family=family)
+    return _computer_modern_tex(family=family)
+
+
+def aistats2025_tex(*, family="serif"):
+    """Fonts for AISTATS 2025. LaTeX version."""
+    return _computer_modern_tex(family=family)
 
 
 def uai2023_tex(*, family="serif"):

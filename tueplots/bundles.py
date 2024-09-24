@@ -68,6 +68,17 @@ def aistats2023(*, column="half", nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def aistats2025(*, column="half", nrows=1, ncols=1, family="serif"):
+    """AISTATS 2025 bundle."""
+    if column == "half":
+        size = figsizes.aistats2025_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.aistats2025_full(nrows=nrows, ncols=ncols)
+    font_config = fonts.aistats2025_tex(family=family)
+    fontsize_config = fontsizes.aistats2025()
+    return {**font_config, **size, **fontsize_config}
+
+
 def aaai2024(*, column="half", nrows=1, ncols=1, family="serif", rel_width=1.0):
     """AAAI 2024 bundle.
 

@@ -55,6 +55,16 @@ def aistats2023_full(**kwargs):
     return _icml_and_aistats_common_full(**kwargs)
 
 
+def aistats2025_half(**kwargs):
+    """Double-column (half-width) figures for AISTATS 2025."""
+    return _icml_and_aistats_common_half(**kwargs)
+
+
+def aistats2025_full(**kwargs):
+    """Single-column (full-width) figures for AISTATS 2025."""
+    return _icml_and_aistats_common_full(**kwargs)
+
+
 def _icml_and_aistats_common_half(
     *,
     nrows=1,

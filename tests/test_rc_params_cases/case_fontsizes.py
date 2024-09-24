@@ -47,6 +47,10 @@ def case_fontsizes_aistats2023():
     return fontsizes.aistats2023()
 
 
+def case_fontsizes_aistats2025():
+    return fontsizes.aistats2025()
+
+
 def case_fontsizes_aaai2024():
     return fontsizes.aaai2024()
 

@@ -39,6 +39,11 @@ def case_bundles_aistats2023(column):
     return bundles.aistats2023(column=column, nrows=2, ncols=2, family="serif")
 
 
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_aistats2025(column):
+    return bundles.aistats2025(column=column, nrows=2, ncols=2, family="serif")
+
+
 @pytest_cases.parametrize(usetex=[True, False])
 def case_bundles_neurips2021(usetex):
     return bundles.neurips2021(usetex=usetex, nrows=2, ncols=2, family="serif")
