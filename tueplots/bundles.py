@@ -10,6 +10,9 @@ def cvpr2024(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
         size = figsizes.cvpr2024_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.cvpr2024_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     if usetex is True:
         font_config = fonts.cvpr2024_tex(family=family)
     elif usetex is False:
@@ -24,6 +27,9 @@ def icml2022(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
         size = figsizes.icml2022_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.icml2022_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     if usetex is True:
         font_config = fonts.icml2022_tex(family=family)
     elif usetex is False:
@@ -38,6 +44,9 @@ def icml2024(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
         size = figsizes.icml2024_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.icml2024_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     if usetex is True:
         font_config = fonts.icml2024_tex(family=family)
     elif usetex is False:
@@ -52,6 +61,9 @@ def aistats2022(*, column="half", nrows=1, ncols=1, family="serif"):
         size = figsizes.aistats2022_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.aistats2022_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     font_config = fonts.aistats2022_tex(family=family)
     fontsize_config = fontsizes.aistats2022()
     return {**font_config, **size, **fontsize_config}
@@ -85,12 +97,6 @@ def aistats2025(*, column="half", nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def _msg_error_wrong_column_arg(column):
-    msg = f"Argument column={column} unknown."
-    msg += "Either column='half' or column='full' expected."
-    return msg
-
-
 def aaai2024(*, column="half", nrows=1, ncols=1, family="serif", rel_width=1.0):
     """AAAI 2024 bundle.
 
@@ -100,6 +106,9 @@ def aaai2024(*, column="half", nrows=1, ncols=1, family="serif", rel_width=1.0):
         size = figsizes.aaai2024_half(nrows=nrows, ncols=ncols, rel_width=rel_width)
     elif column == "full":
         size = figsizes.aaai2024_full(nrows=nrows, ncols=ncols, rel_width=rel_width)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     font_config = fonts.aaai2024_tex(family=family)
     fontsize_config = fontsizes.aaai2024()
     return {**font_config, **size, **fontsize_config}
@@ -111,9 +120,18 @@ def uai2023(*, column="half", nrows=1, ncols=1, family="serif"):
         size = figsizes.uai2023_half(nrows=nrows, ncols=ncols)
     elif column == "full":
         size = figsizes.uai2023_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_column_arg(column)
+        raise ValueError(msg)
     font_config = fonts.uai2023_tex(family=family)
     fontsize_config = fontsizes.uai2023()
     return {**font_config, **size, **fontsize_config}
+
+
+def _msg_error_wrong_column_arg(column):
+    msg = f"Argument column={column} unknown."
+    msg += "Either column='half' or column='full' expected."
+    return msg
 
 
 def eccv2024(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
