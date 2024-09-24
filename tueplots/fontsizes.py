@@ -68,6 +68,11 @@ def aistats2023(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def aistats2025(*, default_smaller=1):
+    """Font size for AISTATS 2025."""
+    return _from_base(base=10 - default_smaller)
+
+
 def aaai2024(*, default_smaller=1):
     """Font size for AAAI 2024."""
     return _from_base(base=10 - default_smaller)
