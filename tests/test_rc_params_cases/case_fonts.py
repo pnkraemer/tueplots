@@ -193,3 +193,7 @@ def case_fonts_cvpr2024_tex_default():
 
 def case_fonts_cvpr2024_tex_custom():
     return fonts.cvpr2024_tex(family="serif")
+
+
+def case_fonts_probnum2025_tex_default():
+    return fonts.probnum2025_tex()

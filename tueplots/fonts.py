@@ -147,6 +147,11 @@ def icml2024(*, family="serif"):
     return _times(family=family)
 
 
+def probnum2025_tex(*, family="serif"):
+    """Fonts for ProbNum 2025. LaTeX version."""
+    return _computer_modern_tex(family=family)
+
+
 def beamer_moml():
     """Fonts that are compatible with the beamer template of the method-of-machine-learning group in Tübingen."""
     return {

@@ -96,6 +96,11 @@ def case_bundles_tmlr2023():
     return bundles.tmlr2023(nrows=2, ncols=2, family="serif")
 
 
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_probnum2025(column):
+    return bundles.probnum2025(column=column, nrows=1, ncols=1, family="sans-serif")
+
+
 def case_bundles_beamer_moml():
     return bundles.beamer_moml(rel_width=0.9, rel_height=0.9)
 

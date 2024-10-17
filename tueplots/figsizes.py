@@ -326,6 +326,57 @@ def cvpr2024_full(
     )
 
 
+def probnum2025_half(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Single-column (half-width) figures for ProbNum 2025."""
+    figsize = _from_base_pt(
+        base_width_pt=240,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def probnum2025_full(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Full-page (full-width) figures for ProbNum 2025."""
+    figsize = _from_base_pt(
+        base_width_pt=500,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
 # Single-column formats
 
 
