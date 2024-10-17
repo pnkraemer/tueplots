@@ -236,6 +236,20 @@ def iclr2024(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def probnum2025(*, column="half", nrows=1, ncols=1, family="serif"):
+    """ProbNum 2025 bundle."""
+    if column == "half":
+        size = figsizes.probnum2025_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.probnum2025_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_arg_column(column)
+        raise ValueError(msg)
+    font_config = fonts.probnum2025_tex(family=family)
+    fontsize_config = fontsizes.probnum2025()
+    return {**font_config, **size, **fontsize_config}
+
+
 def _msg_error_wrong_arg_usetex(usetex):
     msg = f"Argument usetex={usetex} unknown."
     msg += "Either usetex=True or usetex=False expected."
