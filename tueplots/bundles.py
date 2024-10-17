@@ -236,7 +236,7 @@ def iclr2024(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def probnum2025(*, column="half", nrows=1, ncols=1, family="serif"):
+def probnum2025(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     """ProbNum 2025 bundle."""
     if column == "half":
         size = figsizes.probnum2025_half(nrows=nrows, ncols=ncols)

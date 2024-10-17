@@ -336,8 +336,8 @@ def probnum2025_half(
     pad_inches=_PAD_INCHES,
 ):
     """Single-column (half-width) figures for ProbNum 2025."""
-    figsize = _from_base_in(
-        base_width_in=3.333,
+    figsize = _from_base_pt(
+        base_width_pt=240,
         rel_width=1.0,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
@@ -362,8 +362,8 @@ def probnum2025_full(
     pad_inches=_PAD_INCHES,
 ):
     """Full-page (full-width) figures for ProbNum 2025."""
-    figsize = _from_base_in(
-        base_width_in=6.944,
+    figsize = _from_base_pt(
+        base_width_pt=500,
         rel_width=rel_width,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,

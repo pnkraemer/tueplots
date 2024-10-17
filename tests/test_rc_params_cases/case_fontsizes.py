@@ -67,5 +67,9 @@ def case_fontsizes_jmlr2001():
     return fontsizes.jmlr2001()
 
 
+def case_fontsizes_probnum2025():
+    return fontsizes.probnum2025()
+
+
 def case_fontsizes_beamer():
     return fontsizes.beamer()
