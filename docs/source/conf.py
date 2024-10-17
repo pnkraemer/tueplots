@@ -24,7 +24,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.napoleon",
     "nbsphinx",
-    "m2r2",
+    "myst_parser",
 ]
 
 source_suffix = [".rst", ".md"]
@@ -50,10 +50,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
-html_theme_options = {
-    "logo_only": True,
-}
+html_theme = "sphinx_book_theme"
+html_theme_options = {"navigation_with_keys": False}
 
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.

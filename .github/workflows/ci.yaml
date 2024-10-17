@@ -12,51 +12,42 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: "3.x"
-    - uses: actions/checkout@v2
-    - name: Lint with black through tox
+    - uses: actions/checkout@v4
+    - name: Lint through tox
       run: |
         pip install tox
-        tox -e black
-    - name: Lint with isort through tox
-      run: |
-        pip install tox
-        tox -e isort
-    - name: Lint with pylint through tox
-      run: |
-        pip install tox
-        tox -e pylint
-  tests:
+        tox -e format-and-lint
+
+  test:
 
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.8,3.9]
+        python-version: ["3.9","3.10", "3.11", "3.12"]
         os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: "3.x"
-    - uses: actions/checkout@v2
-    - name: Run tests with pytest
+    - uses: actions/checkout@v4
+    - name: Run tests through tox
       run: |
         pip install tox
-        tox -e py3
-    - name: Run doctests for python snippets in markdown files
-      run: |
-        pip install tox
-        tox -e doctest
-  docs:
+        tox -e test
+
+  build-docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
-        python-version: "3.x"
-    - uses: actions/checkout@v2
+        # Ensure that this version matches .readthedocs.yaml
+        python-version: "3.10"
+    - uses: actions/checkout@v4
     - name: Build the HTML docs
       run: |
         pip install tox

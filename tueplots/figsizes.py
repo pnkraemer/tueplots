@@ -25,6 +25,16 @@ def icml2022_full(**kwargs):
     return _icml_and_aistats_common_full(**kwargs)
 
 
+def icml2024_half(**kwargs):
+    """Double-column (half-width) figures for ICML 2024."""
+    return _icml_and_aistats_common_half(**kwargs)
+
+
+def icml2024_full(**kwargs):
+    """Single-column (full-width) figures for ICML 2024."""
+    return _icml_and_aistats_common_full(**kwargs)
+
+
 def aistats2022_half(**kwargs):
     """Double-column (half-width) figures for AISTATS 2022."""
     return _icml_and_aistats_common_half(**kwargs)
@@ -42,6 +52,16 @@ def aistats2023_half(**kwargs):
 
 def aistats2023_full(**kwargs):
     """Single-column (full-width) figures for AISTATS 2023."""
+    return _icml_and_aistats_common_full(**kwargs)
+
+
+def aistats2025_half(**kwargs):
+    """Double-column (half-width) figures for AISTATS 2025."""
+    return _icml_and_aistats_common_half(**kwargs)
+
+
+def aistats2025_full(**kwargs):
+    """Single-column (full-width) figures for AISTATS 2025."""
     return _icml_and_aistats_common_full(**kwargs)
 
 
@@ -81,6 +101,60 @@ def _icml_and_aistats_common_full(
 ):
     figsize = _from_base_in(
         base_width_in=6.75,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def aaai2024_half(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+    rel_width=1.0,
+):
+    """Double-column (half-width) figures for AAAI 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=3.3,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def aaai2024_full(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+    rel_width=1.0,
+):
+    """Double-column (full-width) figures for AAAI 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=6.975,
         rel_width=rel_width,
         height_to_width_ratio=height_to_width_ratio,
         nrows=nrows,
@@ -199,7 +273,90 @@ def cvpr2022_full(
     )
 
 
+def cvpr2024_half(
+    *,
+    nrows=1,
+    ncols=1,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Double-column (half-width) figures for CVPR 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=3.25,
+        rel_width=1.0,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
+def cvpr2024_full(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Single-column (full-width) figures for CVPR 2024."""
+
+    figsize = _from_base_in(
+        base_width_in=6.875,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
 # Single-column formats
+
+
+def eccv2024(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """ECCV figure size.
+
+    Source: https://eccv2024.ecva.net/Conferences/2024/SubmissionPolicies
+    """
+
+    figsize = _from_base_in(
+        base_width_in=4.8,  # corresponds to 122mm in ECCV template
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
 
 
 def jmlr2001(
@@ -329,6 +486,31 @@ def neurips2023(
     )
 
 
+def neurips2024(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Neurips 2024 figure size.
+
+    Source: https://nips.cc/Conferences/2024/CallForPapers
+    """
+    return _neurips_and_iclr_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
+    )
+
+
 def iclr2023(
     *,
     rel_width=1.0,
@@ -340,6 +522,28 @@ def iclr2023(
     pad_inches=_PAD_INCHES,
 ):
     """ICLR 2023 figure size."""
+    return _neurips_and_iclr_common(
+        rel_width=rel_width,
+        nrows=nrows,
+        ncols=ncols,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        height_to_width_ratio=height_to_width_ratio,
+        pad_inches=pad_inches,
+    )
+
+
+def iclr2024(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """ICLR 2024 figure size."""
     return _neurips_and_iclr_common(
         rel_width=rel_width,
         nrows=nrows,

@@ -1,6 +1,5 @@
 """Test-cases for figsizes."""
 
-
 from tueplots import figsizes
 
 
@@ -10,6 +9,14 @@ def case_figsizes_icml2022_full():
 
 def case_figsizes_icml2022_half():
     return figsizes.icml2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_icml2024_full():
+    return figsizes.icml2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_icml2024_half():
+    return figsizes.icml2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_aistats2022_full():
@@ -28,12 +35,28 @@ def case_figsizes_aistats2023_half():
     return figsizes.aistats2023_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_aistats2025_full():
+    return figsizes.aistats2025_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aistats2025_half():
+    return figsizes.aistats2025_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_cvpr2022_half():
     return figsizes.cvpr2022_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_cvpr2022_full():
     return figsizes.cvpr2022_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_cvpr2024_half():
+    return figsizes.cvpr2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_cvpr2024_full():
+    return figsizes.cvpr2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_neurips2021():
@@ -48,8 +71,24 @@ def case_figsizes_neurips2023():
     return figsizes.neurips2023(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_neurips2024():
+    return figsizes.neurips2024(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_iclr2023():
     return figsizes.iclr2023(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_iclr2024():
+    return figsizes.iclr2024(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aaai2024_half():
+    return figsizes.aaai2024_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_aaai2024_full():
+    return figsizes.aaai2024_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_uai2023_half():
@@ -58,6 +97,10 @@ def case_figsizes_uai2023_half():
 
 def case_figsizes_uai2023_full():
     return figsizes.uai2023_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_eccv2024():
+    return figsizes.eccv2024(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
 def case_figsizes_jmlr2001():

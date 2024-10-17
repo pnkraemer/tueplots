@@ -7,8 +7,24 @@ from tueplots import bundles
 
 @pytest_cases.parametrize(column=["full", "half"])
 @pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_cvpr2024(column, usetex):
+    return bundles.cvpr2024(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
+
+
+@pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
 def case_bundles_icml2022(column, usetex):
     return bundles.icml2022(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
+
+
+@pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_icml2024(column, usetex):
+    return bundles.icml2024(
         nrows=2, ncols=2, family="serif", column=column, usetex=usetex
     )
 
@@ -21,6 +37,11 @@ def case_bundles_aistats2022(column):
 @pytest_cases.parametrize(column=["full", "half"])
 def case_bundles_aistats2023(column):
     return bundles.aistats2023(column=column, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_aistats2025(column):
+    return bundles.aistats2025(column=column, nrows=2, ncols=2, family="serif")
 
 
 @pytest_cases.parametrize(usetex=[True, False])
@@ -39,13 +60,32 @@ def case_bundles_neurips2023(usetex):
 
 
 @pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_neurips2024(usetex):
+    return bundles.neurips2024(usetex=usetex, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(usetex=[True, False])
 def case_bundles_iclr2023(usetex):
     return bundles.iclr2023(usetex=usetex, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_iclr2024(usetex):
+    return bundles.iclr2024(usetex=usetex, nrows=2, ncols=2, family="serif")
+
+
+@pytest_cases.parametrize(column=["full", "half"])
+def case_bundles_aaai2024(column):
+    return bundles.aaai2024(column=column, nrows=2, ncols=2, family="serif")
 
 
 @pytest_cases.parametrize(column=["full", "half"])
 def case_bundles_uai2023(column):
     return bundles.uai2023(column=column, nrows=2, ncols=2, family="serif")
+
+
+def case_bundles_eccv2024():
+    return bundles.eccv2024(nrows=2, ncols=2, family="serif")
 
 
 def case_bundles_jmlr2001():

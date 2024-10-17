@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="./docs/source/img/logo.png" width="400"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo.png" width="400"/>
 </p>
 
 # TUEplots: Extend matplotlib for scientific publications
@@ -8,9 +8,9 @@
 [![PyPi Version](https://img.shields.io/pypi/v/tueplots.svg?style=flat-square)](https://pypi.org/project/tueplots/)
 [![Docs](https://readthedocs.org/projects/pip/badge/?version=latest&style=flat-square)](https://github.com/pnkraemer/tueplots)
 [![GitHub stars](https://img.shields.io/github/stars/pnkraemer/tueplots.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/pnkraemer/tueplots)
-[![gh-actions](https://img.shields.io/github/workflow/status/pnkraemer/tueplots/ci?style=flat-square)](https://github.com/pnkraemer/tueplots/actions?query=workflow%3Aci)
+[![gh-actions](https://img.shields.io/github/actions/workflow/status/pnkraemer/tueplots/ci.yaml?branch=main&style=flat-square)](https://github.com/pnkraemer/tueplots/actions?query=workflow%3Aci)
 <a href="https://github.com/pnkraemer/tueplots/blob/master/LICENSE"><img src="https://img.shields.io/github/license/pnkraemer/tueplots?style=flat-square&color=2b9348" alt="License Badge"/></a>
-
+![PyPI - Downloads](https://img.shields.io/pypi/dm/tueplots?style=flat-square&color=yellow)
 
 
 ## Why?
@@ -24,9 +24,9 @@ For example, consider the style tailored to the ICML2022 template.
 (Left: default matplotlib, middle: one line of tueplots-code, right: two lines of tueplots-code)
 
 <p align="center">
-<img src="./docs/img_for_readme/before.png" width="200"/>
-<img src="./docs/img_for_readme/after1.png" width="200"/>
-<img src="./docs/img_for_readme/after2.png" width="200"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/img_for_readme/before.png" width="200"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/img_for_readme/after1.png" width="200"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/img_for_readme/after2.png" width="200"/>
 </p>
 
 
@@ -69,4 +69,4 @@ If you know of any others, please feel invited to open an issue/PR.
 
 # Miscellaneous
 
-`tueplots`has been developed at the University of Tübingen (hence the name).
+`tueplots`has been started at the University of Tübingen (hence the name).
