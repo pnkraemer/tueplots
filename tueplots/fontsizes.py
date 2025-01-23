@@ -1,7 +1,5 @@
 """Fontsize settings."""
 
-import warnings
-
 
 def icml2022(*, default_smaller=1):
     r"""Font size for ICML 2022.
