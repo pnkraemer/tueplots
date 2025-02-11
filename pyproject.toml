@@ -30,7 +30,7 @@ dependencies = [
 
 [project.optional-dependencies]
 ci = ["tox"]
-examples = ["jupyter", "cairosvg"]
+examples = ["jupyter"]
 
 [tool.setuptools.packages.find]
 where = ["."]

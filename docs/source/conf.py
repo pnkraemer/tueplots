@@ -29,6 +29,10 @@ extensions = [
 
 source_suffix = [".rst", ".md"]
 
+# Execute the Jupyter notebooks with every build
+nbsphinx_execute = "always"
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = []
 
