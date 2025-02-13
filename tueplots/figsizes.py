@@ -685,6 +685,5 @@ def _figsize_to_output_dict(
         "figure.figsize": figsize,
         "figure.constrained_layout.use": constrained_layout,
         "figure.autolayout": tight_layout,
-        "savefig.bbox": "tight",
         "savefig.pad_inches": pad_inches,
     }
