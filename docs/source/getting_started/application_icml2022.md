@@ -9,9 +9,9 @@ is `plt.rcParams.update(bundles.icml2022())`:
 >>> import matplotlib.pyplot as plt
 >>> from tueplots import bundles
 >>> bundles.icml2022()
-{'text.usetex': True, 'font.family': 'serif', 'text.latex.preamble': '\\usepackage{times} ', 'figure.figsize': (3.25, 2.0086104634371584), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.bbox': 'tight', 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
+{'text.usetex': True, 'font.family': 'serif', 'text.latex.preamble': '\\usepackage{times} ', 'figure.figsize': (3.25, 2.0086104634371584), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>> bundles.icml2022(family="sans-serif", usetex=False, column="full", nrows=2)
-{'text.usetex': False, 'font.serif': ['Times'], 'mathtext.fontset': 'stix', 'mathtext.rm': 'Times', 'mathtext.it': 'Times:italic', 'mathtext.bf': 'Times:bold', 'font.family': 'sans-serif', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.bbox': 'tight', 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
+{'text.usetex': False, 'font.serif': ['Times'], 'mathtext.fontset': 'stix', 'mathtext.rm': 'Times', 'mathtext.it': 'Times:italic', 'mathtext.bf': 'Times:bold', 'font.family': 'sans-serif', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>>
 >>> # Plug any of those into either the rcParams or into an rc_context:
 >>> plt.rcParams.update(bundles.icml2022())
@@ -27,9 +27,9 @@ If you don't want a pre-packaged solution, at least fix your figure- and font-si
 ```python
 >>> from tueplots import figsizes, fontsizes, fonts
 >>> figsizes.icml2022_full()
-{'figure.figsize': (6.75, 2.0858647120308955), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.bbox': 'tight', 'savefig.pad_inches': 0.015}
+{'figure.figsize': (6.75, 2.0858647120308955), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015}
 >>> figsizes.icml2022_half(nrows=2, constrained_layout=True, tight_layout=False)
-{'figure.figsize': (3.25, 4.017220926874317), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.bbox': 'tight', 'savefig.pad_inches': 0.015}
+{'figure.figsize': (3.25, 4.017220926874317), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015}
 >>> fontsizes.icml2022()
 {'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>> fonts.icml2022()
