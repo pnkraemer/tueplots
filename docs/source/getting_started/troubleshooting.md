@@ -59,3 +59,16 @@ or `fonts.icml2022_tex()`.
 If the goal, however, is only to avoid type 3 fonts, adding
 `plt.rcParams.update({"pdf.fonttype": 42})` to your plotting code will create a PDF with `TrueType` fonts.
 See <a href=https://github.com/pnkraemer/tueplots/issues/77>this issue</a> for more details.
+
+
+## Setting the figure size of a 3d plot cuts off labels
+
+This has been raised in [Issue #143](https://github.com/pnkraemer/tueplots/issues/143) and tight/constrained layouts are no help.
+It's a known problem in matplotlib [for example, see this issue](https://github.com/matplotlib/matplotlib/issues/19519).
+
+For now, and according to [this stackoverflow discussion](https://stackoverflow.com/questions/77577613/matplotlib-3d-plot-z-label-cut-off), one possible fix is to "zoom out" by running
+```python
+...
+ax.set_box_aspect(None, zoom=0.85)
+```
+before `plt.show()` or `plt.savefig(...)`. This might require adjusting some whitespaces manually.
