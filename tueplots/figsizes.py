@@ -1,4 +1,32 @@
-"""Figure size settings."""
+"""Figure size presets (:mod:`tueplots.figsizes`).
+
+Provides standard figure dimensions for publications, ensuring
+proper scaling in papers.
+
+Examples
+--------
+
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import figsizes, fontsizes
+    >>>
+    >>> # Select a style bundle: fontsize + figsize
+    >>> style = figsizes.aistats2025_half() | fontsizes.aistats2025()
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
+
+
+"""
 
 # Some useful constants
 _GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0

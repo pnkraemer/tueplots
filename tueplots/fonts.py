@@ -1,4 +1,32 @@
-"""Font settings for conference papers and journals."""
+"""Font settings for plots (:mod:`tueplots.fonts`).
+
+Configures fonts to match LaTeX documents.
+
+
+Examples
+--------
+
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import fonts
+    >>>
+    >>> # Select a style bundle
+    >>> style = fonts.neurips2021()
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
+
+
+"""
 
 
 def neurips2021(*, family="serif"):

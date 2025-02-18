@@ -6,10 +6,8 @@
 TUEplots reference documentation
 ================================
 
-TUEplots is a light-weight matplotlib extension
-that adapts your figure sizes to formats more suitable for scientific publications.
-It produces configurations that are compatible with matplotlib's `rcParams`,
-and provides fonts, figure sizes, font sizes, color schemes, and more, for a number of publication formats.
+TUEplots is a light-weight matplotlib extension that adapts your figure sizes to formats more suitable for scientific publications.
+It produces configurations that are compatible with matplotlib's `rcParams`, and provides fonts, figure sizes, font sizes, color schemes, and more, for a number of publication formats.
 
 
 Supported Venues
@@ -23,6 +21,12 @@ The following venues are currently supported by TUEplots out of the box as pre-c
 - International Conference on Machine Learning (ICML)
 - Conference on Uncertainty in Artificial Intelligence (UAI)
 - Journal of Machine Learning Research (JMLR)
+- Transactions of Machine Learning Research (TMLR)
+- Conference on Computer Vision and Pattern Recognition (CVPR)
+- Association for the Advancement of Artificial Intelligence (AAAI)
+- European Conference on Computer Vision (ECCV)
+- International Conference on Probabilistic Numerics (ProbNum)
+
 
 For further details on the available bundles, check out the `tueplots.bundles API documentation <docs_api/tueplots.bundles.rst>`_.
 
