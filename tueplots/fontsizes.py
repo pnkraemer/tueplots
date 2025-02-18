@@ -11,10 +11,10 @@ Examples
     :include-source: True
 
     >>> import matplotlib.pyplot as plt
-    >>> from tueplots import fontsizes
+    >>> from tueplots import fontsizes, figsizes
     >>>
-    >>> # Select a style bundle
-    >>> style = fontsizes.cvpr2024()
+    >>> # Select a style bundle: fontsize + figsize
+    >>> style = fontsizes.cvpr2024() | figsizes.cvpr2022_half()
     >>>
     >>> # Apply the style to matplotlib
     >>> plt.rcParams.update(style)

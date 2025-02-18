@@ -10,10 +10,10 @@ Examples
     :include-source: True
 
     >>> import matplotlib.pyplot as plt
-    >>> from tueplots import figsizes
+    >>> from tueplots import figsizes, fontsizes
     >>>
-    >>> # Select a style bundle
-    >>> style = figsizes.aistats2025_half()
+    >>> # Select a style bundle: fontsize + figsize
+    >>> style = figsizes.aistats2025_half() | fontsizes.aistats2025()
     >>>
     >>> # Apply the style to matplotlib
     >>> plt.rcParams.update(style)
