@@ -1,4 +1,25 @@
-"""Axes behaviour."""
+"""Axes behavior configuration.
+
+This module provides functions to adjust the behavior and appearance of plot axes in matplotlib.
+Each function returns a dictionary of settings that can be applied to matplotlib's `rcParams` to customize
+various aspects of the axes, such as line widths, grid style, legend style, colors, spines visibility, and tick direction.
+
+Examples
+--------
+>>> import matplotlib.pyplot as plt
+>>> from tueplots import axes
+>>>
+>>> # Apply line settings to matplotlib
+>>> plt.rcParams.update(axes.lines(base_width=0.8))
+>>>
+>>> # Apply grid settings to matplotlib
+>>> plt.rcParams.update(axes.grid(grid_alpha=0.3))
+>>>
+>>> # Create a plot
+>>> fig, ax = plt.subplots()
+>>> ax.plot([0, 1, 2], [2, 1, 3])
+>>> plt.show()
+"""
 
 
 def lines(
