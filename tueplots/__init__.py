@@ -13,7 +13,7 @@ Examples
     >>> from tueplots import bundles
     >>>
     >>> # Select a style bundle
-    >>> style = bundles.icml2024()
+    >>> style = bundles.icml2024(usetex=False)
     >>>
     >>> # Apply the style to matplotlib
     >>> plt.rcParams.update(style)
