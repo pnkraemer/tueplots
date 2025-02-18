@@ -5,20 +5,25 @@ Each module in TUEplots provides specific settings like fonts, figure sizes, axe
 
 Examples
 --------
->>> import matplotlib.pyplot as plt
->>> from tueplots import bundles
->>>
->>> # Select a style bundle
->>> style = bundles.neurips2023()
->>>
->>> # Apply the style to matplotlib
->>> plt.rcParams.update(style)
->>>
->>> # Create a plot
->>> fig, ax = plt.subplots()
->>> ax.plot([0, 1, 2], [2, 1, 3])
->>> plt.show()
 
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import bundles
+    >>>
+    >>> # Select a style bundle
+    >>> style = bundles.icml2024()
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
 """
 
 from ._version import version as __version__

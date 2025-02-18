@@ -2,6 +2,30 @@
 
 Provides standard figure dimensions for publications, ensuring
 proper scaling in papers.
+
+Examples
+--------
+
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import figsizes
+    >>>
+    >>> # Select a style bundle
+    >>> style = figsizes.aistats2025_half()
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
+
+
 """
 
 # Some useful constants

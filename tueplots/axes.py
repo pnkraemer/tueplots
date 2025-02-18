@@ -2,6 +2,28 @@
 
 Provides functions to adjust axis appearance, including grid lines,
 spines, ticks, and legends.
+
+Examples
+--------
+
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import axes
+    >>>
+    >>> # Select a style bundle
+    >>> style = axes.spines(right=False, top=False)
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
 """
 
 

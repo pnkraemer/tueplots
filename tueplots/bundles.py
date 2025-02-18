@@ -2,6 +2,29 @@
 
 Includes ready-to-use style configurations for major conferences
 and journals. Bundles figure sizes, font sizes, fonts, and so on.
+
+Examples
+--------
+
+.. plot::
+    :include-source: True
+
+    >>> import matplotlib.pyplot as plt
+    >>> from tueplots import bundles
+    >>>
+    >>> # Select a style bundle
+    >>> style = bundles.probnum2025()
+    >>>
+    >>> # Apply the style to matplotlib
+    >>> plt.rcParams.update(style)
+    >>>
+    >>> # Create a plot
+    >>> fig, ax = plt.subplots()
+    >>> ax.plot([0, 1, 2], [2, 1, 3])
+    >>> ax.set_xlabel("$x$ label")
+    >>> ax.set_ylabel("$y$ label")
+    >>> plt.show()
+
 """
 
 from tueplots import axes, cycler, figsizes, fonts, fontsizes
