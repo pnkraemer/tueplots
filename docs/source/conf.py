@@ -20,7 +20,6 @@ author = "Nicholas Krämer"
 # ones.
 extensions = [
     "matplotlib.sphinxext.plot_directive",
-    "sphinx.ext.doctest",
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx.ext.todo",
