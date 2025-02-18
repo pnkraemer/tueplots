@@ -13,7 +13,7 @@ Examples
     >>> from tueplots import fonts
     >>>
     >>> # Select a style bundle
-    >>> style = fonts.jmlr2001_tex()
+    >>> style = fonts.neurips2021()
     >>>
     >>> # Apply the style to matplotlib
     >>> plt.rcParams.update(style)

@@ -13,7 +13,7 @@ Examples
     >>> from tueplots import bundles
     >>>
     >>> # Select a style bundle
-    >>> style = bundles.probnum2025()
+    >>> style = bundles.neurips2021(usetex=False)
     >>>
     >>> # Apply the style to matplotlib
     >>> plt.rcParams.update(style)
