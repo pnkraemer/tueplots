@@ -1,4 +1,7 @@
-"""RGB color constants."""
+"""Standard colour definitions (:mod:`tueplots.constants.colours`).
+
+Lists predefined colours for consistency in visualisations.
+"""
 
 import numpy as np
 

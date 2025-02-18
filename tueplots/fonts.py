@@ -1,4 +1,7 @@
-"""Font settings for conference papers and journals."""
+"""Font settings for plots (:mod:`tueplots.fonts`).
+
+Configures fonts to match LaTeX documents.
+"""
 
 
 def neurips2021(*, family="serif"):

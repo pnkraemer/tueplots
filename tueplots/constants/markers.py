@@ -1,4 +1,7 @@
-"""Marker collections."""
+"""Marker shape presets (:mod:`tueplots.constants.markers`).
+
+Defines commonly used marker styles for plots.
+"""
 
 import numpy as _np
 

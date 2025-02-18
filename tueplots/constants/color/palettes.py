@@ -1,4 +1,7 @@
-"""Color palettes."""
+"""Predefined colour palettes (:mod:`tueplots.constants.color.palettes`).
+
+Offers curated colour sets for consistent and visually appealing plots.
+"""
 
 import numpy as np
 

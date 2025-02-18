@@ -1,4 +1,8 @@
-"""Marker styles."""
+"""Marker styles and sizes (:mod:`tueplots.markers`).
+
+Provides predefined marker shapes and sizes for scatter plots
+and line charts.
+"""
 
 
 def with_edge(*, edgecolor="black", edgewidth=0.5):

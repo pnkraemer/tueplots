@@ -1,4 +1,8 @@
-"""Fontsize settings."""
+"""Adapt font sizes (:mod:`tueplots.fontsizes`).
+
+Sets appropriate font sizes for labels, legends, and titles
+in publication-ready figures.
+"""
 
 
 def icml2022(*, default_smaller=1):

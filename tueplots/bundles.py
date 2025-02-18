@@ -1,4 +1,8 @@
-"""Bundled configurations."""
+"""Predefined style settings (:mod:`tueplots.bundles`).
+
+Includes ready-to-use style configurations for major conferences
+and journals. Bundles figure sizes, font sizes, fonts, and so on.
+"""
 
 from tueplots import axes, cycler, figsizes, fonts, fontsizes
 from tueplots.constants.color import palettes, rgb

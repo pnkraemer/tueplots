@@ -1,4 +1,8 @@
-"""Wrapper for matplotlib cycler."""
+"""Colour and style cycling (:mod:`tueplots.cycler`).
+
+Defines custom cyclers for colours, markers, and line styles to
+keep plots visually distinct.
+"""
 
 from matplotlib import cycler as mpl_cycler
 

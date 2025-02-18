@@ -1,4 +1,8 @@
-"""Figure size settings."""
+"""Figure size presets (:mod:`tueplots.figsizes`).
+
+Provides standard figure dimensions for publications, ensuring
+proper scaling in papers.
+"""
 
 # Some useful constants
 _GOLDEN_RATIO = (5.0**0.5 - 1.0) / 2.0
