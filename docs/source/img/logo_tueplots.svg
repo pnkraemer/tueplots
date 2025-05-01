@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-05-01T08:38:35.999147</dc:date>
+    <dc:date>2025-05-01T08:57:43.148079</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -208,7 +208,7 @@ Q 110.385938 117.036875 112.845313 117.036875
 Q 113.814063 117.036875 114.876563 117.18375
 Q 115.942188 117.3275 117.192188 117.64
 z
-" style="stroke: #ffffff; stroke-width: 1.5"/>
+" style="stroke: #d3d3d3; stroke-width: 1.5"/>
      <path d="M 30.628125 114.193125
 L 30.628125 117.299375
 L 34.234375 117.299375
@@ -480,7 +480,7 @@ L 123.594406 23.092342
 L 124.703963 20.759898
 L 125.81352 18.466477
 L 126.923077 16.221145
-" clip-path="url(#p0af692d3d6)" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#ped31b37d73)" style="fill: none; stroke: #d3d3d3; stroke-width: 1.5; stroke-linecap: round"/>
    <path d="M 17.076923 82.618855
 L 18.18648 80.282092
 L 19.296037 77.916763
@@ -581,25 +581,25 @@ L 123.594406 23.092342
 L 124.703963 20.759898
 L 125.81352 18.466477
 L 126.923077 16.221145
-" clip-path="url(#p0af692d3d6)" style="fill: none; stroke: #6495ed; stroke-opacity: 0.99; stroke-width: 5; stroke-linecap: round"/>
+" clip-path="url(#ped31b37d73)" style="fill: none; stroke: #6495ed; stroke-opacity: 0.99; stroke-width: 5; stroke-linecap: round"/>
    <g id="patch_3">
     <path d="M 10.8 88.04
 L 10.8 10.8
-" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+" style="fill: none; stroke: #d3d3d3; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
     <path d="M 10.8 88.04
 L 10.8 10.8
 " style="fill: none; stroke: #696969; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
     <g id="patch_4">
      <path d="M 10.8 88.04
 L 133.2 88.04
-" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+" style="fill: none; stroke: #d3d3d3; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
      <path d="M 10.8 88.04
 L 133.2 88.04
 " style="fill: none; stroke: #696969; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
     </g>
    </g>
    <defs>
-    <clipPath id="p0af692d3d6">
+    <clipPath id="ped31b37d73">
      <rect x="10.8" y="10.8" width="122.4" height="77.24"/>
     </clipPath>
    </defs>
