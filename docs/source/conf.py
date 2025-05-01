@@ -56,7 +56,7 @@ html_theme_options = {"navigation_with_keys": False}
 
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.
-html_logo = "img/logo.png"
+html_logo = "img/logo_tueplots.svg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

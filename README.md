@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo.png" width="400"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/new-logo/docs/source/img/logo_tueplots.svg" width="200"/>
 </p>
 
 # TUEplots: Extend matplotlib for scientific publications
