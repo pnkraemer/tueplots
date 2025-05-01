@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/new-logo/docs/source/img/logo_tueplots.svg" width="250" alt="tueplots logo"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo_tueplots.svg" width="250" alt="tueplots logo"/>
 </p>
 
 
