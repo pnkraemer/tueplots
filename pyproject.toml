@@ -47,7 +47,7 @@ force_grid_wrap = "0"
 use_parentheses = "true"
 line_length = "88"
 profile = "black"
-
+extend_skip = ["tueplots/_version.py"]
 
 # Pylint configuration
 
