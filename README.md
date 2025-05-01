@@ -1,7 +1,9 @@
 
+
 <p align="center">
-<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo.png" width="400"/>
+<img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo_tueplots.svg" width="250" alt="tueplots logo"/>
 </p>
+
 
 # TUEplots: Extend matplotlib for scientific publications
 
