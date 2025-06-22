@@ -52,6 +52,7 @@ For further details on the available bundles, check out the `tueplots.bundles AP
    example_notebooks/fonts
    example_notebooks/fontsizes
    example_notebooks/markers
+   example_notebooks/advanced
 
 
 .. toctree::
