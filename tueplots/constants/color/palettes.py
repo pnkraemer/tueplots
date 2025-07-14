@@ -91,13 +91,13 @@ paultol_bright = np.array(
 )
 """Bright colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
 
 paultol_high_contrast = np.array(["004488", "DDAA33", "BB5566"])
 """High-contrast colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
 
 paultol_muted = np.array(
@@ -116,7 +116,7 @@ paultol_muted = np.array(
 )
 """Muted colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
 
 
@@ -132,7 +132,7 @@ paultol_medium_contrast = np.array(
 )
 """Medium-contrast colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
 
 
@@ -149,7 +149,7 @@ paultol_vibrant = np.array(
 )
 """Vibrant colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
 
 
@@ -168,5 +168,5 @@ paultol_light = np.array(
 )
 """Light colors.
 
-From Paul Tol's website: https://personal.sron.nl/~pault/.
+From Paul Tol's website: https://sronpersonalpages.nl/~pault/.
 """
