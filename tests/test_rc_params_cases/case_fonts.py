@@ -197,3 +197,38 @@ def case_fonts_cvpr2024_tex_custom():
 
 def case_fonts_probnum2025_tex_default():
     return fonts.probnum2025_tex()
+
+
+# Tests for match_math_font parameter
+
+
+def case_fonts_icml2022_match_math_font_true():
+    return fonts.icml2022(match_math_font=True)
+
+
+def case_fonts_icml2022_match_math_font_false():
+    return fonts.icml2022(match_math_font=False)
+
+
+def case_fonts_icml2022_tex_match_math_font_true():
+    return fonts.icml2022_tex(family="sans-serif", match_math_font=True)
+
+
+def case_fonts_icml2022_tex_match_math_font_false():
+    return fonts.icml2022_tex(family="sans-serif", match_math_font=False)
+
+
+def case_fonts_neurips2024_match_math_font_true():
+    return fonts.neurips2024(match_math_font=True)
+
+
+def case_fonts_neurips2024_tex_match_math_font_true():
+    return fonts.neurips2024_tex(family="sans-serif", match_math_font=True)
+
+
+def case_fonts_aistats2025_tex_match_math_font_true():
+    return fonts.aistats2025_tex(family="sans-serif", match_math_font=True)
+
+
+def case_fonts_probnum2025_tex_match_math_font_true():
+    return fonts.probnum2025_tex(family="sans-serif", match_math_font=True)

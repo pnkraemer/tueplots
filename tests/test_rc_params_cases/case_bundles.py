@@ -107,3 +107,27 @@ def case_bundles_beamer_moml():
 
 def case_bundles_beamer_moml_dark_bg():
     return bundles.beamer_moml(rel_width=0.9, rel_height=0.9)
+
+
+# Tests for match_math_font parameter
+
+
+@pytest_cases.parametrize(match_math_font=[True, False])
+def case_bundles_neurips2024_match_math_font(match_math_font):
+    return bundles.neurips2024(
+        usetex=True, family="sans-serif", match_math_font=match_math_font
+    )
+
+
+@pytest_cases.parametrize(match_math_font=[True, False])
+def case_bundles_icml2024_match_math_font(match_math_font):
+    return bundles.icml2024(
+        usetex=False, family="serif", match_math_font=match_math_font
+    )
+
+
+@pytest_cases.parametrize(match_math_font=[True, False])
+def case_bundles_probnum2025_match_math_font(match_math_font):
+    return bundles.probnum2025(
+        family="sans-serif", match_math_font=match_math_font
+    )
