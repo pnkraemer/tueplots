@@ -180,6 +180,11 @@ def probnum2025_tex(*, family="serif"):
     return _computer_modern_tex(family=family)
 
 
+def tue_ai_thesis_tex(*, family="serif"):
+    """Fonts for Tübingen AI Center thesis."""
+    return _computer_modern_tex(family=family)
+
+
 def beamer_moml():
     """Fonts that are compatible with the beamer template of the method-of-machine-learning group in Tübingen."""
     return {

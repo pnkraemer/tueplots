@@ -277,6 +277,26 @@ def probnum2025(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def tue_ai_thesis(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
+    """Tübingen AI Center thesis bundle."""
+    font_config = fonts.tue_ai_thesis_tex(family=family)
+    size = figsizes.tue_ai_thesis(rel_width=rel_width, nrows=nrows, ncols=ncols)
+    fontsize_config = fontsizes.tue_ai_thesis()
+    axes_config = axes.color(base=rgb.tue_ai_dark)
+    cycler_config = cycler.cycler(color=palettes.tue_ai)
+    axes_config_line = axes.lines()
+    axes_config_grid = axes.grid()
+    return {
+        **font_config,
+        **size,
+        **fontsize_config,
+        **axes_config,
+        **cycler_config,
+        **axes_config_line,
+        **axes_config_grid,
+    }
+
+
 def _msg_error_wrong_arg_usetex(usetex):
     msg = f"Argument usetex={usetex} unknown."
     msg += "Either usetex=True or usetex=False expected."
@@ -321,6 +341,52 @@ def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_dark, base="w")
     cycler_config = cycler.cycler(color=palettes.tue_plot_dark_bg)
+    fontsize_config = fontsizes.beamer()
+    return {
+        **size,
+        **font_config,
+        **fontsize_config,
+        **axes_config_line,
+        **axes_config_grid,
+        **axes_config_color,
+        **cycler_config,
+    }
+
+
+def beamer_tueai(
+    *,
+    rel_width=1.0,
+    rel_height=0.8,
+):
+    """Beamer bundle that matches the beamer template of the Tübingen AI Center.
+    This is a clone of bundles.beamer_moml, but with the colors of the Tübingen AI Center.
+    """
+    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
+    font_config = fonts.beamer_moml()
+    axes_config_line = axes.lines()
+    axes_config_grid = axes.grid()
+    axes_config_color = axes.color(base=rgb.tue_ai_dark)
+    cycler_config = cycler.cycler(color=palettes.tue_ai)
+    fontsize_config = fontsizes.beamer()
+    return {
+        **size,
+        **font_config,
+        **fontsize_config,
+        **axes_config_line,
+        **axes_config_grid,
+        **axes_config_color,
+        **cycler_config,
+    }
+
+
+def beamer_tueai_dark_bg(*, rel_width=1.0, rel_height=0.8):
+    """Dark version of :func:`beamer_tueai`."""
+    size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
+    font_config = fonts.beamer_moml_dark_bg()
+    axes_config_line = axes.lines()
+    axes_config_grid = axes.grid()
+    axes_config_color = axes.color(face=rgb.tue_ai_dark, base="w")
+    cycler_config = cycler.cycler(color=palettes.tue_ai)
     fontsize_config = fontsizes.beamer()
     return {
         **size,

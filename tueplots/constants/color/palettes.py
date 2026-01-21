@@ -78,6 +78,20 @@ pn = np.array(
 )
 """Colors used for probnum.org."""
 
+tue_ai = np.array(
+    [
+        rgb.tue_ai_darkblue,
+        rgb.tue_ai_accent,
+        rgb.tue_ai_dark,
+        rgb.tue_ai_lightblue,
+        rgb.tue_ai_oceanblue,
+        rgb.tue_ai_oceangreen,
+        rgb.tue_ai_springgreen,
+        rgb.tue_ai_brightyellow,
+    ]
+)
+"""Colors used for tuebingen.ai."""
+
 paultol_bright = np.array(
     [
         "4477AA",
