@@ -107,5 +107,3 @@ def case_bundles_beamer_moml():
 
 def case_bundles_beamer_moml_dark_bg():
     return bundles.beamer_moml(rel_width=0.9, rel_height=0.9)
-
-
