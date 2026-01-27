@@ -5,42 +5,31 @@ This tests that non-TeX font functions now mirror TeX behavior:
 - This matches what usepackage{times} and usepackage{ptm} do in LaTeX
 """
 
+import pytest
+
 from tueplots import fonts
 
 
 class TestTimesTextCmodernMath:
     """Test that non-TeX functions use Times text with Computer Modern math."""
 
-    def test_icml2022_no_stix(self):
-        """ICML 2022 non-TeX should NOT use STIX fontset."""
-        config = fonts.icml2022()
-        assert "mathtext.fontset" not in config
+    @pytest.mark.parametrize("font_func", [
+        fonts.icml2022,
+        fonts.icml2024,
+        fonts.neurips2021,
+        fonts.neurips2022,
+        fonts.neurips2023,
+        fonts.neurips2024,
+        fonts.iclr2023,
+        fonts.iclr2024,
+        fonts.cvpr2024,
+    ])
+    def test_uses_cm_math(self, font_func):
+        """Non-TeX functions should use Computer Modern math."""
+        config = font_func()
+        assert config["mathtext.fontset"] == "cm"
         assert config["font.serif"] == ["Times"]
         assert config["text.usetex"] is False
-
-    def test_icml2024_no_stix(self):
-        """ICML 2024 non-TeX should NOT use STIX fontset."""
-        config = fonts.icml2024()
-        assert "mathtext.fontset" not in config
-        assert config["font.serif"] == ["Times"]
-
-    def test_neurips2024_no_stix(self):
-        """NeurIPS 2024 non-TeX should NOT use STIX fontset."""
-        config = fonts.neurips2024()
-        assert "mathtext.fontset" not in config
-        assert config["font.serif"] == ["Times"]
-
-    def test_iclr2024_no_stix(self):
-        """ICLR 2024 non-TeX should NOT use STIX fontset."""
-        config = fonts.iclr2024()
-        assert "mathtext.fontset" not in config
-        assert config["font.serif"] == ["Times"]
-
-    def test_cvpr2024_no_stix(self):
-        """CVPR 2024 non-TeX should NOT use STIX fontset."""
-        config = fonts.cvpr2024()
-        assert "mathtext.fontset" not in config
-        assert config["font.serif"] == ["Times"]
 
 
 class TestTexVersionsUnchanged:
@@ -82,6 +71,5 @@ class TestTexNonTexConsistency:
         assert non_tex_config["text.usetex"] is False
         assert non_tex_config["font.serif"] == ["Times"]
 
-        # Neither should force math font to match (for serif)
-        assert "mathtext.fontset" not in non_tex_config
-        # TeX version uses default LaTeX math (Computer Modern)
+        # Both use Computer Modern for math
+        assert non_tex_config["mathtext.fontset"] == "cm"

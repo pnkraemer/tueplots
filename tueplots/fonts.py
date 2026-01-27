@@ -220,8 +220,7 @@ def _times_text_cmodern_math(*, family="serif"):
         "text.usetex": False,
         "font.serif": ["Times"],
         "font.family": family,
-        # mathtext.fontset defaults to "dejavusans" in matplotlib,
-        # but we leave it unset to use the default (Computer Modern-like)
+        "mathtext.fontset": "cm",
     }
 
 
