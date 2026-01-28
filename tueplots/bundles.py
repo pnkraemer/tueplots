@@ -277,7 +277,7 @@ def probnum2025(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     return {**font_config, **size, **fontsize_config}
 
 
-def tue_ai_thesis(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
+def tue_ai_thesis(*, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
     """Tübingen AI Center thesis bundle."""
     font_config = fonts.tue_ai_thesis_tex(family=family)
     size = figsizes.tue_ai_thesis(rel_width=rel_width, nrows=nrows, ncols=ncols)
