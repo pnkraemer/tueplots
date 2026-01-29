@@ -201,7 +201,14 @@ def roboto_condensed():
 
 # Helper functions below
 
-_TIMES_LIKE = ["Times New Roman", "Times", "Nimbus Roman", "TeX Gyre Termes"]
+_TIMES_LIKE = ["Times New Roman", "Times", "TeX Gyre Termes", "Nimbus Roman"]
+_HELVET_LIKE = [
+    "Helvetica",
+    "Helvetica Neue",
+    "TeX Gyre Heros",
+    "Nimbus Sans",
+    "Nimbus Sans L",
+]
 
 
 def _times_text_cmodern_math(*, family="serif"):
@@ -214,21 +221,10 @@ def _times_text_cmodern_math(*, family="serif"):
     return {
         "text.usetex": False,
         "font.serif": _TIMES_LIKE,
+        "font.sans-serif": _HELVET_LIKE,
         "font.family": family,
-        "mathtext.fontset": "cm",
-    }
-
-
-def _times(*, family="serif"):
-    """Choose the Times font with STIX math (Times-like math).
-
-    Used when both text and math should be in Times.
-    """
-    return {
-        "text.usetex": False,
-        "font.serif": _TIMES_LIKE,
-        "font.family": family,
-        "mathtext.fontset": "stix",
+        # Mirror sansmath behaviour:
+        "mathtext.fontset": "cm" if family == "serif" else "stixsans",
     }
 
 
@@ -244,9 +240,8 @@ def _times_tex_via_pkg_ptm(*, family):
             "font.family": "serif",
             "text.latex.preamble": preamble,
         }
-    preamble += (
-        r"\renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
-    )
+    preamble += r" \renewcommand{\familydefault}{\sfdefault}"
+    preamble += r" \usepackage{sansmath} \sansmath"
     return {
         "text.usetex": True,
         "font.family": "sans-serif",
