@@ -1,0 +1,3 @@
+[formats]
+"source/example_notebooks/notebooks/" = "ipynb"
+"source/example_notebooks/_human_readable_copies_for_version_control/" = "py:percent"

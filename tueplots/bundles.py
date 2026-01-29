@@ -319,7 +319,7 @@ def beamer_moml(
 ):
     """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.roboto_condensed()
+    font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(base=rgb.tue_dark)
@@ -339,7 +339,7 @@ def beamer_moml(
 def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
     """Dark version of :func:`beamer_moml`."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.roboto_condensed()
+    font_config = fonts.beamer_moml()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_dark, base="w")
@@ -367,7 +367,7 @@ def tue_ai_beamer(
     More information about the template can be found at https://github.com/philipphennig/tueaistylepack
     """
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.roboto_condensed()
+    font_config = fonts.beamer_tue_ai()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(base=rgb.tue_ai_dark)
@@ -391,7 +391,7 @@ def tue_ai_beamer_dark_bg(*, rel_width=1.0, rel_height=0.8):
     More information about the template can be found at https://github.com/philipphennig/tueaistylepack
     """
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.roboto_condensed()
+    font_config = fonts.beamer_tue_ai()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_ai_dark, base="w")

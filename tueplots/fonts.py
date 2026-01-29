@@ -185,8 +185,18 @@ def tue_ai_thesis_tex(*, family="serif"):
     return _computer_modern_tex(family=family)
 
 
+def beamer_moml():
+    """Fonts for the beamer template of the method-of-machine-learning group in Tübingen."""
+    return roboto_condensed()
+
+
+def beamer_tue_ai():
+    """Fonts for the beamer template of the Tuebingen AI Centre."""
+    return roboto_condensed()
+
+
 def roboto_condensed():
-    """Robot fonts, typically used with the beamer templates."""
+    """Roboto fonts, typically used with the beamer templates."""
     return {
         "text.usetex": False,
         "mathtext.fontset": "custom",
