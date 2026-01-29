@@ -5,15 +5,17 @@
 Some fonts that Tueplots uses (e.g., `Times` or `Roboto`) must be installed on your machine before matplotlib can find them.
 This installation means that you need to find a `.ttf` file online (e.g., the `Roboto` family is available at Google fonts: [link-to-roboto](https://fonts.google.com/specimen/Roboto),
 download it, and install it. For Ubuntu, this means opening the file (with your font manager) and clicking `install`.
-There are probably many other ways to do this.
-Once the font is installed, delete your matplotlib cache (usually: `rm ~/.cache/matplotlib -rf`) and restart your notebook (not just the kernel).
+There are many other ways to do this, for example, one way would be to install Microsoft's TrueType Core fonts (known as `mscorefonts`).
+Once a set of fonts has been installed, delete your matplotlib cache (usually: `rm ~/.cache/matplotlib -rf`) and restart your notebook (not just the kernel).
 See also [this question on Stack Overflow](https://stackoverflow.com/questions/42097053/matplotlib-cannot-find-basic-fonts/42841531).
 
 On a related note: if you want to use the Latex version of the fonts/bundles, your system must include the required tex packages.
+Typically, this means installing either `texlive-fonts-extra` or `texlive-fonts-recommended`.
 See [this Stack Overflow discussion](https://stackoverflow.com/questions/55746749/latex-equations-do-not-render-in-google-colaboratory-when-using-matplotlib)
 for information.
-You may encounter this problem when using Tueplots with a Google Colab notebook.
+Some users have encountered this Latex compatibility problem when using Tueplots with a Google Colab notebook.
 
+If font compatibility is an issue, one workaround would be to set matplotlib up that it uses only a set of 14 core fonts; [here](https://matplotlib.org/stable/users/explain/text/fonts.html#core-fonts) is a link to the matplotlib documentation.
 
 
 ## My fonts are not displayed as expected  with `plt.rc_context()`
@@ -23,7 +25,8 @@ If someone knows why, please let us know. :)
 
 ## I am still getting 'overfull hbox' errors in my latex code
 
-Even though the figure sizes delivered by Tueplots match the figure sizes in style files exactly, sometimes, figures can be a few points wider than what latex allows.
+Even though the figure sizes delivered by Tueplots match the figure sizes in style files as closely as possible,
+sometimes, figures can be a few points wider than what latex allows.
 Visually, this does not make any difference, but it might lead to an 'overfull hbox' raised by, e.g., 'pdflatex'.
 This overfull hbox is not Tueplots' fault but more due to how matplotlib draws figures:
 - The figure dimensions are optimised differently, depending on whether a user selects constrained_layout=True or tight_layout=True (or neither).
