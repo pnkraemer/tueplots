@@ -35,7 +35,7 @@ def neurips2021(*, family="serif"):
     # font, but includes the 'ptm' package, which implements
     # the 'Times' font.
     # Therefore, refer to 'Times' instead of 'Times New Roman'
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def neurips2021_tex(*, family="serif"):
@@ -49,7 +49,7 @@ def neurips2022(*, family="serif"):
     # font, but includes the 'ptm' package, which implements
     # the 'Times' font.
     # Therefore, refer to 'Times' instead of 'Times New Roman'
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def neurips2022_tex(*, family="serif"):
@@ -63,7 +63,7 @@ def neurips2023(*, family="serif"):
     # font, but includes the 'ptm' package, which implements
     # the 'Times' font.
     # Therefore, refer to 'Times' instead of 'Times New Roman'
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def neurips2023_tex(*, family="serif"):
@@ -77,7 +77,7 @@ def neurips2024(*, family="serif"):
     # font, but includes the 'ptm' package, which implements
     # the 'Times' font.
     # Therefore, refer to 'Times' instead of 'Times New Roman'
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def neurips2024_tex(*, family="serif"):
@@ -96,13 +96,13 @@ def iclr2024_tex(*, family="serif"):
 
 
 def iclr2023(*, family="serif"):
-    """Fonts for ICLR 2023. LaTeX version."""
-    return _times(family=family)
+    """Fonts for ICLR 2023."""
+    return _times_text_cmodern_math(family=family)
 
 
 def iclr2024(*, family="serif"):
-    """Fonts for ICLR 2024. LaTeX version."""
-    return _times(family=family)
+    """Fonts for ICLR 2024."""
+    return _times_text_cmodern_math(family=family)
 
 
 def cvpr2024_tex(*, family="serif"):
@@ -111,8 +111,8 @@ def cvpr2024_tex(*, family="serif"):
 
 
 def cvpr2024(*, family="serif"):
-    """Fonts for CVPR 2024. LaTeX version."""
-    return _times(family=family)
+    """Fonts for CVPR 2024."""
+    return _times_text_cmodern_math(family=family)
 
 
 def icml2022_tex(*, family="serif"):
@@ -167,12 +167,12 @@ def aaai2024_tex(*, family="serif"):
 
 def icml2022(*, family="serif"):
     """Fonts for ICML 2022."""
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def icml2024(*, family="serif"):
     """Fonts for ICML 2024."""
-    return _times(family=family)
+    return _times_text_cmodern_math(family=family)
 
 
 def probnum2025_tex(*, family="serif"):
@@ -209,12 +209,26 @@ def beamer_moml_dark_bg():
 # Helper functions below
 
 
-def _times(*, family="serif"):
-    """Times font.
+def _times_text_cmodern_math(*, family="serif"):
+    """Times text font with Computer Modern math.
 
-    Used, e.g., for ICML 2022.
+    Mirrors the TeX behavior of \\usepackage{times} and \\usepackage{ptm},
+    which use Times for text but Computer Modern for math.
+    Used for non-TeX versions of NeurIPS, ICML, ICLR, CVPR, etc.
     """
+    return {
+        "text.usetex": False,
+        "font.serif": ["Times"],
+        "font.family": family,
+        "mathtext.fontset": "cm",
+    }
 
+
+def _times(*, family="serif"):
+    """Times font with STIX math (Times-like math).
+
+    Used when both text and math should be in Times.
+    """
     return {
         "text.usetex": False,
         "font.serif": ["Times"],
