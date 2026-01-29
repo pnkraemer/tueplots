@@ -13,7 +13,7 @@ is `plt.rcParams.update(bundles.icml2022())`:
 >>> bundles.icml2022()
 {'text.usetex': True, 'font.family': 'serif', 'text.latex.preamble': '\\usepackage{times} ', 'figure.figsize': (3.25, 2.0086104634371584), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>> bundles.icml2022(family="sans-serif", usetex=False, column="full", nrows=2)
-{'text.usetex': False, 'font.serif': ['Times'], 'font.family': 'sans-serif', 'mathtext.fontset': 'cm', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
+{'text.usetex': False, 'font.serif': ['Times New Roman', 'Times', 'Nimbus Roman', 'TeX Gyre Termes'], 'font.family': 'sans-serif', 'mathtext.fontset': 'cm', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>>
 >>> # Plug any of those into either the rcParams or into an rc_context:
 >>> plt.rcParams.update(bundles.icml2022())
@@ -35,9 +35,9 @@ If you don't want a pre-packaged solution, at least fix your figure- and font-si
 >>> fontsizes.icml2022()
 {'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>> fonts.icml2022()
-{'text.usetex': False, 'font.serif': ['Times'], 'font.family': 'serif', 'mathtext.fontset': 'cm'}
+{'text.usetex': False, 'font.serif': ['Times New Roman', 'Times', 'Nimbus Roman', 'TeX Gyre Termes'], 'font.family': 'serif', 'mathtext.fontset': 'cm'}
 >>> fonts.icml2022(family="serif")
-{'text.usetex': False, 'font.serif': ['Times'], 'font.family': 'serif', 'mathtext.fontset': 'cm'}
+{'text.usetex': False, 'font.serif': ['Times New Roman', 'Times', 'Nimbus Roman', 'TeX Gyre Termes'], 'font.family': 'serif', 'mathtext.fontset': 'cm'}
 >>> fonts.icml2022_tex(family="sans-serif")
 {'text.usetex': True, 'font.family': 'sans-serif', 'text.latex.preamble': '\\usepackage{times} \\renewcommand{\\familydefault}{\\sfdefault} \\usepackage{sansmath} \\sansmath'}
 
