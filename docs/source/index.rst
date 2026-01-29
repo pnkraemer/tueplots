@@ -45,13 +45,13 @@ For further details on the available bundles, check out the `tueplots.bundles AP
    :maxdepth: 1
    :caption: Example notebooks
 
-   example_notebooks/axes
-   example_notebooks/bundles
-   example_notebooks/color-cycles
-   example_notebooks/figsizes
-   example_notebooks/fonts
-   example_notebooks/fontsizes
-   example_notebooks/markers
+   example_notebooks/notebooks/axes
+   example_notebooks/notebooks/bundles
+   example_notebooks/notebooks/color-cycles
+   example_notebooks/notebooks/figsizes
+   example_notebooks/notebooks/fonts
+   example_notebooks/notebooks/fontsizes
+   example_notebooks/notebooks/markers
 
 
 .. toctree::
