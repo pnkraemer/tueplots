@@ -13,8 +13,8 @@ authors = [
 description = "Scientific plotting made easy."
 readme = "README.md"
 requires-python=">=3.10"
+license-files = ["LICEN[CS]E*"]
 classifiers = [
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.10",

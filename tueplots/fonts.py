@@ -208,6 +208,8 @@ def beamer_moml_dark_bg():
 
 # Helper functions below
 
+_TIMES_LIKE = ["Times New Roman", "Times", "Nimbus Roman", "TeX Gyre Termes"]
+
 
 def _times_text_cmodern_math(*, family="serif"):
     """Times text font with Computer Modern math.
@@ -218,7 +220,7 @@ def _times_text_cmodern_math(*, family="serif"):
     """
     return {
         "text.usetex": False,
-        "font.serif": ["Times"],
+        "font.serif": _TIMES_LIKE,
         "font.family": family,
         "mathtext.fontset": "cm",
     }
@@ -231,12 +233,9 @@ def _times(*, family="serif"):
     """
     return {
         "text.usetex": False,
-        "font.serif": ["Times"],
-        "mathtext.fontset": "stix",  # free ptmx replacement, for ICML and NeurIPS
-        "mathtext.rm": "Times",
-        "mathtext.it": "Times:italic",
-        "mathtext.bf": "Times:bold",
+        "font.serif": _TIMES_LIKE,
         "font.family": family,
+        "mathtext.fontset": "stix",
     }
 
 
