@@ -385,7 +385,11 @@ def tue_ai_beamer(
 
 
 def tue_ai_beamer_dark_bg(*, rel_width=1.0, rel_height=0.8):
-    """Dark version of :func:`tue_ai_beamer`."""
+    """Dark version of :func:`tue_ai_beamer`.
+
+    This is a minor variant of :func:`tue_ai_beamer` with a dark background.
+    More information about the template can be found at https://github.com/philipphennig/tueaistylepack
+    """
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
     font_config = fonts.roboto_condensed()
     axes_config_line = axes.lines()
