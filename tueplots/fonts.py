@@ -223,7 +223,8 @@ def _times_text_cmodern_math(*, family="serif"):
         "font.serif": _TIMES_LIKE,
         "font.sans-serif": _HELVET_LIKE,
         "font.family": family,
-        "mathtext.fontset": "cm",
+        # Mirror sansmath behaviour:
+        "mathtext.fontset": "cm" if family == "serif" else "stixsans",
     }
 
 
