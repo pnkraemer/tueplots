@@ -39,33 +39,73 @@ include = ["tueplots*"]
 [tool.setuptools_scm]
 version_file = "tueplots/_version.py"
 
-
-[tool.isort]
-multi_line_output = "3"
-include_trailing_comma = "true"
-force_grid_wrap = "0"
-use_parentheses = "true"
-line_length = "88"
-profile = "black"
-extend_skip = ["tueplots/_version.py"]
-
-# Pylint configuration
-
-[tool.pylint.master]
-load-plugins = [
-    "pylint.extensions.docparams",
-    "pylint.extensions.docstyle",
-]
-ignore-paths = 'tueplots/_version.py'
-
-[tool.pylint.messages_control]
-disable = [
-    # Specific ignores
-    "invalid-name",  # we name things the way we want.
-    "line-too-long",  # black takes care of linebreaks itself. Long docs dont really matter.
-    "import-error",  # caught by the tests, not by pylint.
-    "too-many-arguments",  # e.g. figsize-configs tend to have many arguments, which is acceptable.
+[tool.ruff]
+extend-exclude = [
+    "tueplots/__init__.py",
+    "tueplots/_version.py"
 ]
 
-[tool.pylint.format]
-max-line-length = "88"
+[tool.ruff.lint]
+# See: https://beta.ruff.rs/docs/rules/
+select = [
+    # pycodestyle (warning, error)
+    "W",
+    "E",
+    # Pyflakes:
+    "F",
+    # pyupgrade:
+    "UP",
+    # flake8-bugbear:
+    "B",
+    # flake8-builtins:
+    "A",
+    # flake8-import-conventions:
+    "ICN",
+    # flake8-pytest-style:
+    "PT",
+    # flake8-quotes:
+    "Q",
+    # flake8-return:
+    "RET",
+    # flake8-simplify:
+    "SIM",
+    # flake8-unused-arguments:
+    "ARG",
+    # Ruff-specific rules:
+    "RUF",
+    # isort:
+    "I",
+    # flake8-errormsg:
+    "EM",
+    # tryceratops:
+    "TRY",
+    # Docstrings:
+    # "D",
+]
+
+ignore = [
+    # warning: `one-blank-line-before-class` (D203) and `no-blank-line-before-class` (D211) are incompatible.
+    "D203",
+    # warning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible.
+    "D213",
+    # zip(..., strict=True/False) is not supported on Python < 3.10
+    "B905",
+    # Disable line-too-long because it is handled by formatter (and we allow docstrings to contain long lines)
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Ignore all directories named `tests`.
+"tests/**" = ["D"]
+"docs/**" = ["A"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

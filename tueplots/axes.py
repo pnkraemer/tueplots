@@ -24,6 +24,7 @@ Examples
     >>> ax.set_xlabel("$x$ label")
     >>> ax.set_ylabel("$y$ label")
     >>> plt.show()
+
 """
 
 
@@ -39,7 +40,6 @@ def lines(
     axisbelow=True,
 ):
     """Adjust linewidth(s) according to a base width."""
-
     tick_major_width = tick_major_base_ratio * base_width
     tick_minor_width = tick_minor_base_ratio * base_width
     tick_major_size = max(tick_major_size_min, tick_size_width_ratio * tick_major_width)
@@ -79,7 +79,6 @@ def grid(*, grid_alpha=0.2, grid_linestyle="solid"):
 
 def legend(*, shadow=False, frameon=True, fancybox=False):
     """Adjust the legend-style."""
-
     return {
         "legend.shadow": shadow,
         "legend.frameon": frameon,
@@ -89,7 +88,6 @@ def legend(*, shadow=False, frameon=True, fancybox=False):
 
 def color(*, base="black", face="none"):
     """Adjust the axes' color."""
-
     return {
         "text.color": base,
         "axes.edgecolor": base,

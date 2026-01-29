@@ -153,7 +153,6 @@ def aaai2024_half(
     rel_width=1.0,
 ):
     """Double-column (half-width) figures for AAAI 2024."""
-
     figsize = _from_base_in(
         base_width_in=3.3,
         rel_width=rel_width,
@@ -180,7 +179,6 @@ def aaai2024_full(
     rel_width=1.0,
 ):
     """Double-column (full-width) figures for AAAI 2024."""
-
     figsize = _from_base_in(
         base_width_in=6.975,
         rel_width=rel_width,
@@ -206,7 +204,6 @@ def uai2023_half(
     pad_inches=_PAD_INCHES,
 ):
     """Double-column (half-width) figures for UAI 2023."""
-
     figsize = _from_base_in(
         base_width_in=3.25,
         rel_width=1.0,
@@ -232,7 +229,6 @@ def uai2023_full(
     pad_inches=_PAD_INCHES,
 ):
     """Double-column (full-width) figures for UAI 2023."""
-
     figsize = _from_base_in(
         base_width_in=6.75,
         rel_width=1.0,
@@ -258,7 +254,6 @@ def cvpr2022_half(
     pad_inches=_PAD_INCHES,
 ):
     """Double-column (half-width) figures for CVPR 2022."""
-
     figsize = _from_base_pt(
         base_width_pt=237.13594,
         rel_width=1.0,
@@ -285,7 +280,6 @@ def cvpr2022_full(
     pad_inches=_PAD_INCHES,
 ):
     """Single-column (full-width) figures for CVPR 2022."""
-
     figsize = _from_base_pt(
         base_width_pt=496.85625,
         rel_width=rel_width,
@@ -311,7 +305,6 @@ def cvpr2024_half(
     pad_inches=_PAD_INCHES,
 ):
     """Double-column (half-width) figures for CVPR 2024."""
-
     figsize = _from_base_in(
         base_width_in=3.25,
         rel_width=1.0,
@@ -338,7 +331,6 @@ def cvpr2024_full(
     pad_inches=_PAD_INCHES,
 ):
     """Single-column (full-width) figures for CVPR 2024."""
-
     figsize = _from_base_in(
         base_width_in=6.875,
         rel_width=rel_width,
@@ -422,7 +414,6 @@ def eccv2024(
 
     Source: https://eccv2024.ecva.net/Conferences/2024/SubmissionPolicies
     """
-
     figsize = _from_base_in(
         base_width_in=4.8,  # corresponds to 122mm in ECCV template
         rel_width=rel_width,
@@ -454,7 +445,6 @@ def jmlr2001(
 
     The present format is for US letter format.
     """
-
     figsize = _from_base_in(
         base_width_in=6.0,
         rel_width=rel_width,
@@ -482,8 +472,8 @@ def tmlr2023(
 ):
     """TMLR figure size.
 
-    Source: https://www.jmlr.org/tmlr/author-guide.html"""
-
+    Source: https://www.jmlr.org/tmlr/author-guide.html
+    """
     figsize = _from_base_in(
         base_width_in=6.5,
         rel_width=rel_width,
@@ -645,7 +635,6 @@ def _neurips_and_iclr_common(
     pad_inches=_PAD_INCHES,
 ):
     """Neurips figure size defaults."""
-
     figsize = _from_base_in(
         base_width_in=5.5,
         rel_width=rel_width,

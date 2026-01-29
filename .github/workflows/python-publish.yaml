@@ -1,3 +1,4 @@
+---
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -5,16 +6,13 @@
 #
 # Source:
 #   https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
-
 name: Upload Python Package
-
 on:
   release:
     types: [published]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: 3.x
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -32,6 +30,6 @@ jobs:
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        run: |
+        run: |-
           python -m build
           twine upload dist/*py3-none-any.whl
