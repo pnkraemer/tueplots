@@ -13,7 +13,7 @@ is `plt.rcParams.update(bundles.icml2022())`:
 >>> bundles.icml2022()
 {'text.usetex': True, 'font.family': 'serif', 'text.latex.preamble': '\\usepackage{times} ', 'figure.figsize': (3.25, 2.0086104634371584), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>> bundles.icml2022(family="sans-serif", usetex=False, column="full", nrows=2)
-{'text.usetex': False, 'font.serif': ['Times New Roman', 'Times', 'TeX Gyre Termes', 'Nimbus Roman'], 'font.sans-serif': ['Helvetica', 'Helvetica Neue', 'TeX Gyre Heros', 'Nimbus Sans', 'Nimbus Sans L'], 'font.family': 'sans-serif', 'mathtext.fontset': 'cm', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
+{'text.usetex': False, 'font.serif': ['Times New Roman', 'Times', 'TeX Gyre Termes', 'Nimbus Roman'], 'font.sans-serif': ['Helvetica', 'Helvetica Neue', 'TeX Gyre Heros', 'Nimbus Sans', 'Nimbus Sans L'], 'font.family': 'sans-serif', 'mathtext.fontset': 'stixsans', 'figure.figsize': (6.75, 8.343458848123582), 'figure.constrained_layout.use': True, 'figure.autolayout': False, 'savefig.pad_inches': 0.015, 'font.size': 8, 'axes.labelsize': 8, 'legend.fontsize': 6, 'xtick.labelsize': 6, 'ytick.labelsize': 6, 'axes.titlesize': 8}
 >>>
 >>> # Plug any of those into either the rcParams or into an rc_context:
 >>> plt.rcParams.update(bundles.icml2022())
