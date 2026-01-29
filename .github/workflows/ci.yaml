@@ -1,55 +1,48 @@
+---
 name: ci
-
 on:
   push:
-    branches:
-    - main
+    branches: [main]
   pull_request:
-    branches:
-    - main
-
+    branches: [main]
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
-    - uses: actions/checkout@v4
-    - name: Lint through tox
-      run: |
-        pip install tox
-        tox -e format-and-lint
-
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/checkout@v4
+      - name: Lint through tox
+        run: |
+          pip install tox
+          tox -e format-and-lint
   test:
-
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ['3.10', '3.11', '3.12', '3.13']
         os: [ubuntu-latest, macOS-latest, windows-latest]
-
     steps:
-    - uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
-    - uses: actions/checkout@v4
-    - name: Run tests through tox
-      run: |
-        pip install tox
-        tox -e test
-
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/checkout@v4
+      - name: Run tests through tox
+        run: |
+          pip install tox
+          tox -e test
   build-docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v4
-      with:
+      - uses: actions/setup-python@v4
+        with:
         # Ensure that this version matches .readthedocs.yaml
-        python-version: "3.10"
-    - uses: actions/checkout@v4
-    - name: Build the HTML docs
-      run: |
-        pip install tox
-        sudo apt-get install pandoc
-        tox -e docs
+          python-version: '3.10'
+      - uses: actions/checkout@v4
+      - name: Build the HTML docs
+        run: |-
+          pip install tox
+          sudo apt-get install pandoc
+          tox -e docs

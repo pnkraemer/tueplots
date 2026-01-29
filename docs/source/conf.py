@@ -9,7 +9,7 @@ from datetime import datetime
 # -- Project information -----------------------------------------------------
 
 project = "tueplots"
-copyright = f"{str(datetime.utcnow().year)}, Nicholas Krämer"
+copyright = f"{datetime.utcnow().year!s}, Nicholas Krämer"
 author = "Nicholas Krämer"
 
 

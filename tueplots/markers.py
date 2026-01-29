@@ -30,7 +30,10 @@ Examples
 
 
 def with_edge(*, edgecolor="black", edgewidth=0.5):
-    """The facecolor is set to the linecolor, the edgecolor is changed."""
+    """Create markers with an edge.
+
+    The facecolor matches the linecolor and the edgecolor is changed.
+    """
     return {
         "lines.markeredgecolor": edgecolor,
         "lines.markerfacecolor": "auto",
@@ -39,7 +42,10 @@ def with_edge(*, edgecolor="black", edgewidth=0.5):
 
 
 def inverted(*, facecolor="white", edgewidth=0.75):
-    """The edgecolor is set to the linecolor, the facecolor is changed."""
+    """Create inverted markers.
+
+    The edgecolor matches the linecolor and the facecolor is changed.
+    """
     return {
         "lines.markeredgecolor": "auto",
         "lines.markerfacecolor": facecolor,
