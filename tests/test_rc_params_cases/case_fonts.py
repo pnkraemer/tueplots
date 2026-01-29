@@ -197,3 +197,7 @@ def case_fonts_cvpr2024_tex_custom():
 
 def case_fonts_probnum2025_tex_default():
     return fonts.probnum2025_tex()
+
+
+def case_fonts_roboto_condensed():
+    return fonts.roboto_condensed()

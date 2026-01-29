@@ -81,6 +81,36 @@ pn_gray = tue_gray
 pn_red = tue_red
 """Color associated with ProbNum: probnum.org. Red."""
 
+# the color scheme of the Tuebingen AI Center:
+
+tue_ai_dark = np.array([56, 56, 56]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Dark."""
+
+tue_ai_gray = np.array([246, 246, 246]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Gray."""
+
+tue_ai_darkblue = np.array([26, 58, 91]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Dark blue."""
+
+tue_ai_accent = np.array([234, 75, 46]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Accent."""
+
+tue_ai_lightblue = np.array([133, 203, 210]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Light blue."""
+
+tue_ai_oceanblue = np.array([119, 221, 204]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Ocean blue."""
+
+tue_ai_oceangreen = np.array([119, 221, 159]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Ocean green."""
+
+tue_ai_springgreen = np.array([186, 213, 72]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Spring green."""
+
+tue_ai_brightyellow = np.array([255, 221, 0]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Bright yellow."""
+
+
 # the Corporate-ID colors of the Max Planck Society:
 
 mps_green = np.array([17, 102, 86]) / 255.0

@@ -76,6 +76,21 @@ def case_bundle_iclr2024():
     return bundles.iclr2024
 
 
+@pytest_cases.case()
+def case_bundle_tue_ai_thesis():
+    return bundles.tue_ai_thesis
+
+
+@pytest_cases.case()
+def case_bundle_tue_ai_beamer():
+    return bundles.tue_ai_beamer
+
+
+@pytest_cases.case()
+def case_bundle_beamer_moml():
+    return bundles.beamer_moml
+
+
 @pytest_cases.parametrize_with_cases("bundle_fun", cases=".", has_tag=["multicol"])
 def test_column_neither_half_nor_full_raises_value_error(bundle_fun):
     # Sanity checks
