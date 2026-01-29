@@ -227,7 +227,7 @@ def _times_text_cmodern_math(*, family="serif"):
     }
 
 
-def _times_tex_via_pkg_ptm(*, family, use_sansmath=False):
+def _times_tex_via_pkg_ptm(*, family):
     """Choose the Times font, implemented in Latex via the ptm-package.
 
     Default fonts for Neurips.
@@ -240,8 +240,7 @@ def _times_tex_via_pkg_ptm(*, family, use_sansmath=False):
             "text.latex.preamble": preamble,
         }
     preamble += r" \renewcommand{\familydefault}{\sfdefault}"
-    if use_sansmath:
-        preamble += r" \usepackage{sansmath} \sansmath"
+    preamble += r" \usepackage{sansmath} \sansmath"
     return {
         "text.usetex": True,
         "font.family": "sans-serif",
