@@ -185,26 +185,14 @@ def tue_ai_thesis_tex(*, family="serif"):
     return _computer_modern_tex(family=family)
 
 
-def beamer_moml():
-    """Fonts that are compatible with the beamer template of the method-of-machine-learning group in Tübingen."""
+def roboto_condensed():
+    """Robot fonts, typically used with the beamer templates."""
     return {
         "text.usetex": False,
         "mathtext.fontset": "custom",
         "mathtext.it": "sans:italic",
         "font.sans-serif": ["Roboto Condensed"],
         "font.family": "sans-serif",
-        "font.weight": "light",
-        "axes.labelweight": "light",
-        "axes.titleweight": "light",
-    }
-
-
-def beamer_moml_dark_bg():
-    """Fonts for :func:`beamer_moml` with dark background."""
-    return {
-        "text.usetex": False,
-        "font.serif": ["Roboto Condensed"],
-        "font.family": "serif",
         "font.weight": "light",
         "axes.labelweight": "light",
         "axes.titleweight": "light",

@@ -278,7 +278,10 @@ def probnum2025(*, column="half", nrows=1, ncols=1, family="sans-serif"):
 
 
 def tue_ai_thesis(*, rel_width=1.0, nrows=1, ncols=1, family="sans-serif"):
-    """Tübingen AI Center thesis bundle."""
+    """Tübingen AI Center thesis bundle.
+
+    More information about the template can be found at https://github.com/philipphennig/tueaistylepack
+    """
     font_config = fonts.tue_ai_thesis_tex(family=family)
     size = figsizes.tue_ai_thesis(rel_width=rel_width, nrows=nrows, ncols=ncols)
     fontsize_config = fontsizes.tue_ai_thesis()
@@ -316,7 +319,7 @@ def beamer_moml(
 ):
     """Beamer bundle that matches the template of the method-of-machine-learning group in Tübingen."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.beamer_moml()
+    font_config = fonts.roboto_condensed()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(base=rgb.tue_dark)
@@ -336,7 +339,7 @@ def beamer_moml(
 def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
     """Dark version of :func:`beamer_moml`."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.beamer_moml_dark_bg()
+    font_config = fonts.roboto_condensed()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_dark, base="w")
@@ -353,16 +356,18 @@ def beamer_moml_dark_bg(*, rel_width=1.0, rel_height=0.8):
     }
 
 
-def beamer_tueai(
+def tue_ai_beamer(
     *,
     rel_width=1.0,
     rel_height=0.8,
 ):
     """Beamer bundle that matches the beamer template of the Tübingen AI Center.
+
     This is a clone of bundles.beamer_moml, but with the colors of the Tübingen AI Center.
+    More information about the template can be found at https://github.com/philipphennig/tueaistylepack
     """
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.beamer_moml()
+    font_config = fonts.roboto_condensed()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(base=rgb.tue_ai_dark)
@@ -379,10 +384,10 @@ def beamer_tueai(
     }
 
 
-def beamer_tueai_dark_bg(*, rel_width=1.0, rel_height=0.8):
-    """Dark version of :func:`beamer_tueai`."""
+def tue_ai_beamer_dark_bg(*, rel_width=1.0, rel_height=0.8):
+    """Dark version of :func:`tue_ai_beamer`."""
     size = figsizes.beamer_169(rel_width=rel_width, rel_height=rel_height)
-    font_config = fonts.beamer_moml_dark_bg()
+    font_config = fonts.roboto_condensed()
     axes_config_line = axes.lines()
     axes_config_grid = axes.grid()
     axes_config_color = axes.color(face=rgb.tue_ai_dark, base="w")
