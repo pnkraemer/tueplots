@@ -205,9 +205,9 @@ _TIMES_LIKE = ["Times New Roman", "Times", "Nimbus Roman", "TeX Gyre Termes"]
 
 
 def _times_text_cmodern_math(*, family="serif"):
-    """Times text font with Computer Modern math.
+    r"""Choose a Times text font with Computer Modern math.
 
-    Mirrors the TeX behavior of \\usepackage{times} and \\usepackage{ptm},
+    Mirrors the TeX behavior of \usepackage{times} and \usepackage{ptm},
     which use Times for text but Computer Modern for math.
     Used for non-TeX versions of NeurIPS, ICML, ICLR, CVPR, etc.
     """
@@ -220,7 +220,7 @@ def _times_text_cmodern_math(*, family="serif"):
 
 
 def _times(*, family="serif"):
-    """Times font with STIX math (Times-like math).
+    """Choose the Times font with STIX math (Times-like math).
 
     Used when both text and math should be in Times.
     """
@@ -233,7 +233,7 @@ def _times(*, family="serif"):
 
 
 def _times_tex_via_pkg_ptm(*, family):
-    """Times font, implemented in Latex via the ptm-package.
+    """Choose the Times font, implemented in Latex via the ptm-package.
 
     Default fonts for Neurips.
     """

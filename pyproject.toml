@@ -80,7 +80,7 @@ select = [
     # tryceratops:
     "TRY",
     # Docstrings:
-    # "D",
+    "D",
 ]
 
 ignore = [
@@ -97,7 +97,7 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 # Ignore all directories named `tests`.
 "tests/**" = ["D"]
-"docs/**" = ["A"]
+"docs/**" = ["A", "D"]
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
