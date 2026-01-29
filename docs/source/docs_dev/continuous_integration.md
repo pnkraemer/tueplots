@@ -31,6 +31,6 @@ pre-commit install
 From then on, your code will be checked for isort and black compatibility automatically.
 
 
-Both the pre-commit hook and tox point to isort, black, and so on.
+Both the pre-commit hook and tox point to formatters, linters, and so on.
 We do our best to match their versions. If you run into version conflicts
 between those two tools, please let us know!
