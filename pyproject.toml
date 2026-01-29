@@ -110,3 +110,8 @@ convention = "numpy"
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+
+
+[tool.jupytext.formats]
+"docs/source/example_notebooks/_as_ipynb/" = "ipynb"
+"docs/source/example_notebooks/as_py_percent/" = "py:percent"
