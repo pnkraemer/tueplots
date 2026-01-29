@@ -650,6 +650,32 @@ def _neurips_and_iclr_common(
     )
 
 
+def tue_ai_thesis(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+    pad_inches=_PAD_INCHES,
+):
+    """Figures (full width) for the Tübingen AI Center thesis template."""
+    figsize = _from_base_pt(
+        base_width_pt=455.24411,
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+        pad_inches=pad_inches,
+    )
+
+
 def _from_base_pt(*, base_width_pt, **kwargs):
     base_width_in = base_width_pt / _POINTS_PER_INCH
     return _from_base_in(base_width_in=base_width_in, **kwargs)

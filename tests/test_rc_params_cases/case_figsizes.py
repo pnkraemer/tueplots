@@ -115,5 +115,9 @@ def case_figsizes_probnum2025_half():
     return figsizes.probnum2025_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_tue_ai_thesis():
+    return figsizes.tue_ai_thesis(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_beamer_169():
     return figsizes.beamer_169(rel_width=0.5, rel_height=0.1)

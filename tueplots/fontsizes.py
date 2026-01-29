@@ -139,6 +139,11 @@ def beamer(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def tue_ai_thesis(*, default_smaller=1):
+    """Font size for a Tübingen AI Center thesis."""
+    return _from_base(base=10 - default_smaller)
+
+
 def _from_base(*, base, small_offset=2):
     """Set all font-sizes based on a base-size.
 
