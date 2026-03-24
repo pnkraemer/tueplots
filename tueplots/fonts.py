@@ -105,6 +105,16 @@ def iclr2024(*, family="serif"):
     return _times_text_cmodern_math(family=family)
 
 
+def colm2026_tex():
+    """Fonts for COLM 2026. LaTeX version."""
+    return _palatino_tex_via_pkg_tgpagella_mathpazo()
+
+
+def colm2026():
+    """Fonts for COLM 2026."""
+    return _palatino_text_stix_math()
+
+
 def cvpr2024_tex(*, family="serif"):
     """Fonts for CVPR 2024. LaTeX version."""
     return _times_tex_via_pkg_ptm(family=family)
@@ -212,6 +222,7 @@ def roboto_condensed():
 # Helper functions below
 
 _TIMES_LIKE = ["Times New Roman", "Times", "TeX Gyre Termes", "Nimbus Roman"]
+_PALATINO_LIKE = ["Palatino", "Palatino Linotype"]
 _HELVET_LIKE = [
     "Helvetica",
     "Helvetica Neue",
@@ -255,6 +266,26 @@ def _times_tex_via_pkg_ptm(*, family):
     return {
         "text.usetex": True,
         "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
+    }
+
+
+def _palatino_text_stix_math():
+    """Choose a Palatino-like text font with STIX math."""
+    return {
+        "text.usetex": False,
+        "font.serif": _PALATINO_LIKE,
+        "font.family": "serif",
+        "mathtext.fontset": "stix",
+    }
+
+
+def _palatino_tex_via_pkg_tgpagella_mathpazo():
+    """Choose the Palatino font for COLM."""
+    preamble = r"\usepackage{tgpagella}\usepackage{mathpazo}\usepackage{inconsolata}"
+    return {
+        "text.usetex": True,
+        "font.family": "serif",
         "text.latex.preamble": preamble,
     }
 

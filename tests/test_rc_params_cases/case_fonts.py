@@ -123,6 +123,14 @@ def case_fonts_iclr2024_custom():
     return fonts.iclr2024(family="serif")
 
 
+def case_fonts_colm2026_default():
+    return fonts.colm2026()
+
+
+def case_fonts_colm2026_tex_default():
+    return fonts.colm2026_tex()
+
+
 def case_fonts_aaai2024_tex_default():
     return fonts.aaai2024_tex()
 
