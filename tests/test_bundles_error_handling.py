@@ -76,6 +76,11 @@ def case_bundle_iclr2024():
     return bundles.iclr2024
 
 
+@pytest_cases.case(tags=["tex_or_not"])
+def case_fontsizes_colm2026():
+    return bundles.colm2026
+
+
 @pytest_cases.case()
 def case_bundle_tue_ai_thesis():
     return bundles.tue_ai_thesis

@@ -263,6 +263,19 @@ def iclr2024(*, usetex=True, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def colm2026(*, usetex=True, rel_width=1.0, nrows=1, ncols=1):
+    """COLM 2026 bundle."""
+    if usetex is True:
+        font_config = fonts.colm2026_tex()
+    elif usetex is False:
+        font_config = fonts.colm2026()
+    else:
+        raise ValueError(_msg_error_wrong_arg_usetex(usetex))
+    size = figsizes.colm2026(rel_width=rel_width, nrows=nrows, ncols=ncols)
+    fontsize_config = fontsizes.colm2026()
+    return {**font_config, **size, **fontsize_config}
+
+
 def probnum2025(*, column="half", nrows=1, ncols=1, family="sans-serif"):
     """ProbNum 2025 bundle."""
     if column == "half":
