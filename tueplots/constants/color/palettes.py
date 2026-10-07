@@ -88,9 +88,27 @@ tue_ai = np.array(
         rgb.tue_ai_oceangreen,
         rgb.tue_ai_springgreen,
         rgb.tue_ai_brightyellow,
+        rgb.tue_ai_deepnavy,
+        rgb.tue_ai_indigo,
+        rgb.tue_ai_steelblue,
+        rgb.tue_ai_azure,
+        rgb.tue_ai_skyblue,
+        rgb.tue_ai_lightazure,
+        rgb.tue_ai_palesky,
+        rgb.tue_ai_iceblue,
+        rgb.tue_ai_cyan,
+        rgb.tue_ai_teal,
+        rgb.tue_ai_mint,
+        rgb.tue_ai_sage,
+        rgb.tue_ai_moss,
+        rgb.tue_ai_violet,
+        rgb.tue_ai_plum,
+        rgb.tue_ai_raspberry,
+        rgb.tue_ai_rose,
     ]
 )
-"""Colors used for tuebingen.ai."""
+"""Colors used for tuebingen.ai, extended by the palette of the All-Hands
+Meeting (AHM) of the German AI competence centers."""
 
 paultol_bright = np.array(
     [
