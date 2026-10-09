@@ -23,6 +23,10 @@ def case_palettes_pn():
     return palettes.pn
 
 
+def case_palettes_tue_ai():
+    return palettes.tue_ai
+
+
 def case_palettes_paultol_bright():
     return palettes.paultol_bright
 

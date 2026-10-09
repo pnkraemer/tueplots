@@ -119,3 +119,74 @@ def case_rgb_mpg_gray():
 
 def case_rgb_mpg_lightgray():
     return rgb.mps_lightgray
+
+
+# Tuebingen AI Center colors: AHM extended palette
+
+
+def case_rgb_tue_ai_deepnavy():
+    return rgb.tue_ai_deepnavy
+
+
+def case_rgb_tue_ai_indigo():
+    return rgb.tue_ai_indigo
+
+
+def case_rgb_tue_ai_steelblue():
+    return rgb.tue_ai_steelblue
+
+
+def case_rgb_tue_ai_azure():
+    return rgb.tue_ai_azure
+
+
+def case_rgb_tue_ai_skyblue():
+    return rgb.tue_ai_skyblue
+
+
+def case_rgb_tue_ai_lightazure():
+    return rgb.tue_ai_lightazure
+
+
+def case_rgb_tue_ai_palesky():
+    return rgb.tue_ai_palesky
+
+
+def case_rgb_tue_ai_iceblue():
+    return rgb.tue_ai_iceblue
+
+
+def case_rgb_tue_ai_cyan():
+    return rgb.tue_ai_cyan
+
+
+def case_rgb_tue_ai_teal():
+    return rgb.tue_ai_teal
+
+
+def case_rgb_tue_ai_mint():
+    return rgb.tue_ai_mint
+
+
+def case_rgb_tue_ai_sage():
+    return rgb.tue_ai_sage
+
+
+def case_rgb_tue_ai_moss():
+    return rgb.tue_ai_moss
+
+
+def case_rgb_tue_ai_violet():
+    return rgb.tue_ai_violet
+
+
+def case_rgb_tue_ai_plum():
+    return rgb.tue_ai_plum
+
+
+def case_rgb_tue_ai_raspberry():
+    return rgb.tue_ai_raspberry
+
+
+def case_rgb_tue_ai_rose():
+    return rgb.tue_ai_rose

@@ -111,6 +111,62 @@ tue_ai_brightyellow = np.array([255, 221, 0]) / 255.0
 """Color associated with the AI Center: tuebingen.ai. Bright yellow."""
 
 
+# Extended palette from the logo of the All-Hands Meeting (AHM) of the German
+# AI competence centers; designed by Franziska Schwarz to match the color
+# schemes of all German AI centers, including the one in Tübingen:
+
+tue_ai_deepnavy = np.array([0, 48, 99]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Deep navy."""
+
+tue_ai_indigo = np.array([29, 58, 143]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Indigo."""
+
+tue_ai_steelblue = np.array([18, 117, 172]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Steel blue."""
+
+tue_ai_azure = np.array([0, 127, 255]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Azure."""
+
+tue_ai_skyblue = np.array([0, 158, 227]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Sky blue."""
+
+tue_ai_lightazure = np.array([89, 189, 247]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Light azure."""
+
+tue_ai_palesky = np.array([127, 204, 224]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Pale sky."""
+
+tue_ai_iceblue = np.array([177, 222, 235]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Ice blue."""
+
+tue_ai_cyan = np.array([46, 186, 213]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Cyan."""
+
+tue_ai_teal = np.array([0, 152, 166]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Teal."""
+
+tue_ai_mint = np.array([0, 235, 181]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Mint."""
+
+tue_ai_sage = np.array([106, 191, 163]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Sage."""
+
+tue_ai_moss = np.array([86, 175, 49]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Moss."""
+
+tue_ai_violet = np.array([140, 120, 255]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Violet."""
+
+tue_ai_plum = np.array([152, 48, 130]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Plum."""
+
+tue_ai_raspberry = np.array([232, 46, 130]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Raspberry."""
+
+tue_ai_rose = np.array([236, 97, 159]) / 255.0
+"""Color associated with the AI Center: tuebingen.ai. Rose."""
+
+
 # the Corporate-ID colors of the Max Planck Society:
 
 mps_green = np.array([17, 102, 86]) / 255.0
