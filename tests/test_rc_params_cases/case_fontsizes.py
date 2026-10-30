@@ -71,6 +71,10 @@ def case_fontsizes_jmlr2001():
     return fontsizes.jmlr2001()
 
 
+def case_fontsizes_tufte_book():
+    return fontsizes.tufte_book()
+
+
 def case_fontsizes_probnum2025():
     return fontsizes.probnum2025()
 
