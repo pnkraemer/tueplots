@@ -177,6 +177,28 @@ def jmlr2001(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     return {**font_config, **size, **fontsize_config}
 
 
+def tufte_book(*, column="half", nrows=1, ncols=1, usetex=True, family="serif"):
+    """Tufte book bundle.
+
+    Source: https://github.com/Tufte-LaTeX/tufte-latex
+    """
+    if column == "half":
+        size = figsizes.tufte_book_half(nrows=nrows, ncols=ncols)
+    elif column == "full":
+        size = figsizes.tufte_book_full(nrows=nrows, ncols=ncols)
+    else:
+        msg = _msg_error_wrong_arg_column(column)
+        raise ValueError(msg)
+    if usetex is True:
+        font_config = fonts.tufte_book_tex(family=family)
+    elif usetex is False:
+        font_config = fonts.tufte_book(family=family)
+    else:
+        raise ValueError(_msg_error_wrong_arg_usetex(usetex))
+    fontsize_config = fontsizes.tufte_book()
+    return {**font_config, **size, **fontsize_config}
+
+
 def tmlr2023(*, rel_width=1.0, nrows=1, ncols=1, family="serif"):
     """TMLR 2023 bundle."""
     size = figsizes.tmlr2023(rel_width=rel_width, nrows=nrows, ncols=ncols)

@@ -112,7 +112,7 @@ def colm2026_tex():
 
 def colm2026():
     """Fonts for COLM 2026."""
-    return _palatino_text_stix_math()
+    return _palatino_text_stix_math(family="serif")
 
 
 def cvpr2024_tex(*, family="serif"):
@@ -195,6 +195,16 @@ def tue_ai_thesis_tex(*, family="serif"):
     return _computer_modern_tex(family=family)
 
 
+def tufte_book_tex(*, family="serif"):
+    """Fonts for the Tufte book class. LaTeX version."""
+    return _palatino_tex_via_pkg_mathpazo(family=family)
+
+
+def tufte_book(*, family="serif"):
+    """Fonts for the Tufte book class."""
+    return _palatino_text_stix_math(family=family)
+
+
 def beamer_moml():
     """Fonts for the beamer template of the method-of-machine-learning group in Tübingen."""
     return roboto_condensed()
@@ -270,13 +280,33 @@ def _times_tex_via_pkg_ptm(*, family):
     }
 
 
-def _palatino_text_stix_math():
+def _palatino_text_stix_math(*, family="serif"):
     """Choose a Palatino-like text font with STIX math."""
     return {
         "text.usetex": False,
         "font.serif": _PALATINO_LIKE,
-        "font.family": "serif",
-        "mathtext.fontset": "stix",
+        "font.sans-serif": _HELVET_LIKE,
+        "font.family": family,
+        "mathtext.fontset": "stix" if family == "serif" else "stixsans",
+    }
+
+
+def _palatino_tex_via_pkg_mathpazo(*, family="serif"):
+    """Choose Palatino via mathpazo as in Tufte-LaTeX."""
+    preamble = r"\usepackage[osf,sc]{mathpazo}\usepackage{textcomp}"
+    if family == "serif":
+        return {
+            "text.usetex": True,
+            "font.family": "serif",
+            "text.latex.preamble": preamble,
+        }
+    preamble += (
+        r" \renewcommand{\familydefault}{\sfdefault} \usepackage{sansmath} \sansmath"
+    )
+    return {
+        "text.usetex": True,
+        "font.family": "sans-serif",
+        "text.latex.preamble": preamble,
     }
 
 

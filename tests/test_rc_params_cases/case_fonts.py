@@ -163,6 +163,22 @@ def case_fonts_jmlr2001_tex_custom():
     return fonts.jmlr2001_tex(family="serif")
 
 
+def case_fonts_tufte_book_default():
+    return fonts.tufte_book()
+
+
+def case_fonts_tufte_book_custom():
+    return fonts.tufte_book(family="serif")
+
+
+def case_fonts_tufte_book_tex_default():
+    return fonts.tufte_book_tex()
+
+
+def case_fonts_tufte_book_tex_custom():
+    return fonts.tufte_book_tex(family="serif")
+
+
 def case_fonts_aistats2022_tex_default():
     return fonts.aistats2022_tex()
 
