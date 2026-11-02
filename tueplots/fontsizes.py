@@ -149,6 +149,15 @@ def tue_ai_thesis(*, default_smaller=1):
     return _from_base(base=10 - default_smaller)
 
 
+def tufte_book(*, default_smaller=1):
+    r"""Font size for the Tufte book class.
+
+    Source: https://github.com/Tufte-LaTeX/tufte-latex/blob/master/tufte-common.def
+    (figure captions use ``\\footnotesize``, 8pt).
+    """
+    return _from_base(base=8 - default_smaller)
+
+
 def _from_base(*, base, small_offset=2):
     """Set all font-sizes based on a base-size.
 

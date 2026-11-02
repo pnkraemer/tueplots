@@ -111,6 +111,14 @@ def case_figsizes_jmlr2001():
     return figsizes.jmlr2001(nrows=2, ncols=3, height_to_width_ratio=1.0)
 
 
+def case_figsizes_tufte_book_half():
+    return figsizes.tufte_book_half(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
+def case_figsizes_tufte_book_full():
+    return figsizes.tufte_book_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
+
+
 def case_figsizes_probnum2025_full():
     return figsizes.probnum2025_full(nrows=2, ncols=3, height_to_width_ratio=1.0)
 

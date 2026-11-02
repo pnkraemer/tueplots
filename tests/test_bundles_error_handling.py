@@ -21,6 +21,11 @@ def case_bundle_icml2024():
     return bundles.icml2024
 
 
+@pytest_cases.case(tags=["multicol", "tex_or_not"])
+def case_bundle_tufte_book():
+    return bundles.tufte_book
+
+
 @pytest_cases.case(tags=["multicol"])
 def case_bundle_aistats2022():
     return bundles.aistats2022

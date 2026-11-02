@@ -97,6 +97,14 @@ def case_bundles_jmlr2001():
     return bundles.jmlr2001(nrows=2, ncols=2, family="serif")
 
 
+@pytest_cases.parametrize(column=["full", "half"])
+@pytest_cases.parametrize(usetex=[True, False])
+def case_bundles_tufte_book(column, usetex):
+    return bundles.tufte_book(
+        nrows=2, ncols=2, family="serif", column=column, usetex=usetex
+    )
+
+
 def case_bundles_tmlr2023():
     return bundles.tmlr2023(nrows=2, ncols=2, family="serif")
 
