@@ -4,16 +4,15 @@
 <img src="https://raw.githubusercontent.com/pnkraemer/tueplots/main/docs/source/img/logo_tueplots.svg" width="250" alt="tueplots logo"/>
 </p>
 
+# tueplots
 
-# TUEplots: Extend matplotlib for scientific publications
+**Make your matplotlib figures fit your paper, poster, or slides in a single line of code.**
 
-[![PyPi Version](https://img.shields.io/pypi/v/tueplots.svg?style=flat-square)](https://pypi.org/project/tueplots/)
-[![Docs](https://readthedocs.org/projects/pip/badge/?version=latest&style=flat-square)](https://github.com/pnkraemer/tueplots)
-[![GitHub stars](https://img.shields.io/github/stars/pnkraemer/tueplots.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/pnkraemer/tueplots)
-[![gh-actions](https://img.shields.io/github/actions/workflow/status/pnkraemer/tueplots/ci.yaml?branch=main&style=flat-square)](https://github.com/pnkraemer/tueplots/actions?query=workflow%3Aci)
-<a href="https://github.com/pnkraemer/tueplots/blob/master/LICENSE"><img src="https://img.shields.io/github/license/pnkraemer/tueplots?style=flat-square&color=2b9348" alt="License Badge"/></a>
-![PyPI - Downloads](https://img.shields.io/pypi/dm/tueplots?style=flat-square&color=yellow)
-
+[![PyPI](https://img.shields.io/pypi/v/tueplots?style=flat-square&color=0b3d91)](https://pypi.org/project/tueplots/)
+[![Docs](https://img.shields.io/readthedocs/tueplots?style=flat-square&color=0b3d91)](https://tueplots.readthedocs.io)
+[![License](https://img.shields.io/github/license/pnkraemer/tueplots?style=flat-square&color=0b3d91)](https://github.com/pnkraemer/tueplots/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/pypi/dm/tueplots?style=flat-square&color=0b3d91)](https://pypistats.org/packages/tueplots)
+[![Stars](https://img.shields.io/github/stars/pnkraemer/tueplots?style=flat-square&color=0b3d91)](https://github.com/pnkraemer/tueplots)
 
 ## Why?
 
