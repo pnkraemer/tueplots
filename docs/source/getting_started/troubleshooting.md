@@ -42,7 +42,7 @@ If you want to avoid this warning by any means, here are some solutions:
 * Set the `rel_width` in the figsizes to, e.g., `rel_width=0.97` and use `\includegraphics(<plot>)` as usual.
 * Set the `savefig.bbox` argument to `tight`, as in:
 ```python
-with mpl.rc_context({'savefig.bbox': 'standard'}):
+with mpl.rc_context({"savefig.bbox": "standard"}):
     plt.savefig("figure.pdf")
 ```
 and again, see [Issue #129](https://github.com/pnkraemer/tueplots/issues/129) for more info.
